@@ -1,0 +1,33 @@
+{
+    "game": "",
+    "commands": [
+        "addfaq",
+        "ban",
+        "botinfo",
+        "commands",
+        "doggo",
+        "flip",
+        "kick",
+        "level",
+        "mirror",
+        "ping",
+        "purge",
+        "report",
+        "roll",
+        "rps",
+        "rtfm",
+        "serverinfo",
+        "suggest",
+        "ticket"
+    ],
+    "token": "NTEyNjYwNjI1MDU1NDE2MzI2.Dt7BqA.Uuac5EuOyfPsyJyF-wlDp_upiKE",
+    "welcomeChannel": "create bot.prod.json at same folder and put your welcome channel's id inside",
+    "reportChannel": "create bot.prod.json at same folder and put your report channel's id inside",
+    "kicksAndBansChannel": "create bot.prod.json at same folder and put your report channel's id inside",
+    "apiBearerToken": "create bot.prod.json at same folder and put your API token Token inside",
+    "apiEmail": "create bot.prod.json at same folder and put your API email Token inside",
+    "apiPassword": "create bot.prod.json at same folder and put your API password Token inside",
+    "idiots": [],
+    "idiotAnswer": "",
+    "name":"4DnkBot"
+}
