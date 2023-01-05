@@ -1,0 +1,20 @@
+# virtualenv
+.venv
+venv/
+
+#Config
+.config.py
+config.py
+/config.py
+hooks.py
+./hooks.py
+
+transactions.json
+.idea/
+.vscode
+*.sql
+
+.config.json
+
+__pycache__
+Tools/
