@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "repl_python3_beta_Discordbot"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytz = "^2021.1"
+flask = "^2.0.1"
+credentials = "^1.1"
+pyttsx3 = "^2.90"
+replit = "^3.2.4"
+discord = {git = "https://github.com/Rapptz/discord.py"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
