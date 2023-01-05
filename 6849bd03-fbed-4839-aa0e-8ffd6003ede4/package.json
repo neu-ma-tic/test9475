@@ -1,0 +1,7 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "11.4.2",
+    "random-puppy": "^1.1.0"
+  }
+}
