@@ -1,0 +1,1366 @@
+Bitcoin Cash	BCH
+Bitcoin Gold	BTG
+BitConnect	BCC
+BitShares	BTS
+Dash	DASH
+Dogecoin	DOGE
+Ethereum	ETH
+Ethereum Classic	ETC
+Ardor	ARDR
+Ark	ARK
+Bitcoin	BTC
+Cardano	ADA
+Civic	CVC
+Decred	DCR
+EOS	EOS
+FunFair	FUN
+Golem	GNT
+PIVX	PIVX
+Nano	NANO
+SALT	SALT
+Stellar	XLM
+Verge	XVG
+Vertcoin	VTC
+IOTA	MIOTA
+Lisk	LSK
+Litecoin	LTC
+Monero	XMR
+NEM	XEM
+NEO	NEO
+OmiseGO	OMG
+Power Ledger	POWR
+Qtum	QTUM
+Ripple	XRP
+Siacoin	SC
+Steem	STEEM
+Stratis	STRAT
+Tether	USDT
+Waves	WAVES
+Zcash	ZEC
+1337	1337
+0x	ZRX
+10M Token	10MT
+2GIVE	2GIVE
+300 Token	300
+42-coin	42
+808Coin	808
+8Bit	8BIT
+9COIN	9COIN
+Abjcoin	ABJ
+Abncoin	ABN
+Accelerator N...	ACC
+Ace	ACE
+Aces	ACES
+Achain	ACT
+Acoin	ACOIN
+AdCoin	ACC
+Adelphoi	ADL
+AdEx	ADX
+AdShares	ADST
+adToken	ADT
+Advanced Inte...	AIB
+Adzcoin	ADZ
+aelf	ELF
+Aeon	AEON
+Aerium	AERM
+Aeron	ARN
+Aeternity	AE
+Agoras Tokens	AGRS
+Agrello	DLT
+AgrolifeCoin	AGLC
+Aidos Kuneen	ADK
+Aion	AION
+AirSwap	AST
+AirToken	AIR
+Akuya Coin	AKY
+ALIS	ALIS
+Allion	ALL
+AllSafe	ASAFE2
+AlpaCoin	APC
+Alphabit	ABC
+ALQO	ALQO
+Altcoin	ALT
+AltCommunity ...	ALTCOM
+AmberCoin	AMBER
+Ambrosus	AMB
+Ammo Rewards	AMMO
+AmsterdamCoin	AMS
+AnarchistsPrime	ACP
+Animecoin	ANI
+Anoncoin	ANC
+ANRYZE	RYZ
+AntiBitcoin	ANTI
+Antilitecoin	ALTC
+Antimatter	ANTX
+AppleCoin	APW
+APX	APX
+AquariusCoin	ARCO
+Aragon	ANT
+ARbit	ARB
+Arcade Token	ARC
+ArcticCoin	ARC
+Argentum	ARG
+Argus	ARGUS
+Aricoin	ARI
+ArtByte	ABY
+Artex Coin	ATX
+Asch	XAS
+Aseancoin	ASN
+AsiaCoin	AC
+Asiadigicoin	ADCN
+Astro	ASTRO
+ATBCoin	ATB
+ATLANT	ATL
+ATMChain	ATM
+ATMCoin	ATMC
+Atmos	ATMS
+Atomic Coin	ATOM
+AudioCoin	ADC
+Augur	REP
+Auroracoin	AUR
+AurumCoin	AU
+Authorship	ATS
+Autonio	NIO
+AvatarCoin	AV
+Aventus	AVT
+Avoncoin	ACN
+Axiom	AXIOM
+B2B	B2B
+B3Coin	B3
+Bancor	BNT
+Bankcoin	B@
+Basic Attenti...	BAT
+Bastonet	BSN
+Bata	BTA
+BatCoin	BAT
+BCAP	BCAP
+Beatcoin	XBTS
+BeaverCoin	BVC
+Bela	BELA
+BenjiRolls	BENJI
+BERNcash	BERN
+BestChain	BEST
+BetaCoin	BET
+BiblePay	BBP
+Bibox Token	BIX
+BigUp	BIGUP
+BillaryCoin	BLRY
+Billionaire T...	XBL
+BinanceCoin	BNB
+BioBar	BIOB
+BiosCrypto	BIOS
+BipCoin	BIP
+Birds	BIRDS
+Bismuth	BIS
+Bit20	BTWTY
+Bitair	BTCA
+BitAlphaCoin	BAC
+BitAsean	BAS
+BitBar	BTB
+Bitbase	BTBc
+BitBay	BAY
+BitBean	BITB
+BitBoost	BBT
+bitBTC	BITBTC
+Bitcedi	BXC
+Bitcloud	BTDX
+bitCNY	BITCNY
+BitCoal	COAL
+Bitcoin 21	XBTC21
+Bitcoin Diamond	BCD
+Bitcoin Fast	BCF
+Bitcoin Planet	BTPL
+Bitcoin Plus	XBC
+Bitcoin Red	BTCRED
+Bitcoin Scrypt	BTCS
+Bitcoin Silver	BTCS
+Bitcoin Unlim...	BTU
+Bitcoin2x	BTC2X
+BitcoinDark	BTCD
+BitcoinX [Fut...	BCX
+BitcoinZ	BTCZ
+Bitcore	BTX
+Bitcrystals	BCY
+Bitcurrency	BTCR
+Bitdeal	BDL
+BitDice	CSNO
+bitEUR	BITEUR
+BITFID	FID
+Bitgem	BTG
+bitGold	BITGOLD
+bitJob	STU
+Bitmark	BTM
+Bitok	BITOK
+Bitpark Coin	BPC
+BitQuark	BTQ
+bitqy	BQ
+Bitradio	BRO
+BitSend	BSD
+BitSerial	BTE
+bitSilver	BITSILVER
+BitSoar	BSR
+Bitstar	BITS
+Bitswift	SWIFT
+BitTokens	BXT
+bitUSD	BITUSD
+Bitvolt	VOLT
+Bitz	BITZ
+Bitzeny	ZNY
+BlackCoin	BLK
+Blackmoon Crypto	BMC
+Blackstar	BSTAR
+Blakecoin	BLC
+BlakeStar	BLAS
+BlazeCoin	BLZ
+BlazerCoin	BLAZR
+Blitzcash	BLITZ
+BlockCAT	CAT
+BlockCDN	BCDN
+Blockchain Index	BLX
+BlockMason Cr...	BCPT
+Blocknet	BLOCK
+BlockPay	BLOCKPAY
+Blockpool	BPL
+Blocktix	TIX
+BLOCKv	VEE
+BLUE	BLUE
+BlueCoin	BLU
+BnrtxCoin	BNX
+BOAT	BOAT
+Bodhi	BOT
+Bolenum	BLN
+Bolivarcoin	BOLI
+Bongger	BGR
+Bonpay	BON
+Boolberry	BBR
+BoostCoin	BOST
+BOScoin	BOS
+Bounty0x	BNTY
+Bowhead	AHT
+BowsCoin	BSC
+Braincoin	BRAIN
+Bread	BRD
+Breakout	BRK
+Breakout Stake	BRX
+BriaCoin	BRIA
+BridgeCoin	BCO
+BritCoin	BRIT
+BROTHER	BRAT
+BT1 [CST]	BT1
+BT2 [CST]	BT2
+BTCMoon	BTCM
+BTCtalkcoin	TALK
+BTSR	BTSR
+Bubble	BUB
+Bulwark	BWK
+BumbaCoin	BUMBA
+BunnyCoin	BUN
+Burst	BURST
+BurstOcean	OCEAN
+BuzzCoin	BUZZ
+Byteball Bytes	GBYTE
+Bytecent	BYC
+Bytom	BTM
+Cabbage	CAB
+CacheCoin	CACH
+Californium	CF
+CaliphCoin	CALC
+CampusCoin	CMPCO
+Canada eCoin	CDN
+CannabisCoin	CANN
+CannaCoin	CCN
+Cannation	CNNC
+Cappasity	CAPP
+Capricoin	CPC
+Carboncoin	CARBON
+CarTaxi Token	CTX
+Cash Poker Pro	CASH
+Cashcoin	CASH
+Cashme	CME
+Casino	CASINO
+CasinoCoin	CSC
+Catcoin	CAT
+CBD Crystals	CBD
+C-Bit	XCT
+CCMiner	CCM100
+Ccore	CCO
+Centra	CTR
+Centurion	CNT
+ChainCoin	CHC
+ChainLink	LINK
+ChanCoin	4CHN
+Change	CAG
+Cheapcoin	CHEAP
+ChessCoin	CHESS
+CHIPS	CHIPS
+Chronobank	TIME
+Chronologic	DAY
+Chronos	CRX
+Cindicator	CND
+Circuits of V...	COVAL
+Clams	CLAM
+ClearPoll	POLL
+Clinton	CLINT
+CloakCoin	CLOAK
+ClubCoin	CLUB
+Cobinhood	COB
+CoExistCoin	COXST
+Cofound.it	CFI
+Coimatic 2.0	CTIC2
+Coimatic 3.0	CTIC3
+Coin(O)	CNO
+Coin2.1	C2
+CoinDash	CDT
+Coinonat	CXT
+CoinonatX	XCXT
+Colossuscoin V2	CV2
+ColossusCoinXT	COLX
+Comet	CMT
+Compcoin	CMP
+CompuCoin	CPN
+COMSA [ETH]	CMS
+COMSA [XEM]	CMS
+Concoin	CONX
+Condensate	RAIN
+Confido	CFD
+Copico	XCPO
+Corethum	CRTM
+CorgiCoin	CORG
+CORION	COR
+COSS	COSS
+Counterparty	XCP
+Coupecoin	COUPE
+Crave	CRAVE
+Cream	CRM
+Creatio	XCRE
+Creativecoin	CREA
+Credence Coin	CRDNC
+Creditbit	CRB
+Credo	CREDO
+CrevaCoin	CREVA
+CrowdCoin	CRC
+Crown	CRW
+CRTCoin	CRT
+CryptCoin	CRYPT
+Crypto	CTO
+Crypto Bullion	CBX
+CryptoCarbon	CCRB
+CryptoEscudo	CESC
+CryptoForecast	CFT
+CryptoInsight	TKR
+Cryptojacks	CJ
+Cryptonex	CNX
+Cryptonite	XCN
+Cryptopay	CPAY
+CryptoPing	PING
+CryptoWorldX ...	CWXT
+Crystal Clear	CCT
+Cthulhu Offer...	OFF
+Cubits	QBT
+Curecoin	CURE
+CVCoin	CVCOIN
+CybCSec	XCS
+CyberCoin	CC
+CyberMiles	CMT
+Cycling Coin	CYC
+Cyder	CYDER
+Cypher	CYP
+Dai	DAI
+Dalecoin	DALC
+DAO.Casino	BET
+DAPPSTER	DLISK
+Darcrus	DAR
+DarkLisk	DISK
+Darsek	KED
+Dashcoin	DSH
+Dashs	DASHS
+Databits	DTB
+Datum	DAT
+DavorCoin	DAV
+DaxxCoin	DAXX
+DCORP	DRP
+Debitcoin	DBTC
+DECENT	DCT
+DecentBet	DBET
+Decentraland	MANA
+Decision Token	HST
+DeepBrain Chain	DBC
+DeepOnion	ONION
+Delphy	DPY
+DeltaCredits	DCRE
+Denarius	DNR
+Dent	DENT
+Dentacoin	DCN
+Desire	DSR
+Destiny	DES
+DeusCoin	DEUS
+Deutsche eMark	DEM
+DEW	DEW
+DFSCoin	DFS
+Diamond	DMD
+DIBCOIN	DIBC
+DigiByte	DGB
+DigiCube	CUBE
+DigiPulse	DGPT
+Digital Bulli...	DBG
+Digital Credits	DGCS
+Digital Money...	DMB
+Digital Rupees	DRS
+Digitalcoin	DGC
+DigitalDevelo...	DDF
+DigitalNote	XDN
+DigitalPrice	DP
+DigixDAO	DGD
+DIMCOIN	DIM
+Dimecoin	DIME
+DimonCoin	FUDD
+Dinastycoin	DCY
+district0x	DNT
+Divi	DIVX
+Dix Asset	DIX
+DNotes	NOTE
+Dollar Online	DOLLAR
+Dollarcoin	DLC
+DomRaider	DRT
+Donationcoin	DON
+DopeCoin	DOPE
+Polkadot	DOT
+Dovu	DOVU
+DPAY	DPAY
+DraftCoin	DFT
+Dragonchain	DRGN
+Dreamcoin	DRM
+DROXNE	DRXNE
+DubaiCoin	DBIX
+Dubstep	DUB
+Dutch Coin	DUTCH
+Dynamic	DYN
+Dynamic Tradi...	DTR
+DynamicCoin	DMC
+E4ROW	E4ROW
+EA Coin	EAG
+EagleCoin	EAGLE
+eBIT	EBIT
+eBitcoin	EBTC
+eBitcoinCash	EBCH
+Ebittree Coin	EBT
+eBoost	EBST
+ECC	ECC
+Ecobit	ECOB
+EcoCoin	ECO
+E-coin	ECN
+Edgeless	EDG
+E-Dinar Coin	EDR
+EDRCoin	EDRC
+EggCoin	EGG
+EGO	EGO
+eGold	EGOLD
+e-Gulden	EFL
+Eidoo	EDO
+Einsteinium	EMC2
+Elacoin	ELC
+Elastic	XEL
+Elcoin	EL
+Electra	ECA
+Electroneum	ETN
+Elementrem	ELE
+Elixir	ELIX
+Ellaism	ELLA
+eLTC	ELTC2
+ELTCOIN	ELTCOIN
+Elysium	ELS
+EmberCoin	EMB
+Embers	MBRS
+Emerald Crypto	EMD
+Emercoin	EMC
+Emphy	EPY
+EncrypGen	DNA
+EncryptoTel [...	ETT
+EncryptoTel [...	ETT
+Energo	TSL
+Energycoin	ENRG
+Enigma	ENG
+Enigma	XNG
+Enjin Coin	ENJ
+EOT Token	EOT
+EquiTrader	EQT
+ERC20	ERC20
+eREAL	EREAL
+Ergo	EFYT
+Eroscoin	ERO
+Eryllium	ERY
+Espers	ESP
+Eternity	ENT
+EthBet	EBET
+Ethbits	ETBS
+Ethereum Cash	ECASH
+Ethereum Dark	ETHD
+Ethereum Gold	ETG
+Ethereum Lite	ELITE
+Ethereum Movi...	EMV
+Etheriya	RIYA
+Etheroll	DICE
+Etherparty	FUEL
+ETHGAS	EGAS
+ETHLend	LEND
+Ethos	ETHOS
+Eurocoin	EUC
+EuropeCoin	ERC
+eUSD	EUSD
+EventChain	EVC
+Everex	EVX
+EverGreenCoin	EGC
+Everus	EVR
+Evil Coin	EVIL
+Evotion	EVO
+Exchange Union	XUC
+ExchangeN	EXN
+ExclusiveCoin	EXCL
+Expanse	EXP
+Experience Po...	XP
+EXRNchain	EXRN
+Faceblock	FBL
+Facecoin	FC
+Factom	FCT
+FairCoin	FAIR
+Fantomcoin	FCN
+FAPcoin	FAP
+Farad	FRD
+Fargocoin	FRGC
+Farstcoin	FRCT
+Fastcoin	FST
+Fazzcoin	FAZZ
+Feathercoin	FTC
+FedoraCoin	TIPS
+Filecoin [Fut...	FIL
+FIMKrypto	FIMK
+FinCoin	FNC
+Firecoin	FIRE
+FireFlyCoin	FFC
+First Bitcoin	BIT
+First Bitcoin...	BITCF
+FirstBlood	1ST
+FirstCoin	FRST
+FlappyCoin	FLAP
+Flash	FLASH
+FlavorCoin	FLVR
+Flaxscript	FLAX
+FLiK	FLIK
+Flixxo	FLIXX
+FlorinCoin	FLO
+FlutterCoin	FLT
+Flycoin	FLY
+FlypMe	FYP
+FoldingCoin	FLDC
+Fonziecoin	FONZ
+Footy Cash	XFT
+FORCE	FOR
+Francs	FRN
+Franko	FRK
+FrankyWillCoin	FRWC
+Frazcoin	FRAZ
+Freicoin	FRC
+FuckToken	FUCK
+FuelCoin	FC2
+FujiCoin	FJC
+Fujinto	NTO
+FUNCoin	FUNC
+FundYourselfNow	FYN
+FutCoin	FUTC
+FuturXe	FXE
+FuzzBalls	FUZZ
+G3N	G3N
+GAIA	GAIA
+Gambit	GAM
+GameBet Coin	GBT
+GameCredits	GAME
+GameLeagueCoin	GML
+GameUnits	UNITS
+GanjaCoin	MRJA
+Gapcoin	GAP
+Gas	GAS
+GAY Money	GAY
+GBCGoldCoin	GBC
+GCoin	GCN
+GeertCoin	GEERT
+Genaro Network	GNX
+Genesis Vision	GVT
+GeoCoin	GEO
+GeyserCoin	GSR
+Gifto	GTO
+Giga Watt Token	WTT
+Gimli	GIM
+GlassCoin	GLS
+Global Busine...	GBRC
+Global Curren...	GCR
+Global Tour Coin	GTC
+GlobalBoost-Y	BSTY
+GlobalCoin	GLC
+GlobalToken	GLT
+Gnosis	GNO
+GoByte	GBX
+Gold Pressed ...	GPL
+GOLD Reward T...	GRX
+GoldBlocks	GB
+GoldCoin	GLD
+GoldMaxCoin	GMX
+GoldPieces	GP
+GoldReserve	XGR
+GoldUnionCoin	GUC
+Golfcoin	GOLF
+Golos	GOLOS
+Golos Gold	GBG
+Goodomy	GOOD
+GPU Coin	GPU
+Granite	GRN
+Grantcoin	GRT
+Greencoin	GRE
+Grid+	GRID
+GridCoin	GRC
+Grimcoin	GRIM
+Groestlcoin	GRS
+Growers Inter...	GRWI
+GuccioneCoin	GCC
+Gulden	NLG
+Guncoin	GUN
+GXShares	GXS
+Halcyon	HAL
+Halloween Coin	HALLO
+Happy Creator...	HCC
+Happycoin	HPC
+HarmonyCoin	HMC
+Hawala.Today	HAT
+HealthyWormCoin	WORM
+HEAT	HEAT
+Hedge	HDG
+Helleniccoin	HNC
+HelloGold	HGT
+HempCoin	THC
+HempCoin	HMP
+Hexx	HXX
+HiCoin	XHI
+High Gain	HIGH
+High Voltage	HVCO
+HitCoin	HTC
+Hive	HVN
+HoboNickels	HBN
+HODL Bucks	HDLB
+HOdlcoin	HODL
+HollyWoodCoin	HWC
+HomeBlockCoin	HBC
+Honey	HONEY
+Hshare	HSR
+HTML5COIN	HTML5
+HTMLCOIN	HTML
+Hubii Network	HBT
+Humaniq	HMQ
+Huncoin	HNC
+HunterCoin	HUC
+Hush	HUSH
+Hyper	HYPER
+Hyper TV	HYTV
+HyperStake	HYP
+I/O Coin	IOC
+I0Coin	I0C
+iBank	IBANK
+iBTC	IBTC
+ICO OpenLedger	ICOO
+ICOBID	ICOB
+iCoin	ICN
+ICON	ICX
+ICON [Futures]	ICX
+Iconic	ICON
+Iconomi	ICN
+ICOS	ICOS
+iDice	ICE
+iEthereum	IETH
+iExec RLC	RLC
+Ignis [Futures]	IGNIS
+Impact	IMX
+ImpulseCoin	IMPS
+IncaKoin	NKA
+Incent	INCNT
+Independent M...	IMS
+India Coin	INDIA
+Indorse Token	IND
+InfChain	INF
+Infinitecoin	IFC
+Infinity Econ...	XIN
+Infinity Pay	IPY
+InflationCoin	IFLT
+Influxcoin	INFX
+Ink	INK
+Innova	INN
+InPay	INPAY
+InsaneCoin	INSN
+Intelligent T...	ITT
+IntenseCoin	ITNS
+International...	XID
+Internet of P...	IOP
+Internet of T...	XOT
+Internxt	INXT
+Interstellar ...	HOLD
+Interzone	ITZ
+InvestFeed	IFT
+InvisibleCoin	IVZ
+ION	ION
+IoT Chain	ITC
+iQuant	IQT
+IrishCoin	IRL
+IslaCoin	ISL
+iTicoin	ITI
+Ixcoin	IXC
+iXledger	IXT
+Janus	JNS
+JavaScript Token	JS
+Jetcoin	JET
+Jewels	JWL
+Jin Coin	JIN
+Jinn	JINN
+JobsCoin	JOBS
+Joincoin	J
+Joulecoin	XJO
+Karbo	KRB
+Karmacoin	KARMA
+KashhCoin	KASHH
+Kayicoin	KAYI
+KekCoin	KEK
+KickCoin	KICK
+KiloCoin	KLC
+Kin	KIN
+KingN Coin	KNC
+Kittehcoin	MEOW
+Kobocoin	KOBO
+Kolion	KLN
+Komodo	KMD
+Kore	KORE
+Kronecoin	KRONE
+Kubera Coin	KBR
+KuCoin Shares	KCS
+Kurrent	KURT
+KushCoin	KUSH
+Kyber Network	KNC
+Lampix	PIX
+LanaCoin	LANA
+LandCoin	LDCN
+LAthaan	LTH
+LAToken	LA
+Lazaruscoin	LAZ
+LBRY Credits	LBC
+LeaCoin	LEA
+Legends Room	LGD
+LEOcoin	LEO
+LePen	LEPEN
+LetItRide	LIR
+LeviarCoin	XLC
+LevoPlus	LVPS
+Lex4All	LEX
+LIFE	LIFE
+Linda	LINDA
+Link Platform	LNK
+LinkedCoin	LKC
+Linx	LINX
+LiteBar	LTB
+LiteBitcoin	LBTC
+LiteCoin Gold	LTG
+Litecoin Plus	LCP
+LiteCoin Ultra	LTCU
+Litecred	LTCR
+LiteDoge	LDOGE
+LLToken	LLT
+LockChain	LOC
+LoMoCoin	LMC
+Loopring	LRC
+LottoCoin	LOT
+Terra	LUNA
+Lunyr	LUN
+LUXCoin	LUX
+Lykke	LKK
+Machinecoin	MAC
+Macro	MCR
+MACRON	MCRN
+Maecenas	ART
+Magi	XMG
+MagicCoin	MAGE
+Magnet	MAG
+Magnetcoin	MAGN
+Magnum	MGM
+MaidSafeCoin	MAID
+Maker	MKR
+Mao Zedong	MAO
+Marijuanacoin	MAR
+Marscoin	MARS
+MarteXcoin	MXT
+MarxCoin	MARX
+Master Swiscoin	MSCN
+Masternodecoin	MTNC
+Matchpool	GUP
+Mavro	MAVRO
+MaxCoin	MAX
+MazaCoin	MZC
+MCAP	MCAP
+Medibloc	MED
+MediShares	MDS
+Megacoin	MEC
+Melon	MLN
+Memetic / Pep...	MEME
+Mercury	MER
+Mercury Protocol	GMT
+MergeCoin	MGC
+Metal	MTL
+Metal Music Coin	MTLMC3
+MetalCoin	METAL
+Metaverse ETP	ETP
+MicroMoney	AMM
+MiloCoin	MILO
+Mincoin	MNC
+MindCoin	MND
+Minereum	MNE
+Miners' Rewar...	MRT
+Mineum	MNM
+Minex	MINEX
+MinexCoin	MNX
+Mintcoin	MINT
+MMXVI	MMXVI
+MobileCash	MBL
+MobileGo	MGO
+Modum	MOD
+Moeda Loyalty...	MDA
+Moin	MOIN
+MojoCoin	MOJO
+Monaco	MCO
+MonaCoin	MONA
+Moneta	MONETA
+MonetaryUnit	MUE
+Monetha	MTH
+Money	$$$
+MoneyCoin	MONEY
+Monkey Project	MONK
+Monoeci	XMCC
+Monster Byte	MBI
+Mooncoin	MOON
+MorningStar	MRNG
+Mothership	MSP
+Motocoin	MOTO
+MSD	MSD
+MTMGaming	MTM
+Musicoin	MUSIC
+Musiconomi	MCI
+MustangCoin	MST
+Mutual Coin	MUT
+MyBit Token	MYB
+Myriad	XMY
+Mysterium	MYST
+MyWish	WISH
+NAGA	NGC
+Namecoin	NMC
+NamoCoin	NAMO
+Natcoin	NTC
+NAV Coin	NAV
+Neblio	NEBL
+Nebulas	NAS
+Nekonium	NUKO
+NEO GOLD	NEOG
+NeosCoin	NEOS
+netBit	NBIT
+NetCoin	NET
+Netko	NETKO
+Network Token	NTWK
+Neumark	NEU
+Neuro	NRO
+Neutron	NTRN
+NevaCoin	NEVA
+NEVERDIE	NDC
+Newbium	NEWB
+NewYorkCoin	NYC
+Nexium	NXC
+Nexus	NXS
+Nimiq	NET
+NobleCoin	NOBL
+NodeCoin	NODC
+NoLimitCoin	NLC2
+Novacoin	NVC
+NuBits	USNBT
+Nuls	NULS
+Numeraire	NMR
+NuShares	NSR
+NVO	NVST
+Nxt	NXT
+Nyancoin	NYAN
+OAX	OAX
+OBITS	OBITS
+Obsidian	ODN
+Oceanlab	OCL
+OCOW	OCOW
+Octanox	OTX
+OctoCoin	888
+OKCash	OK
+Omicron	OMC
+Omni	OMNI
+onG.social	ONG
+Onix	ONX
+Opal	OPAL
+Open Trading ...	OTN
+Operand	OP
+Opescoin	OPES
+Opus	OPT
+OracleChain	OCT
+Orbitcoin	ORB
+Orlycoin	ORLY
+Ormeus Coin	ORME
+OsmiumCoin	OS76
+OX Fina	OX
+Oxycoin	OXY
+Oyster Pearl	PRL
+P7Coin	P7C
+Pabyosi Coin ...	PCS
+Paccoin	PAC
+Pakcoin	PAK
+Pandacoin	PND
+Paragon	PRG
+ParallelCoin	DUO
+ParkByte	PKB
+Particl	PART
+Pascal Coin	PASC
+Pascal Lite	PASL
+Patientory	PTOY
+PayCoin	XPY
+PayCon	CON
+Payfair	PFR
+PayPeer	PAYP
+Paypex	PAYX
+PayPie	PPP
+Peacecoin	PEC
+PeepCoin	PCN
+Peercoin	PPC
+Peerplays	PPY
+PeopleCoin	MEN
+Pepe Cash	PEPECASH
+Pesetacoin	PTC
+PetroDollar	XPD
+Phantomx	PNX
+Philosopher S...	PHS
+Phoenixcoin	PXC
+Phore	PHR
+Photon	PHO
+PIECoin	PIE
+Piggycoin	PIGGY
+Pillar	PLR
+PinkCoin	PINK
+PinkDog	PDG
+Pioneer Coin	PCOIN
+PiplCoin	PIPL
+Pirate Blocks	SKULL
+Pirl	PIRL
+PizzaCoin	PIZZA
+PlatinumBAR	XPTX
+PlayerCoin	PLACO
+Playkey	PKT
+PlexCoin	PLX
+PLNcoin	PLNC
+PlusCoin	PLC
+Pluton	PLU
+Po.et	POE
+PokeCoin	POKE
+POLY AI	AI
+Polybius	PLBT
+PonziCoin	PONZI
+PopularCoin	POP
+Populous	PPT
+PosEx	PEX
+PostCoin	POST
+PoSToken	POS
+PoSW Coin	POSW
+PotCoin	POT
+PRCoin	PRC
+Presearch	PRE
+President Joh...	GARY
+President Trump	PRES
+Primalbase Token	PBT
+Primas	PST
+Primecoin	XPM
+Prime-XI	PXI
+Primulon	PRIMU
+Printerium	PRX
+PrismChain	PRM
+Privatix	PRIX
+PRIZM	PZM
+ProChain	PRO
+ProCurrency	PROC
+Project Decorum	PDC
+Project-X	NANOX
+Propy	PRO
+Prospectors Gold	PGL
+Protean	PRN
+Prototanium	PR
+Psilocybin	PSY
+Publica	PBL
+Pulse	PULSE
+Pura	PURA
+Pure	PURE
+PureVidz	VIDZ
+PutinCoin	PUT
+PX	PX
+QASH	QASH
+Qbao	QBT
+QCash	QC
+Qibuck Asset	QBK
+QLINK	QLC
+Qora	QORA
+Quantstamp	QSP
+Quantum	QAU
+Quantum Resis...	QRL
+Quark	QRK
+Quatloo	QTL
+QuazarCoin	QCN
+QubitCoin	Q2C
+Quebecoin	QBC
+Quotient	XQN
+Qvolta	QVT
+Qwark	QWARK
+RabbitCoin	RBBT
+Radium	RADS
+Raiden Networ...	RDN
+Rasputin Onli...	ROC
+Ratecoin	XRA
+Rawcoin	XRC
+RChain	RHOC
+Rcoin	RCN
+REAL	REAL
+Red Pulse	RPX
+RedCoin	RED
+ReddCoin	RDD
+ReeCoin	REE
+Regacoin	REGA
+Regalcoin	REC
+Remicoin	RMC
+Renos	RNS
+Request Network	REQ
+Revain	R
+RevolverCoin	XRE
+REX	REX
+RHFCoin	RHFC
+Rialto	XRL
+RichCoin	RICHX
+Ride My Car	RIDE
+Riecoin	RIC
+Rimbit	RBT
+Ripio Credit ...	RCN
+Ripto Bux	RBX
+Rise	RISE
+Rivetz	RVT
+RonPaulCoin	RPC
+Roofs	ROOFS
+RouletteToken	RLT
+Royal Kingdom...	RKC
+RoyalCoin	ROYAL
+Royalties	XRY
+RSGPcoin	RSGP
+Rubies	RBIES
+RubleBit	RUBIT
+Rubycoin	RBY
+Runners	RUNNERS
+Rupaya	RUPX
+Rupaya [OLD]	RUPX
+Rupee	RUP
+RussiaCoin	RC
+Russian Miner...	RMC
+Rustbits	RUSTBITS
+SACoin	SAC
+Safe Trade Coin	XSTC
+SafeCoin	SFE
+SagaCoin	SAGA
+Sakuracoin	SKR
+SaluS	SLS
+Sand Coin	SND
+Santa Coin	STC
+Santiment Net...	SAN
+Sativacoin	STV
+SatoshiMadness	MAD
+Save and Gain	SANDG
+Scorecoin	SCORE
+SecretCoin	SCRT
+SecureCoin	SRC
+SegWit2x [Fut...	B2X
+Selfiecoin	SLFI
+Senderon	SDRN
+Sequence	SEQ
+Sexcoin	SXC
+SHACoin	SHA
+Shadow Token	SHDW
+ShadowCash	SDC
+Sharechain	SSS
+Sharkcoin	SAK
+ShellCoin	SHELL
+SHIELD	XSH
+Shift	SHIFT
+Shilling	SH
+Shorty	SHORTY
+SIBCoin	SIB
+SIGMAcoin	SIGMA
+Signatum	SIGT
+Simple Token	OST
+SingularDTV	SNGLS
+SIRIN LABS Token	SRN
+SISA	SISA
+SixEleven	611
+Skeincoin	SKC
+SkinCoin	SKIN
+Skycoin	SKY
+Slevin	SLEVIN
+Sling	SLING
+Smart Investm...	SIFT
+SmartBillions	SMART
+SmartCash	SMART
+SmartCoin	SMC
+SmartMesh	SMT
+SmileyCoin	SMLY
+SnakeEyes	SNAKE
+Snovio	SNOV
+Soarcoin	SOAR
+Social	SCL
+Social Send	SEND
+SocialCoin	SOCC
+SOILcoin	SOIL
+Sojourn	SOJ
+Solana	SOL
+Solarflarecoin	SFC
+Solaris	XLR
+Soma	SCT
+SongCoin	SONG
+SONM	SNM
+SoonCoin	SOON
+SophiaTX	SPHTX
+Sovereign Hero	HERO
+SpaceCoin	SPACE
+SpankChain	SPANK
+Spectrecoin	XSPEC
+Speedcash	SCS
+Sphere	SPHR
+Sphre AIR	XID
+SportsCoin	SPORT
+SportyFi	SPF
+Spots	SPT
+SpreadCoin	SPR
+Sprouts	SPRTS
+SproutsExtreme	SPEX
+Starbase	STAR
+StarCash Network	STARS
+StarCredits	STRC
+Starta	STA
+Startcoin	START
+Status	SNT
+Stealthcoin	XST
+Steem Dollars	SBD
+Steps	STEPS
+Sterlingcoin	SLG
+STEX	STEX
+Storj	STORJ
+Storjcoin X	SJCX
+Storm	STORM
+Stox	STX
+Streamr DATAcoin	DATA
+Stress	STS
+StrikeBitClub	SBC
+StrongHands	SHND
+Substratum	SUB
+Sugar Exchange	SGR
+Sumokoin	SUMO
+SunContract	SNC
+Super Bitcoin	SBTC
+SuperCoin	SUPER
+SuperNET	UNITY
+Suretly	SUR
+SwagBucks	BUCKS
+Swapcoin	SWP
+SwapToken	TOKEN
+Swarm City	SWT
+Swing	SWING
+SydPak	SDP
+Syndicate	SYNX
+Synereo	AMP
+Synergy	SNRG
+Syscoin	SYS
+TaaS	TAAS
+TagCoin	TAG
+TAGRcoin	TAGR
+TajCoin	TAJ
+Tao	XTO
+Target Coin	TGT
+Tattoocoin (L...	TLE
+Tattoocoin (S...	TSE
+T-coin	TCOIN
+TeamUp	TEAM
+TechShares	THS
+TEKcoin	TEK
+Tellurion	TELL
+TenX	PAY
+TeraCoin	TERA
+Terracoin	TRC
+TerraNova	TER
+TeslaCoilCoin	TESLA
+TeslaCoin	TES
+Tezos (Pre-La...	XTZ
+The ChampCoin	TCC
+The Cypherfunks	FUNK
+The Vegan Ini...	XVE
+TheCreed	TCR
+TheGCCcoin	GCC
+Theresa May Coin	MAY
+Tierion	TNT
+TIES Network	TIE
+Tigercoin	TGC
+Time New Bank	TNB
+Titcoin	TIT
+TittieCoin	TTC
+ToaCoin	TOA
+TodayCoin	TODAY
+TokenCard	TKN
+Tokes	TKS
+Tokugawa	TOK
+Topaz Coin	TOPAZ
+TopCoin	TOP
+Torcoin	TOR
+Tracto	TRCT
+TransferCoin	TX
+TrezarCoin	TZC
+Triaconta	TRIA
+Triangles	TRI
+TrickyCoin	TRICK
+Trident Group	TRDT
+Triggers	TRIG
+Tristar Coin	TSTR
+Trollcoin	TROLL
+TRON	TRX
+Truckcoin	TRK
+TrueFlip	TFL
+TrumpCoin	TRUMP
+TrustPlus	TRUST
+TurboCoin	TURBO
+Tychocoin	TYCHO
+UAHPay	UAHPAY
+Ubiq	UBQ
+UFO Coin	UFO
+UG Token	UGT
+UGAIN	GAIN
+Ulatech	ULA
+Ultimate Secu...	USC
+UltraCoin	UTC
+UnbreakableCoin	UNB
+UNCoin	UNC
+UniCoin	UNIC
+Unify	UNIFY
+Unikoin Gold	UKG
+United Bitcoin	UBTC
+Unitus	UIS
+Unity Ingot	UNY
+Universe	UNI
+Unobtanium	UNO
+Unrealcoin	URC
+Upfiring	UFR
+Uquid Coin	UQC
+UR	UR
+Uro	URO
+USDe	USDE
+UtaCoin	UTA
+UTRUST	UTK
+Valorbit	VAL
+VapersCoin	VPRC
+Vault Coin	VLTC
+Vcash	XVC
+VeChain	VEN
+VectorAI	VEC2
+Veltor	VLT
+VeriCoin	VRC
+Verify	CRED
+Veritaseum	VERI
+VeriumReserve	VRM
+Veros	VRS
+Version	V
+Viacoin	VIA
+VIBE	VIBE
+Viberate	VIB
+VIP Tokens	VIP
+Virta Unique ...	VUC
+Virtacoin	VTA
+Virtacoinplus	XVP
+VirtualCoin	VC
+Visio	VISIO
+Viuly	VIU
+VIVO	VIVO
+Voise	VOISE
+VoteCoin	VOT
+Voxels	VOX
+Voyacoin	VOYA
+VPNCoin	VASH
+vSlice	VSL
+Vsync	VSX
+vTorrent	VTR
+Vulcano	VULC
+WA Space	WA
+WaBi	WABI
+Wagerr	WGR
+Walton	WTC
+WandX	WAND
+WARP	WARP
+Waves Communi...	WCT
+WavesGo	WGO
+WAX	WAX
+WayGuide	WAY
+WeAreSatoshi	WSX
+WeTrust	TRST
+WhaleCoin	WHL
+WhiteCoin	XWC
+Wi Coin	WIC
+Wild Beast Block	WBB
+Wild Crypto	WILD
+WINCOIN	WC
+Wings	WINGS
+Wink	WINK
+WMCoin	WMC
+WomenCoin	WOMEN
+Woodcoin	LOG
+WorldCoin	WDC
+Worldcore	WRC
+Wowcoin	WOW
+Wyvern	WYV
+X2	X2
+Xaucoin	XAU
+Xaurum	XAUR
+X-Coin	XCO
+XDE II	XDE2
+Xenon	XNN
+XGOX	XGOX
+Xios	XIOS
+Xonecoin	XOC
+XPlay	XPA
+XTD Coin	XTD
+XTRABYTES	XBY
+XYLO	XYLO
+Yacoin	YAC
+YashCoin	YASH
+Yellow Token	YEL
+YENTEN	YTN
+Yescoin	YES
+Yocoin	YOC
+YOYOW	YOYOW
+Zayedcoin	ZYD
+ZCash Gold	ZCG
+ZClassic	ZCL
+ZCoin	XZC
+Zeitcoin	ZEIT
+ZenCash	ZEN
+ZenGold	ZENGOLD
+Zennies	ZENI
+Zephyr	ZEPH
+Zero	ZER
+Zetacoin	ZET
+ZetaMicron	ZMC
+Zeusshield	ZSC
+Zilbercoin	ZBC
+Zoin	ZOI
+Zonecoin	ZNE
+ZoZoCoin	ZZC
+ZrCoin	ZRC
+ZSEcoin	ZSE
+Zurcoin	ZUR

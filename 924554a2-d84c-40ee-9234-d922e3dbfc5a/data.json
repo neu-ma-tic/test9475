@@ -1,0 +1,83 @@
+{
+    "Bot Name": "Linkvertise Bypasser",
+    "Date Created": "February 16, 2021",
+    "Author": "Jonathan Lin",
+    "users": [
+        {
+            "id": 478209410125135881,
+            "username": "GlassTea#6901",
+            "last_used": 1613605053,
+            "total_uses": 5
+        }
+    ],
+    "messages": [
+        {
+            "message_id": 812918879483068437,
+            "channel_id": 812375257653837826,
+            "channel_name": "private_bot_testing",
+            "author_id": 676271642485325866,
+            "author_username": "Glassy#9966",
+            "unix_epoch_time": 1613885365.6581888,
+            "year": 2021,
+            "month": 2,
+            "day": 20,
+            "hour": 23,
+            "minute": 29,
+            "seconds": 25,
+            "command": "bypass",
+            "content": ".bypass https://direct-link.net/215389/vader",
+            "time_elapsed": 0.9262762069702148
+        },
+        {
+            "message_id": 813899515319943198,
+            "channel_id": 813841861462589462,
+            "channel_name": "delete",
+            "author_id": 443851733500952586,
+            "author_username": "SkippyTurtle#0001",
+            "unix_epoch_time": 1614115565.974,
+            "year": 2021,
+            "month": 2,
+            "day": 23,
+            "hour": 22,
+            "minute": 26,
+            "second": 5,
+            "command": "bypass",
+            "content": ".bypass https://file-link.net/216265/Billing",
+            "time_elapsed": 27.691303968429565
+        },
+        {
+            "message_id": 813904875511480330,
+            "channel_id": 813841766675513386,
+            "channel_name": "download",
+            "author_id": 443851733500952586,
+            "author_username": "SkippyTurtle#0001",
+            "unix_epoch_time": 1614116843.943,
+            "year": 2021,
+            "month": 2,
+            "day": 23,
+            "hour": 22,
+            "minute": 47,
+            "second": 23,
+            "command": "bypass",
+            "content": ".bypass https://linkvertise.com/176110/cyndmatfev?o=sharing",
+            "time_elapsed": 28.709542274475098
+        },
+        {
+            "message_id": 813905073247092736,
+            "channel_id": 813841766675513386,
+            "channel_name": "download",
+            "author_id": 443851733500952586,
+            "author_username": "SkippyTurtle#0001",
+            "unix_epoch_time": 1614116891.087,
+            "year": 2021,
+            "month": 2,
+            "day": 23,
+            "hour": 22,
+            "minute": 48,
+            "second": 11,
+            "command": "bypass",
+            "content": ".bypass .bypass https://linkvertise.com/176110/cyndmatfev",
+            "time_elapsed": 27.369789838790894
+        }
+    ]
+}

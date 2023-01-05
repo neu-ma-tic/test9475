@@ -1,0 +1,65 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="s4d_login" id=")O7+PL3eS1Br}h;?X9N$" x="288" y="163">
+    <value name="TOKEN">
+      <block type="text" id="a7JxIIyK[Yr~TPL^-{W:">
+        <field name="TEXT">ODQ2MDQ2NTQ1MzYzMzM3MjE2.YKp0Pw.UcxSylzlp0smSnXys_x_LiZGxS4</field>
+      </block>
+    </value>
+  </block>
+  <block type="s4d_on_message" id="Qx+aIDM=_,mj^tl$vGmW" x="288" y="238">
+    <statement name="STATEMENTS">
+      <block type="controls_if" id="Cr$f.P2*Nq2Dl}?D!r`(">
+        <value name="IF0">
+          <block type="logic_compare" id="oq-Tf{oSnv,],{N*FSF|">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="s4d_message_content" id="pyFMNvR6J#o6Ky/UA~]f"></block>
+            </value>
+            <value name="B">
+              <block type="text" id=";[??XKp36YJf2U}j2_}e">
+                <field name="TEXT">!serverip</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="s4d_reply" id="wgo^7yFoMz,K{AaMl6L)">
+            <value name="CONTENT">
+              <block type="text" id="N-4C!JnJCe,s$75i%8Ce">
+                <field name="TEXT">Server IP: sayeebz_craft.apexmc.co</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_message" id="G4J-Rl_lqNY-Cww]mZ8t" x="289" y="465">
+    <statement name="STATEMENTS">
+      <block type="controls_if" id="s^FWpxjxB0[li`k(z,4b">
+        <value name="IF0">
+          <block type="logic_compare" id="S-5Jl=X+(lG5}=DW95q$">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="s4d_message_content" id="#VY$)C^{H5yJb-|0.bI["></block>
+            </value>
+            <value name="B">
+              <block type="text" id="i[_vSqw?.%TY.go4dTm}">
+                <field name="TEXT">!serverstatus</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="s4d_reply" id="{~zi+[kxv;I4LQO`/-z[">
+            <value name="CONTENT">
+              <block type="text" id="At5tI`P!2pb@,2Y]!hL}">
+                <field name="TEXT">Server is online!!!</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
