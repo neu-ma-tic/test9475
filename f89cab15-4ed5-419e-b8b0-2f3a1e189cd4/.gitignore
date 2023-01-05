@@ -1,0 +1,17 @@
+aiohttp
+async_timeout
+attr
+discord
+idna
+multidict
+websockets
+yarl
+setting.json
+poetry.lock
+pyproject.toml
+__pycache__/
+subscribeData.json
+discord.log
+main.sh
+.vscode
+.env

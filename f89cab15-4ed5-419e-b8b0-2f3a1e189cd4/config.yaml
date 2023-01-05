@@ -1,0 +1,117 @@
+command_map:
+    command: 841346767962374144
+    extension: 840581727156174918
+    manage: 832153466515357708
+    subscribe: 832219176449605713
+    url: 840515980954042398
+config:
+    bot_id: 719120395571298336
+    bot_owner: 384233645621248011
+    channel:
+        command_log: 747054636778913853
+        error_log: 812628283631206431
+    folders:
+        - cmds
+        - events
+        - games
+    managers:
+        - 384233645621248011
+        - 546614210243854337
+    servers:
+        - 719132687897591808
+        - 669934356172636199
+    user_id:
+        - 384233645621248011
+        - 546614210243854337
+        - 590430031281651722
+emojis:
+    cancel: ❎
+    check: ✅
+event:
+    emm:
+        https://i.imgur.com/O2KEANT.png: 1
+        https://i.imgur.com/R03kmWs.gifv: 4
+        https://i.imgur.com/pBtSQY2.png: 5
+        https://i.imgur.com/qnG94J9.gifv: 3
+        https://i.imgur.com/rMfjBLQ.gifv: 4
+    it's_not:
+        https://i.imgur.com/LSg9JN5.jpg: 1
+        https://i.imgur.com/cWOYOCA.jpg: 1
+        https://i.imgur.com/wPlIu0B.jpg: 1
+    mention:
+        作者很懶，沒留下任何回覆。: 1
+        吼嗚?: 5
+        嘎嘎嘎: 5
+    monkey:
+        https://i.imgur.com/0AKZQEe.jpg: 2
+        哪來的猴子: 2
+    pie:
+        http://imgur.com/a/RTPG1JW.jpg: 1
+        https://i.imgur.com/VExHu1r.png: 1
+        https://i.imgur.com/T5Ozdfo.jpg: 1
+    pray:
+        <:021:685800580958126081>: 3
+        <:02:839488926296440863>: 3
+        <:034:835896289970880552>: 3
+        <:3_:839186971678867507>: 3
+        <a:GIF009:752531101276176425>: 1
+    programming:
+        https://i.imgur.com/H3PvVSN.jpg: 1
+        https://i.imgur.com/JZWGnFU.jpg: 1
+        https://i.imgur.com/V7RwtXP.jpg: 1
+        https://i.imgur.com/tzn1gLp.jpg: 1
+        https://i.imgur.com/v0IvaxD.jpg: 1
+        https://i.imgur.com/wXakvWk.jpg: 1
+    rrr:
+        https://i.imgur.com/4qsOH6l.gifv: 1
+        https://i.imgur.com/OZVk4wD.gifv: 1
+        https://i.imgur.com/edFVqHE.jpg: 1
+        https://i.imgur.com/Mw8jElz.gifv: 1
+        https://i.imgur.com/chtct3G.png: 1
+    what:
+        https://i.imgur.com/I33cPpW.jpg: 1
+        https://i.imgur.com/WP3KUHc.png: 1
+        https://i.imgur.com/Wt9X5M2.jpg: 1
+        https://i.imgur.com/spa6UWQ.gifv: 1
+        https://i.imgur.com/Vu7DFXH.jpg: 1
+        https://i.imgur.com/wMEwGzA.png: 1
+        https://i.imgur.com/dIws8Cc.jpg: 1
+    yeah:
+        http://imgur.com/a/wEQQkDE.jpg: 1
+    again:
+        https://i.imgur.com/7CeFJd0.png: 3
+        https://i.imgur.com/G78IPHU.jpg: 3
+        https://i.imgur.com/KEoOuAH.jpg: 1
+        https://i.imgur.com/iZSkCGu.png: 3
+        https://i.imgur.com/lJ83i7O.png: 3
+        https://i.imgur.com/is08tlY.png: 3
+        https://i.imgur.com/AYe8NRF.png: 3
+        https://i.imgur.com/P0taieW.png: 3
+        https://i.imgur.com/I73hhCf.png: 3
+        https://i.imgur.com/eZyDUCU.png: 1
+        https://i.imgur.com/TvWq4Gs.png: 1
+        https://i.imgur.com/aXTLt0Y.png: 1
+        https://i.imgur.com/U3Q0AMg.png: 1
+    hello:
+        o/: 1
+        https://i.imgur.com/eAe8UXH.png: 1
+game:
+    an-jia:
+        bzz:
+            - <:bzz04:811230937273729065>
+            - <:bzz03:811230936934907936>
+            - <:bzz02:811230937224183818>
+            - <:bzz01:811230937000968204>
+        coin:
+            - <:coin02:811230937274122250>
+            - <:coin01:811230937106481173>
+subscribe:
+    error_log: 812628283631206431
+    exclude_channel:
+        - 675956755112394753
+    log_channel: 740196718477312061
+    overview_channel: 675956755112394753
+    overview_msg: 807883465755197472
+    valid_category:
+        - 719132688392519720
+        - 696655511197712414
