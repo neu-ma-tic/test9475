@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AgentX</title>
+        <script src="https://cdn.jsdelivr.net/gh/dusterthefirst/Login-With-Discord@1.5.0/dist/lwd.js"></script>
+        
+        <style>
+        a{color: white;}
+    html,body{text-align:center;width:100%;height:100%;margin:0;font-family:Whitney, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;background:#202225;color:#FFF;overflow:hidden}
+    #login{background-color:#7289DA;border:none;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);border-radius:3px;cursor:pointer;font-size:15px;padding:15px 25px;font-weight:bold;text-transform:uppercase;color:#FFF !important}
+    #loaded{height:100%;width:100%;display:grid;grid-template-columns:580px auto;grid-template-rows:200px 70px auto;grid-template-areas:"user guilds" "guildinspect guilds" "connections guilds"}
+    #loaded .user{display:block;grid-area:user;width:100%;height:100%;background-color:#2f3136}
+    #loaded .user .udata{line-height:128px;height:128px;margin:20px 20px 20px 20px}
+    #loaded .user .udata #userpfp{position:relative;border-radius:1000px;height:128px}
+    #loaded .user .udata .uinfo{margin-left:20px;display:inline-block;line-height:20px}
+    #loaded .user .udata .uinfo #usertag{display:block}
+    #loaded .user .udata .uinfo #usertag .username{position:relative;font-size:30px}
+    #loaded .user .udata .uinfo #usertag .desc{font-size:15px;opacity:.4}
+    #loaded .user .udata .uinfo #usertag .desc::before{content:"#"}
+    #loaded .user .udata .uinfo .extra{margin-top:-8px}
+    #loaded .user .udata .uinfo .extra #userid{font-size:12px;opacity:.4}
+    #loaded .user .udata .uinfo .extra #useremail{font-size:12px;opacity:.4}
+    #loaded .user .udata .uinfo .extra #useremail::before{content:"- "}
+    #loaded .user .udata .uinfo #usermfa{display:inline-block}
+    #loaded .user .udata .uinfo #usermfa.enabled{position:absolute;border:none;border-radius:3px;cursor:pointer;font-size:15px;padding:10px 20px;font-weight:bold;text-transform:uppercase;color:#FFF !important;background-color:#43b581;vertical-align:middle}
+    #loaded .user .udata .uinfo #usermfa.disabled{border:none;border-radius:3px;cursor:pointer;font-size:15px;padding:10px 20px;font-weight:bold;text-transform:uppercase;color:#FFF !important;display:inline-block;background-color:#f04747;vertical-align:middle}
+    #loaded .user .udata .uinfo #logout{position:relative;background-color:#7289DA;border:none;border-radius:3px;cursor:pointer;font-size:15px;padding:10px 20px;font-weight:bold;text-transform:uppercase;color:#FFF !important;vertical-align:middle}
+    #loaded #connections{grid-area:connections;display:inline-block;overflow:auto;height:100%;width:100%;background-color:#2f3136}
+    #loaded #connections .connection{padding:10px;display:inline-block;width:auto;margin:auto;width:calc((100% / 2) - 45px);margin:10px;border:1px solid #202225;border-radius:3px}
+    #loaded #connections .connection .type{text-transform:uppercase;display:block}
+    #loaded #connections .connection .type::after{content:":"}
+    #loaded #connections .connection img{vertical-align:middle}
+    #loaded #guilds{grid-area:guilds;display:block;overflow:auto;height:100%;width:100%}
+    #loaded #guilds .guild{margin:10px 10px;display:inline-block}
+    #loaded #guilds img,#loaded #guilds .img{position:relative;height:80px;width:80px;border-radius:100px;display:inline-block;vertical-align:middle;background:#2f3136}
+    #loaded #guilds img span,#loaded #guilds .img span{position:absolute;top:50%;left:50%;font-size:24px;transform:translate(-50%, -50%)}
+    #loaded #guildinspector{background-color:#2f3136}
+    #loaded #guildinspector img span,#loaded #guildinspector .img span{position:absolute;top:50%;left:50%;font-size:18px;transform:translate(-50%, -50%)}#loaded #guildinspector .name{display:inline-block;font-size:25px;width:calc(100% - 125px);height:25px;padding:2.5px 5px}
+    #loaded #guildinspector .name .owner{height:25px;width:25px}
+</style>
+    </head>
+
+    <body>
+    <script>
+    let discord = new LoginWithDiscord({
+    cache: true,
+    clientID: "474677697474330625",
+    scopes: [
+        Scope.Identify, Scope.Connections, Scope.Guilds
+    ]
+});
+let guilds;
+discord.onlogin = async () => {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("loaded").style.display = null;
+    let user = await discord.fetchUser();
+    let connections = await discord.fetchConnections();
+    guilds = await discord.fetchGuilds();
+//2146958847
+//let adminguilds = guilds. filter(guild => guild.permissions.has("MANAGE_GUILD") || guild.permissions.has("ADMINISTRATOR"));
+
+let adminguilds = guilds. filter(guild => guild.permissions.has("MANAGE_GUILD") || guild.permissions.has("ADMINISTRATOR") || guild.owner === true);
+    document.getElementById("userpfp").src = user.avatarURL;
+    document.getElementById("userid").innerHTML = user.id;
+    document.getElementById("usertag").innerHTML = `<span class="username">${user.username}</span><span class="desc">${user.discriminator}</span>`;
+//    document.getElementById("useremail").innerHTML = user.email;
+   
+    let g = document.getElementById("guilds");
+    g.innerHTML = "";
+    for (let guild of adminguilds) {
+        let child = document.createElement("div");
+        child.classList.add("guild");
+       
+        child.innerHTML = guild.icon
+            ? `<a href="http://agentx.ga/manage/${guild.id}/${user.id}"><img title="${guild.name}" src="${guild.iconURL}"/></a>`
+            : `<div class="img"><a href="http://agentx.ga/manage/${guild.id}/${userid}"><span title="${guild.name}">${guild.name.split(" ").map(x => x[0]).join("")}</span></a></div>`;
+        g.appendChild(child);
+}    
+};
+function inspectGuild(guildid) {
+    let inspector = document.getElementById("guildinspector");
+    if (guildid == null) {
+        inspector.innerHTML = `<div class="img"></div><div class="name"></div>`;
+        return;
+    }
+    let guild = guilds.find(x => x.id === guildid);
+    inspector.innerHTML = guild.icon
+        ? `<img src="${guild.iconURL}"/><div class="name">${guild.name} ${guild.owner ? "<img class='owner' src='./owner.svg'/>" : ""}</span></div>`
+        : `<div class="img"><span>${guild.name.split(" ").map(x => x[0]).join("")}</span></div><div class="name">${guild.name} ${guild.owner ? "<img class='owner' src='./owner.svg'/>" : ""}</span>`;
+}
+discord.onlogout = async () => {
+    document.getElementById("login").style.display = null;
+    document.getElementById("loaded").style.display = "none";
+};
+async function login() {
+    await discord.login();
+}
+async function logout() {
+await discord.logout();
+}
+</script>
+        <button onclick="login()" id="login">login</button>
+
+        <div id="loaded">
+            <div class="user">
+                <div class="udata">
+                    <img id="userpfp">
+                    <div class="uinfo">
+                        <div id="usertag"></div>
+                        <div class="extra">
+                            <span id="userid"></span>
+                            
+                        </div>
+                        <button onclick="logout()" id="logout">logout</button>
+                    </div>
+                </div>
+            </div>
+            <div id="connections"></div>
+            <div id="guilds"></div>
+            <div id="guildinspector">
+                <div class="img"></div>
+                <div class="name"></div>
+            </div>
+        </div>
+       
+           
+        
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!Doctype html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.10/css/ripples.min.css">
+<link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notokufiarabic.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+        <title>Agentx | <%= guild.name %></title>
+    <style>
+    
+        a{color: white;}
+        #colors{display: none;}
+        #roles{display: none;}
+        li {list-style-type: none;background-color: #000001;margin-bottom: 1%;width: 200px;display: inline-block;}
+         #header {
+            background-color: black;
+        }
+        #header li {
+            background-color: blue;
+        }
+    html,body{text-align:center;width:100%;height:100%;margin:0;font-family:Whitney, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;background:#202225;color:#FFF;overflow:hidden}
+</style>
+      </head>
+    <body>
+        <div class="container">
+     
+       <h1 style="margin-top:7%;"><%= guild.name %></h1>
+       
+       <div>
+           <ul id="header">
+                <li role="presentation"><a onclick="home()" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                <li role="presentation"><a onclick="colors()" aria-controls="colors" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> Colors </a> </li>
+                <li role="presentation"><a onclick="roles()" aria-controls="roles" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Roles </a> </li>
+           </ul>
+       </div>
+       <div id="panel">
+<div id="home">
+    <h1>Welcome to Agentx Dashboard</h1>
+</div>
+<div id="colors">
+<h1>Colors</h1>
+<form action="/manage/<%= guild.id %>/<%= user.id %>/colors">
+<p>Colors text:</p>
+<input title="This text well be shown in the head of color box" placeholder="Colors Box header text" id="ctext" name="ctext"><br/>
+<ul>
+<li>
+<input type="submit">SaveChanges</input>
+</li>
+</ul>
+</form>
+</div>
+<div id="roles"><h1>Roles</h1></div>
+</div>
+        </div>
+        <script>
+        function home() {
+        $("#home").show()
+        $("#colors").hide()
+        $("#roles").hide()
+        }
+        function colors() {
+        $("#home").hide()
+        $("#colors").show()
+        $("#roles").hide()
+        }
+        function roles() {
+        $("#home").hide()
+        $("#colors").hide()
+        $("#roles").show()
+        }
+        </script>
+    </body>
+</html>
