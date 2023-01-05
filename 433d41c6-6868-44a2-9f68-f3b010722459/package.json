@@ -1,0 +1,25 @@
+{
+  "name": "economybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "economy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outlaylol/economybot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/outlaylol/economybot/issues"
+  },
+  "homepage": "https://github.com/outlaylol/economybot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "parse-ms": "^2.1.0",
+    "quick.db": "^7.1.3"
+  }
+}
