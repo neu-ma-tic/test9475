@@ -1,7 +1,7 @@
-.. _install-ubuntu-1804:
+.. _install-ubuntu-2004:
 
 ==================================
-Installing Red on Ubuntu 18.04 LTS
+Installing Red on Ubuntu 20.04 LTS
 ==================================
 
 .. include:: _includes/linux-preamble.rst
@@ -17,12 +17,6 @@ We recommend adding the ``git-core`` ppa to install Git 2.11 or greater:
     sudo apt update
     sudo apt -y install software-properties-common
     sudo add-apt-repository -y ppa:git-core/ppa
-
-We recommend adding the ``deadsnakes`` ppa to install Python 3.9:
-
-.. prompt:: bash
-
-    sudo add-apt-repository -y ppa:deadsnakes/ppa
 
 Now install the pre-requirements with apt:
 
