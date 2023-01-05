@@ -1,0 +1,7 @@
+credentials*
+*.log
+*/.idea
+
+.idea/
+
+venv/
