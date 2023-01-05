@@ -1,0 +1,29 @@
+{
+  "name": "DrelezTM-SimiBOT",
+  "version": "1.0",
+  "description": "SimiBOT by DrelezTM",
+  "main": "index.js",
+  "depedencies": {
+    "discord.js": "^12.5.3",
+    "discord-reply": "^0.1.2",
+    "node-fetch": "^2.6.1"
+  },
+  "script": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrelezTM/SimiBOT-Discordjs"
+  },
+  "author": "DrelezTM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrelezTM/SimiBOT-Discordjs/issues"
+  },
+  "homepage": "https://github.com/DrelezTM/SimiBOT-Discordjs#readme",
+  "dependencies": {
+    "discord-reply": "^0.1.2",
+    "discord.js": "^13.5.1",
+    "node-fetch": "^3.1.0"
+  }
+}
