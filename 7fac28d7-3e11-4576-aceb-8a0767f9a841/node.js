@@ -1,0 +1,1 @@
+import npm i ytdl-core

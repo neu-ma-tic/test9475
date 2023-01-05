@@ -1,0 +1,1 @@
+obamiums = ["Obamacube","Obamaprism","Obamasphere","Obamium","Obamium Sphere","Obamasword","Obamadodecagon","Obamasquare","Obamaparalellogram","Obamarhombus"]
