@@ -1,0 +1,30 @@
+{
+  "ANTENA 3": {
+    "id": "antena3",
+    "link": "http://radiocast.rtp.pt/antena380a.mp3"
+  },
+  "BOB": {
+    "id": "radiobob",
+    "link": "http://streams.radiobob.de/bob-live/mp3-192/streams.radiobob.de/"
+  },
+  "BOB BEST OF ROCK": {
+    "id": "radiobobbestofrock",
+    "link": "https://bob.hoerradar.de/radiobob-bestofrock-mp3-hq"
+  },
+  "BOB CLASSIC ROCK": {
+    "id": "radiobobclassicrock",
+    "link": "https://bob.hoerradar.de/radiobob-classicrock-mp3-hq"
+  },
+  "BOB METAL": {
+    "id": "radiobobmetal",
+    "link": "https://bob.hoerradar.de/radiobob-metal-mp3-hq"
+  },
+  "BOB ALTERNATIVE": {
+    "id": "radiobobalternative",
+    "link": "https://bob.hoerradar.de/radiobob-alternativerock-mp3-hq"
+  },
+  "LOFI": {
+    "id": "lofi",
+    "link": "https://lofi.stream.laut.fm/lofi"
+  }
+}
