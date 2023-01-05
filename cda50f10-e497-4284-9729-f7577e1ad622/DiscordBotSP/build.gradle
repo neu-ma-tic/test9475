@@ -1,0 +1,47 @@
+apply from: "../../.gradle/sign.gradle"
+apply plugin: "java"
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+
+version = "0.9.0-UNSTABLE"
+group = "io.github.lxgaming.discordbot"
+archivesBaseName = "DiscordBotSP"
+
+configurations {
+  provided {
+    compile.extendsFrom(provided)
+  }
+  build {
+    finalizedBy(signJar)
+  }
+}
+
+repositories {
+  mavenCentral()
+  maven {
+    url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+  }
+  maven {
+    url "https://oss.sonatype.org/content/repositories/snapshots/"
+  }
+  maven {
+    url "https://lxgaming.github.io/repo/maven/"
+  }
+}
+
+dependencies {
+  provided "org.spigotmc:spigot-api:1.11.2-R0.1-SNAPSHOT"
+  compile fileTree(dir: "../DiscordBotCore/build/libs/", include: ["DiscordBotCore-*.jar"])
+}
+
+jar {
+  from {
+    (configurations.compile - configurations.provided).collect {
+	  it.isDirectory() ? it : zipTree(it)
+	}
+  }
+  from {
+    ["LICENSE"]
+  }
+}

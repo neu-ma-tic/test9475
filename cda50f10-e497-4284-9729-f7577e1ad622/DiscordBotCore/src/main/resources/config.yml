@@ -1,0 +1,37 @@
+DiscordBot:
+  Credentials:
+    # Information on how to get a Token below
+    # https://www.spigotmc.org/resources/discordbot-bungeecord-edition.19347/update?update=85962
+    Token: ''
+  Redis:
+    Enabled: false
+  Messages:
+    # Prefix is what invokes a command eg !help
+    CommandPrefix: '!'
+    # Turn off DiscordBot Connected messages.
+    ConnectionMessage: false
+    # NOTE: In the messages.yml setting messages to 'null' will allow you to stop specific events sending messages
+    # Should Messages be sent to Minecraft/Discord?
+    SendDiscord: true
+    SendMinecraft: true
+    SendConsole: true
+    # Set this to true if you want global chat messages to be sent to discord regardless of other chat plugins
+    ForceChat: false
+  Listeners:
+    # Disable Discord based commands.
+    AllowCommands: true
+    # Discord Events
+    # When a user changes there Avatar/Game/Name or they become Online/Away/DoNotDisturb/Offline/Deafened/Muted should we tell the world?
+    UserAvatarUpdate: false
+    UserGameUpdate: false
+    UserNameUpdate: true
+    UserOnlineStatusUpdate: false
+    VoiceDeafen: false
+    VoiceMute: false
+  Events:
+    # Minecraft Events
+    # Enable/Disable Chat/Join/Quit Messages
+    PlayerChat: true
+    PlayerJoin: true
+    PlayerDeath: true
+    PlayerQuit: true

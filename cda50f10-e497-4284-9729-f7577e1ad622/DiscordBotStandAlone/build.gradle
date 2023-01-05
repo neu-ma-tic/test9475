@@ -1,0 +1,77 @@
+apply plugin: "java"
+
+def signFile = "sign.gradle"
+if (file(signFile).exists()) {
+    apply from: signFile
+}
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+
+group = "io.github.lxgaming"
+archivesBaseName = "DiscordBotStandAlone"
+version = "1.3.2"
+
+configurations {
+    provided {
+        compile.extendsFrom(provided)
+    }
+
+    build {
+        if (project.tasks.findByName("signJar")) {
+            return finalizedBy(signJar)
+        }
+
+        return doLast {
+            println("========== [WARNING] ==========")
+            println()
+            println("   This build is not signed!   ")
+            println()
+            println("========== [WARNING] ==========")
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url("https://jcenter.bintray.com")
+    }
+}
+
+dependencies {
+    compile("com.google.code.gson:gson:2.8.1")
+    compile("com.sedmelluq:lavaplayer:1.2.42")
+    compile("joda-time:joda-time:2.9.9")
+    compile("net.dv8tion:JDA:3.2.0_241")
+    compile("org.apache.commons:commons-lang3:3.6")
+}
+
+jar {
+    manifest {
+        attributes("Main-Class": "io.github.lxgaming.discordbot.Main")
+    }
+
+    from {
+        (configurations.compile - configurations.provided).collect {
+            if (it.isDirectory()) {
+                return it
+            }
+            return zipTree(it)
+        }
+    }
+
+    exclude("natives/darwin/**")
+    exclude("natives/linux-arm/**")
+    exclude("natives/linux-x86/**")
+    //exclude("natives/linux-x86-64/**")
+    exclude("natives/win-x86/**")
+    exclude("natives/win-x86-64/**")
+    exclude("natives/win32-x86/**")
+    exclude("natives/win32-x86-64/**")
+}
+
+processResources {
+    from("LICENSE")
+    rename("LICENSE", "LICENSE-" + archivesBaseName)
+}

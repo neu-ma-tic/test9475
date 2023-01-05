@@ -1,0 +1,24 @@
+DiscordBot:
+  Guild:
+    Id: ''
+  Channels:
+    Bot:
+      Command: 'null'
+      Channel: ''
+      ChatColor: false
+      Permission: 'DiscordBot.BotChat'
+    Global:
+      Command: 'null'
+      Channel: ''
+      ChatColor: false
+      Permission: '*'
+    Custom:
+      Command: 'discordchat, dcc'
+      Channel: ''
+      ChatColor: false
+      Permission: 'DiscordBot.Custom'
+    Admin:
+      Command: 'adminchat'
+      Channel: ''
+      ChatColor: true
+      Permission: 'DiscordBot.AdminChat'

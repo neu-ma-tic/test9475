@@ -1,0 +1,67 @@
+DiscordBot:
+  Ready:
+    MinecraftFormat: '&6[&9Discord&6] &2Connected!'
+    DiscordFormat: '``Time:`` **%time%** ``Discord`` **Connected!**'
+  UserAvatarUpdate:
+    MinecraftFormat: '&6[&9Discord&6] &f%name%: New Avatar - %message%'
+    DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``New Avatar:`` **%message%**'
+  UserGameUpdate:
+    MinecraftFormat: '&6[&9Discord&6] &f%name%: Game - %message%'
+    DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``Game:`` **%message%**'
+  UserNameUpdate:
+    MinecraftFormat: '&6[&9Discord&6] &f%name%: Name - %message%'
+    DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``New name:`` **%message%**'
+  UserOnlineStatusUpdate:
+    ONLINE:
+      MinecraftFormat: '&6[&9Discord&6] &f%name%: is now &2%message%*'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``Status:`` **%message%**'
+    IDLE:
+      MinecraftFormat: '&6[&9Discord&6] &f%name%: is now &6%message%*'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``Status:`` **%message%**'
+    DO_NOT_DISTURB:
+      MinecraftFormat: '&6[&9Discord&6] &f%name%: is now &9%message%*'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``Status:`` **%message%**'
+    OFFLINE:
+      MinecraftFormat: '&6[&9Discord&6] &f%name%: is now &9%message%*'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``Status:`` **%message%**'
+  VoiceDeafen:
+    Deafened:
+      MinecraftFormat: '&6[&9Discord&6] &f%name%: has been &9%message%*'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``Voice:`` **%message%**'
+    Undeafened:
+      MinecraftFormat: '&6[&9Discord&6] &f%name%: has been &2%message%*'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``Voice:`` **%message%**'
+  VoiceMute:
+    Muted:
+      MinecraftFormat: '&6[&9Discord&6] &f%name%: has been &9%message%*'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``Voice:`` **%message%**'
+    Unmuted:
+      MinecraftFormat: '&6[&9Discord&6] &f%name%: has been &2%message%*'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%** ``Voice:`` **%message%**'
+  Player:
+    Join:
+      MinecraftFormat: 'null'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%:** %message%'
+    Death:
+      MinecraftFormat: 'null'
+      DiscordFormat: '``Time:`` **%time%** ``Server:`` **%server%** ``User:`` **%name%:** %message%'
+    Quit:
+      MinecraftFormat: 'null'
+      DiscordFormat: '``Time:`` **%time%** ``User:`` **%name%:** %message%'
+  Channel:
+    Global:
+      MinecraftFormat: '&6[&9Discord&6] &6[&a%server%&6] &f%name%: %message%'
+      DiscordFormat: '``Time:`` **%time%** ``Server:`` **%server%** ``User:`` **%name%:** %message%'
+    Bot:
+      MinecraftFormat: '&6[&9Discord&6] &6[&a%server%&6] &f%name%: %message%'
+      DiscordFormat: '``Time:`` **%time%** ``Server:`` **%server%** ``User:`` **%name%:** %message%'
+    InGame:
+      MinecraftFormat: '&6[&9Discord&6] &6[&a%server%&6] &f%name%: %message%'
+      DiscordFormat: '``Time:`` **%time%** ``Server:`` **%server%** ``User:`` **%name%:** %message%'
+    Admin:
+      MinecraftFormat: '&4[&cAdmin&4] &6[&a%server%&6] &f%name%: %message%'
+      DiscordFormat: '``Time:`` **%time%** ``Server:`` **%server%** ``User:`` **%name%:** %message%'
+  Command:
+    List:
+      MinecraftFormat: 'null'
+      DiscordFormat: '```%command%```'

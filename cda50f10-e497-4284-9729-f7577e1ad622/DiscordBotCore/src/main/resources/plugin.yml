@@ -1,0 +1,25 @@
+name: DiscordBot
+main: io.github.lxgaming.discordbot.DiscordBot
+version: ${version}
+description: Cross communications with Discord and your Minecraft server.
+author: LX_Gaming
+website: http://www.lxgaming.github.io
+commands:
+  discordbot:
+    description: Display plugin information.
+    usage: /<command>
+  discordchat:
+    description: Send messages to Discord.
+    usage: /<command> <message>
+    aliases: [dcc]
+permissions:
+  DiscordBot.Reload:
+    description: Reloads DiscordBot's configuration files.
+  DiscordBot.Toggle:
+    description: Allows a player ignore channels if BypassToggle is false.
+  DiscordBot.GlobalChat:
+    description: Send messages to Discord via global chat.
+  DiscordBot.ReceiveDiscordChat:
+    description: Receive Discord messages in Minecraft.
+  DiscordBot.Silent:
+    description: Players with this permission won't trigger events.
