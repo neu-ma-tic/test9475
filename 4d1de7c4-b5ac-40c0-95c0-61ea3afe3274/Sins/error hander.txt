@@ -1,0 +1,43 @@
+    @commands.Cog.listener()
+    async def on_command_error(self, ctx, error):
+        Error = discord.Embed(
+            title = 'Command error.',
+            description = f'An error occured while attempting to run then command. Error: {error}.',
+            color = ctx.author.color
+        )
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.reply(embed = Error)
+        elif isinstance(error, commands.CommandNotFound):
+            await ctx.reply(f'Hmm, the command you tried to run was not found, please run ``*help`` to check the commands that are usable.')
+        elif isinstance(error, commands.CommandInvokeError):
+            await ctx.reply(embed = Error)
+        elif isinstance(error, commands.CommandOnCooldown):
+            await ctx.delete()
+            await ctx.reply(embed = Error)
+
+	@commands.Cog.listener()
+	async def on_command_error(self, ctx, error):
+		ErrorHandler_V2 = discord.Embed(
+			title = 'Error.',
+			description = f'Whilst running the command, a error occured. Error Info: {error}',
+			color = ctx.author.color
+		)
+
+		if isinstance(error, commands.DisabledCommand):
+			await ctx.send(embed = ErrorHandler_V2)
+
+	@commands.Cog.listener()
+	async def on_message(self, message):
+		mention = f'<@!{self.client.user.id}>'
+		if mention in message.content:
+		
+			Pinged = discord.Embed(
+				title = 'Bot info',
+				description = f"""
+					**Bot prefix**:
+					{get_prefix}
+					**Help command**:
+					{get_prefix}help
+				"""
+			)
+			await message.channel.send(embed = Pinged)

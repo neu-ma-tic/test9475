@@ -1,0 +1,45 @@
+apply from: "../../.gradle/sign.gradle"
+apply plugin: "java"
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+
+version = "0.9.0-UNSTABLE"
+group = "io.github.lxgaming.discordbot"
+archivesBaseName = "DiscordBotBC"
+
+configurations {
+  provided {
+    compile.extendsFrom(provided)
+  }
+  build {
+    finalizedBy(signJar)
+  }
+}
+
+repositories {
+  mavenCentral()
+  maven {
+    url "https://oss.sonatype.org/content/repositories/snapshots/"
+  }
+  maven {
+    url "http://repo.md-5.net/content/repositories/releases/"
+  }
+}
+
+dependencies {
+  provided "net.md-5:bungeecord-api:1.11-SNAPSHOT"
+  provided "com.imaginarycode.minecraft:RedisBungee:0.3.8-INTERIM"
+  compile fileTree(dir: "../DiscordBotCore/build/libs/", include: ["DiscordBotCore-*.jar"])
+}
+
+jar {
+  from {
+    (configurations.compile - configurations.provided).collect {
+	  it.isDirectory() ? it : zipTree(it)
+	}
+  }
+  from {
+    ["LICENSE"]
+  }
+}
