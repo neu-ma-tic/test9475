@@ -1,0 +1,10 @@
+Discord-Webhooks==1.0.4
+Discord-OpenBot==0.1.4
+discord-webhook==0.4.1
+discord-config==0.0.2
+discord-autorooms==2.1.5
+discord-musicbot==0.0.3.dev20170604
+
+discord-interactive==1.1
+discord-hooks==1.0
+discord==0.16.12
