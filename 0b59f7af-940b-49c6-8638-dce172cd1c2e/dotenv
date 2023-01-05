@@ -1,0 +1,11 @@
+
+const mySecret = process.env['YOUTUBEKEY']
+
+const mySecret = process.env['DISCORDTOKEN']
+
+const mySecret = process.env['OWNERTAG']
+
+const mySecret = process.env['OWNERNAME']
+
+const mySecret = process.env['OWNERID']
+const mySecret = process.env['PREFIX']
