@@ -1,0 +1,1 @@
+{"version":2,"languages":{"nodejs-npm":{"specfileHash":"b91610dc4efc721f77a68069b4252932","lockfileHash":"e6593618e967a4c14ccc2746907654e7","guessedImports":["express","quick.db","old-wio.db","discord.js","ms"],"guessedImportsHash":"412e2149446901c70a2ca4be91a872ed"}}}

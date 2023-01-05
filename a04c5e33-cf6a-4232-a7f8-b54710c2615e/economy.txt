@@ -1,0 +1,57 @@
+
+@bot.command()
+async def balance(ctx):
+  open_account(ctx.author)
+  user = ctx.author
+  users = await get_bank_data()
+  
+  wallet_amount = users[str(user.id)]["wallet"]
+  bank_amount = users[str(user.id)]["wank"]
+  em = discord.Embed(title = f"{ctx.author.name}'s balance", color=discord.Color.red())
+  em.add_field(name = "Wallet balance", value = wallet_amount)
+  em.add_field(name = "Bank balance", value = bank_amount)
+  await ctx.send(embed=em)
+  
+
+@bot.command
+async def beg(ctx):
+  await open_account(ctx.author)
+  users = await get_bank_data()
+  user = ctx.author
+  
+  wallet_amount = users[str(user.id)]["wallet"]
+
+  earnings = random.randrange(101)
+  await ctx.send(f'You got{earnings} coins!')
+  users[str(user.id)]["wallet"] += earnings
+
+
+
+
+async def open_account(user):
+  users = get_bank_data
+
+
+  if str(user.id) in users:
+    return False 
+  else:
+    users[str(user.id)] = {}
+    users[str(user.id)]["wallet"] = 0
+    users[str(user.id)]["bank"] = 0
+
+  with open("mainbank.json", "w") as f:
+    json.dump(users,f)
+  return True
+
+async def get_bank_data():
+  with open("bank.json","r") as f:
+    users = json.load(f)
+  return users
+    
+
+
+
+keep_alive()
+TOKEN = os.environ['TOKEN']
+
+bot.run(TOKEN)

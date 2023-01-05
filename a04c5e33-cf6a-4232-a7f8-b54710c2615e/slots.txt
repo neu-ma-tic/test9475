@@ -1,0 +1,37 @@
+
+@bot.command()
+async def slots(ctx):
+    user = ctx.author
+    await open_account(ctx.author)
+    users = await get_bank_data()
+    possible_outcomes = ["🟥","🟩","🟦","7️⃣"]
+    if users[str(user.id)]["wallet"] <= 99:
+        await ctx.send(f"You have no money, you need at least $100")
+        return
+ 
+    users[str(user.id)]["wallet"] -= 100
+    await ctx.send(f"You have  been charged 100$ for playing slots")
+    n = 3
+    for i in range(3):
+        await ctx.send(f"Rolling in {n} seconds") 
+        time.sleep(1)
+        n -= 1
+    a = random.choice(possible_outcomes)
+    b = random.choice(possible_outcomes)
+    c = random.choice(possible_outcomes)
+    x = random.randrange(400,600)
+    g = f'{a,b,c}'
+    if a == "7️⃣" and b == "7️⃣"  and c == "7️⃣":
+        await ctx.send(g)
+        await ctx.send(f"{user.name} JUST HIT THE JACKPOT 🎉🎉🎉🎉")
+        await ctx.send(f"CONGRATS {user.name} YOU JUST EARNED $1777 ")
+        users[str(user.id)]["wallet"] += 1777
+    elif a == b and a == c:
+        await ctx.send(g)
+        await ctx.send(f"You just won {x}$ ")
+        users[str(user.id)]["wallet"] += x
+    else:
+        await ctx.send(g)
+        await ctx.send(f"Unfortunately you didn't win anything, better luck next time!")
+    with open("bank.json", "w") as f:
+      users = json.dump(users, f)
