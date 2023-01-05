@@ -1,0 +1,22 @@
+{
+  "name": "DiscordBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node": "^16.9.1",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "discord.js": "^13.4.0",
+    "dotenv": "^10.0.0",
+    "glob": "^7.2.0"
+  }
+}
