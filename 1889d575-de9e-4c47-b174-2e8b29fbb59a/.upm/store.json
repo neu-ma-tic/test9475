@@ -1,0 +1,1 @@
+{"version":2,"languages":{"nodejs-npm":{"specfileHash":"0f31d9dfac7ad25d372e749005eb5315","lockfileHash":"1db5cbeed225ceac795d02622341d137","guessedImports":["canvas","colors","ms","ytdl-core","yt-search","dotenv","mongoose","play-dl","uuid","discord.js","@discordjs/voice"],"guessedImportsHash":"0b00f8e6f909b3ae4581ed86fecbee29"}}}
