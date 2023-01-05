@@ -1,0 +1,34 @@
+{
+  "files": {
+    "cogs/Economy.py": [
+      {
+        "id": "0c0cc7b8-d4e5-494e-b97f-3ae8c827d874",
+        "line": 533,
+        "version": 1,
+        "index": 18793
+      },
+      {
+        "id": "9262567a-9098-4b9d-b235-ee01f5de40e5",
+        "line": 533,
+        "version": 1,
+        "index": 18793
+      }
+    ],
+    "frack.txt": [
+      {
+        "id": "39f61d31-dae0-4e17-a245-672fbcc83b53",
+        "line": 6,
+        "version": 10,
+        "index": 140
+      }
+    ],
+    "rank_func.py": [
+      {
+        "id": "580abd31-f27c-489d-b0b1-071ce3d9d611",
+        "line": 1,
+        "version": 0,
+        "index": 0
+      }
+    ]
+  }
+}

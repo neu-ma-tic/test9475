@@ -1,0 +1,1 @@
+"CREATE TABLE userdat ( uid integer PRIMARY KEY, team text, graduation_date integer, band_member integer, other text)"
