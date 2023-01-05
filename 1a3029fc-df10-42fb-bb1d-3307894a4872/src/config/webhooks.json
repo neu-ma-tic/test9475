@@ -1,0 +1,58 @@
+{
+    "startLogs": { 
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "shardLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "errorLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "dmLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "voiceLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "serverLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "serverLogs2": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "commandLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "consoleLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "warnLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "voiceErrorLogs": {
+        "id": " ",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "creditLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "evalLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    },
+    "interactionLogs": {
+        "id": "1039107361043914792",
+        "token": "cuDj75XQV5Xa3rEDK0oPzjAymKl35t_CYaxdXeXh_H_A6KgeYK99EgzFbdsM2bxc2Dcl"
+    }
+}
