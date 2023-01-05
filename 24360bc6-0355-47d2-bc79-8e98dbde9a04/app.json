@@ -1,0 +1,9 @@
+{
+  "name": "DiscordBot",
+  "description": "just a discord bot, yk?",
+  "repository": "https://github.com/AnoyingShulkerMC/discordbot",
+  "success_url": "/",
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs"
+  }
+}

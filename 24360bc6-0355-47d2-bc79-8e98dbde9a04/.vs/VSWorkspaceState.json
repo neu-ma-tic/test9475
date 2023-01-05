@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\applicationCommands",
+    "\\autocompleteCommands",
+    "\\buildCommands",
+    "\\lib",
+    "\\lib\\builders",
+    "\\lib\\cache",
+    "\\lib\\types",
+    "\\lib\\utils",
+    "\\lib\\ws"
+  ],
+  "SelectedNode": "\\lib\\cache\\Cache.js",
+  "PreviewInSolutionExplorer": false
+}
