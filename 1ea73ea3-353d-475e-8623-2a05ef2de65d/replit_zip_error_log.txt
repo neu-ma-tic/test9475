@@ -1,0 +1,8 @@
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/detect-libc","time":"2022-11-13T01:27:05Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/mime","time":"2022-11-13T01:27:05Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/mkdirp","time":"2022-11-13T01:27:05Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/prebuild-install","time":"2022-11-13T01:27:05Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/rc","time":"2022-11-13T01:27:05Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/semver","time":"2022-11-13T01:27:05Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/node-abi/node_modules/.bin/semver","time":"2022-11-13T01:27:06Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/tar/node_modules/.bin/mkdirp","time":"2022-11-13T01:27:06Z"}
