@@ -1,0 +1,278 @@
+const Discord = require("discord.js")
+const client = new Discord.Client({partials: ["MESSAGE","CHANNEL","REACTION"]})
+const prefix = '-'
+
+
+client.commands = new Discord.Collection();
+client.events = new Discord.Collection();
+
+['command_handler', 'event_handler'].forEach(handler =>{require(` ./handlers/${handler}`)(client, Discord)
+})
+
+//client.on("ready", () => {
+ // console.log(`Logged in as ${client.user.tag}!`)
+//})
+
+//client.on("message", msg => {
+  //if (msg.content === "ping") {
+   // msg.reply("pong");
+ // }
+//})
+
+client.on("message", msg => {
+    if (msg.content === "السلام عليكم") {
+      msg.reply("وعليكم السلام");
+    }
+  })
+
+  client.on("message", msg => {
+    if (msg.content === " السلام عليكم والرحمة ") {
+      msg.reply("وعليكم السلام والرحمة");
+    }
+  })
+  
+  client.on("message", msg => {
+    if (msg.content === " السلام عليكم والرحمة ") {
+      msg.reply("وعليكم السلام والرحمة");
+    }
+  })
+  
+  client.on("message", msg => {
+    if (msg.content === " السلام عليكم والرحمه") {
+      msg.reply("وعليكم السلام والرحمه");
+    }
+  })
+
+  client.on("message", msg => {
+    if (msg.content === "roleplay") {
+      msg.reply("الرول بلاي - ( RolePlay ) تقمص الشخصية الواقعية بالأقوال والأفعال");
+    }
+  })
+  
+  client.on("message", msg => {
+    if (msg.content === "السلام عليكم والرحمه") {
+      msg.reply("وعليكم السلام والرحمه");
+    }
+  })
+
+  client.on('message', message => {
+    if (message.content.startsWith("$avatar")) { 
+      let mention = message.mentions.users.first();   
+      var men;
+      if(mention){
+          var men = mention;
+      } else {
+          var men = message.author;
+      } 
+    var embed = new Discord.MessageEmbed()
+    .setColor('BLUE')
+    .setTitle(`[Download Link here]`)
+    .setAuthor(`${men.tag} Avatar !`)
+    .setURL(men.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
+    .setImage(men.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 }))
+    message.channel.send(embed)
+    }
+    });
+    
+
+    client.on('message', message => {
+      if(message.content === '$guild avatar') {
+        var embed = new discord.MessageEmbed()
+        .setColor('BLUE')
+        .setTitle(`[Download Link here]`)
+        .setAuthor(`${message.guild.name} Avatar !`)
+      .setURL(message.guild.iconURL({ format: 'png', dynamic: true, size: 1024 }))
+      .setImage(message.guild.iconURL({ format: 'png', dynamic: true, size: 1024 }))
+        message.channel.send(embed)  
+      }
+      });
+
+      const axios = require("axios")
+
+      client.on('message', async message => {
+        if(message.content == "$meme" ) {
+          let request = await axios.get("https://meme-api.herokuapp.com/gimme").catch(err=>message.channel.send(`Something went wrong | ${err.message}`));
+      let embed = new Discord.MessageEmbed()
+      .setColor('RANDOM')
+        .setURL(request.data.postLink)
+        .setTitle(`${request.data.title}`)
+        .setImage(request.data.url).setTimestamp()
+        .setFooter(`Requested by: ${message.author.username}`)
+          message.channel.send(embed)
+      }
+      
+      });
+
+      client.on("messageDelete", message => {
+        let luasupport = message.guild.channels.cache.get('') // ايدي الروم 
+        if (message.author.bot) return;
+        if (message.channel.type === "dm") return;
+        if (!message.guild.member(client.user).hasPermission("EMBED_LINKS")) return;
+        if (!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES"))
+          return;
+      
+      
+      
+
+        let messageDelete = new discord.MessageEmbed()
+        .setColor('RED')
+          .setAuthor(`Log | Messages | Delete` , message.author.avatarURL)
+          .addField('Message :', ' +message.content+')
+          .addField('in :', message.channel.name, true)
+      .addField('By :', `<@​${message.author.id}>`, true)
+      
+      .setTimestamp()
+      .setFooter(`ID : ${message.author.id}`);
+
+   luasupport.send(messageDelete);
+  });
+
+  client.on('message', message => {
+    if( message.content === '$lock') {
+      if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`** لا تملك الصلاحيات الكافية**`)
+      if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.channel.send(`** لا امتلك الصلاحيات الكافية`) 
+    
+      message.channel
+      .createOverwrite(message.guild.id, {
+        SEND_MESSAGES: false,
+        ADD_REACTIONS: false
+      }).then(() => {
+    var embed = new Discord.MessageEmbed()
+    .setColor('RED')
+    .setTitle(`:lock: Channel was locked`)
+    message.channel.send(embed)
+      })
+    
+    }
+    
+    if( message.content === '$unlock') {
+      if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`** لا تملك الصلاحيات الكافية**`)
+      if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.channel.send(`** لا امتلك الصلاحيات الكافية`) 
+    
+      message.channel
+      .createOverwrite(message.guild.id, {
+        SEND_MESSAGES: true,
+        ADD_REACTIONS: true
+      }).then(() => {
+    var embed = new Discord.MessageEmbed()
+    .setColor('RED')
+    .setTitle(`:unlock: Channel was unlocked`)
+    message.channel.send(embed)
+      })
+    
+    }
+    });
+
+ client.on(`message`, message => { 
+    let fullCommand = message.content.substr(1)
+    let args = fullCommand.split("")
+    if (message.content.startsWith("!semojie")) {
+      if (args[1] !== "" || args[1] !== undefined || args[2] !== "" || args[2] !== undefined) {
+        message.guild.emojis.create(args[1],args[2])
+      }
+    }
+  })
+
+
+client.on("message", message => {
+    if(!message.guild) return;
+if (message.content.startsWith(prefix + "clear")) {
+message.delete({timeout: 0})
+    if(!message.channel.guild) return message.reply(`** This Command For Servers Only**`); 
+     if(!message.member.hasPermission('MANAGE_Message')) return 
+     if(!message.guild.member(client.user).hasPermission('MANAGE_Message')) return message.channel.send(`> ** I don't have perms :x:**`);
+    let args = message.content.split(" ").slice(1)
+    let messagecount = parseInt(args);
+    if (args > 100) return message.channel.send(`\`\`\`javascript
+i cant delete more than 100 messages 
+\`\`\``).then(messages => messages.delete(5000))
+if(!messagecount) messagecount = '100';
+    message.channel.messages.fetch({limit: 100 }).then(e => {
+    message.channel.send('Deleting messages.').then(function(e) {
+    setTimeout(function() {
+        e.delete().then(function() {
+        message.channel.bulkDelete(messagecount).then(msgs => {
+        let msgdelete = msgs.size
+    message.channel.send(`\`\`\`js
+${msgdelete} messages cleared
+\`\`\``).then(messages => 
+messages.delete({timeout:2500}));
+    })
+        })
+    }, 700)
+    })
+    })
+  }    
+});   
+
+client.on('message', message => {
+      if(message.content === '$p') {
+        var embed = new discord.MessageEmbed()
+        .setColor('BLUE')
+        .setTitle(`i`)
+        .setAuthor(`Avatar !`)
+      }
+});
+  
+
+//hide
+client.on('message', message => {
+    if(!message.guild) return;
+if(message.content === prefix + 'hide'){
+if(message.member.hasPermission('MANAGE_CHANNELS')){                
+message.channel.updateOverwrite(message.channel.guild.roles.everyone, {
+VIEW_CHANNEL: false
+})
+.then(message.channel.send( `<#${message.channel.id}>   **is hide.** 🔒`).then(msg => {
+}))
+}
+
+
+
+                    if(!message.member.hasPermission('MANAGE_CHANNELS')){
+                        message.channel.send(':Error: **|| You dont have permission. **').then(msg => {
+                            
+                            })
+                    }
+}
+})
+//show
+client.on('message', message => {
+    if(!message.guild) return;
+if(message.content === prefix + 'show'){
+if(message.member.hasPermission('MANAGE_CHANNELS')){                
+message.channel.updateOverwrite(message.channel.guild.roles.everyone, {
+VIEW_CHANNEL: true
+})
+.then(message.channel.send( `<#${message.channel.id}>   **is show.** `).then(msg => {
+}))
+}
+
+
+
+                    if(!message.member.hasPermission('MANAGE_CHANNELS')){
+                        message.channel.send(':Error: **|| You dont have permission. **').then(msg => {
+                            
+                            })
+                    }
+}
+})
+
+  client.on('message', message => {
+    if( message.content === 'السلام عليكم') {
+      message.channel
+    var embed = new Discord.MessageEmbed()
+    .setColor('RED')
+    .setTitle(`:hearts: وعليكم السلام`)
+    message.channel.send(embed)
+     message.channel.send(member)
+    }
+  });
+  
+  
+       
+
+
+
+
+client.login("OTEyMzg4NDkwNTg1NjAwMDIx.YZvN_w.plCG2rS_AnkfRF496fbrJurPgmk")
