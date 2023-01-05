@@ -1,0 +1,16 @@
+[Unit]
+Description=Shinobu Discord Bot
+After=multi-user.target
+[Service]
+WorkingDirectory=/home/eddy/discord_bot
+Environment="PYTHONHASHSEED=0"
+User=eddy
+Group=eddy
+ExecStart=/usr/bin/python3 /home/eddy/discord_bot/main.py
+Type=idle
+Restart=on-failure
+RestartSec=15
+TimeoutStartSec=15
+
+[Install]
+WantedBy=multi-user.target
