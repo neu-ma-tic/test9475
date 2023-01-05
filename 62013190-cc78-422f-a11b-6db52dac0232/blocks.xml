@@ -1,0 +1,65 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="s4d_login" id=")O7+PL3eS1Br}h;?X9N$" x="288" y="163">
+    <value name="TOKEN">
+      <block type="text" id="a7JxIIyK[Yr~TPL^-{W:">
+        <field name="TEXT">OTc2NDA4NDI2MTkwMDc3OTky.G_iEfw.z08uvZWnGup8yjSeMsxOwoIWN0srzcJK-CHJd0</field>
+      </block>
+    </value>
+  </block>
+  <block type="s4d_on_message" id="Qx+aIDM=_,mj^tl$vGmW" x="288" y="238">
+    <statement name="STATEMENTS">
+      <block type="controls_if" id="Cr$f.P2*Nq2Dl}?D!r`(">
+        <value name="IF0">
+          <block type="logic_compare" id="oq-Tf{oSnv,],{N*FSF|">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="s4d_message_content" id="pyFMNvR6J#o6Ky/UA~]f"></block>
+            </value>
+            <value name="B">
+              <block type="text" id=";[??XKp36YJf2U}j2_}e">
+                <field name="TEXT">!ver</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="s4d_reply" id="wgo^7yFoMz,K{AaMl6L)">
+            <value name="CONTENT">
+              <block type="text" id="N-4C!JnJCe,s$75i%8Ce">
+                <field name="TEXT">CharveCompany Version 1.0 All rights to CharveCompany (C).</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_message" id="K76~isRCIWG%[xqc0S$^" x="-31" y="333">
+    <statement name="STATEMENTS">
+      <block type="controls_if" id="`uQqe)K07$M{neQG5fUC">
+        <value name="IF0">
+          <block type="logic_compare" id="_q?xOCK)c#}2DXG7*Pd_">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="s4d_message_content" id="=RNS3d52]xy64HDct`DZ"></block>
+            </value>
+            <value name="B">
+              <block type="text" id="JU}nk?,bc/f2@TG5s9B2">
+                <field name="TEXT">!rules</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="s4d_reply" id="?Fp}2!$*V[}?:bP`EZ{y">
+            <value name="CONTENT">
+              <block type="text" id="/-6NB~*85LaHj#Tt.@)(">
+                <field name="TEXT">The rules is important. Why? These make a fresh, good server. In fact, its true. See the terms for more.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
