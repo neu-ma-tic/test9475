@@ -1,0 +1,23 @@
+{
+  "name": "DiscordBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "chessboard": "^2.0.0",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "gif-frames": "^1.0.1",
+    "gifencoder": "^2.0.1",
+    "gm": "^1.23.1",
+    "pixel-util": "0.0.2",
+    "png-file-stream": "^1.2.1"
+  }
+}

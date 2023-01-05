@@ -1,0 +1,1 @@
+const {ChessBoard} =require("chessboard")
