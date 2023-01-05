@@ -1,0 +1,11 @@
+discord
+discord.py
+discord-py-slash-command
+mysqlclient
+flask
+redis
+addict
+pynacl
+python-dotenv
+bidict
+pyyaml
