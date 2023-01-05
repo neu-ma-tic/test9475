@@ -1,0 +1,7 @@
+db
+fileloader.ts
+.env
+node_modules
+Lavalink/
+configs.ts
+.deno/

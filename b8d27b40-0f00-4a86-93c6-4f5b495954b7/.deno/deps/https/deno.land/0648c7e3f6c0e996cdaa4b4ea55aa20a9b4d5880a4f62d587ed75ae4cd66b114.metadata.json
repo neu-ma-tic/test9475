@@ -1,0 +1,20 @@
+{
+  "headers": {
+    "date": "Tue, 14 Sep 2021 23:05:35 GMT",
+    "access-control-allow-origin": "*",
+    "x-amz-request-id": "AVH8H9RW4RZBBCBJ",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "x-amz-version-id": "17HfizD.Lt4Rk2f0PWEqVzeiAeEm1u4.",
+    "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-27=\":443\"; ma=86400",
+    "server": "cloudflare",
+    "etag": "\"0b9505bfdd4d7320d1253f50f06cb5ba\"",
+    "content-length": "301",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "68ed42cd8bc36321-ORD",
+    "x-amz-id-2": "rrv2QOYOzptOKEIuH6d5eHyj7ftAzL4a5OSm2qs5/XrqKkUmQL9hnb9fajYK5UXYreWQtZVz4RY=",
+    "content-type": "application/typescript; charset=utf-8",
+    "cache-control": "public, max-age=31536000, immutable",
+    "last-modified": "Sun, 13 Jun 2021 19:55:16 GMT"
+  },
+  "url": "https://deno.land/x/discordeno@11.2.0/src/types/activity/activity_types.ts"
+}

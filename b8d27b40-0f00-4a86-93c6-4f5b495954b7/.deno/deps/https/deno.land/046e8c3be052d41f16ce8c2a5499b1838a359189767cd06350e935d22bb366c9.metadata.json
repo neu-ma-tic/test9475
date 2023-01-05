@@ -1,0 +1,20 @@
+{
+  "headers": {
+    "server": "cloudflare",
+    "content-type": "application/typescript; charset=utf-8",
+    "content-length": "322",
+    "cf-cache-status": "DYNAMIC",
+    "etag": "\"3a0e47f0d78c8b90721553c9fdb3e949\"",
+    "x-amz-request-id": "AVHFXPKZY0W5XT9X",
+    "cf-ray": "68ed42c98cde6321-ORD",
+    "access-control-allow-origin": "*",
+    "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-27=\":443\"; ma=86400",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "cache-control": "public, max-age=31536000, immutable",
+    "last-modified": "Sun, 13 Jun 2021 19:55:16 GMT",
+    "x-amz-version-id": "XFT9splCzlOyVmDYIrkOeonPnBPL8ngf",
+    "x-amz-id-2": "gJKAK6EF7PUSw4CSEeNzWILpDquRLhUWsEZeqT/5wVM6PS1pQQCHIyTXiIKV2X9bcAPgk++DgFc=",
+    "date": "Tue, 14 Sep 2021 23:05:35 GMT"
+  },
+  "url": "https://deno.land/x/discordeno@11.2.0/src/handlers/misc/TYPING_START.ts"
+}
