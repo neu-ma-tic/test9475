@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 12
+install:
+  - npm install
+
+stages:
+  - "Tests"
+
+jobs:
+  include:
+    - stage: "Tests"      # Naming the Tests stage
+      name: "Unit Tests"  # Names the first Tests stage job
+      script: "mocha"
