@@ -1,0 +1,129 @@
+import discord
+from discord.ext import commands
+from replit import db
+from datetime import datetime
+import pytz
+
+country_time_zone = pytz.timezone("Brazil/West")
+
+class Trabalhos(commands.Cog):
+    def __init__(self, client) -> None:
+        self.client = client
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print('Works Cogs is on')
+
+    
+    @commands.command(aliases=['aw', 'add_w'])
+    async def add_trabalho(self, ctx, acronym : str, date_limit : str, *, name : str = None):
+        """Adiciona lembrete de atividade
+            :sigla: Sigla de uma disciplina
+            :data de término: Data limite no formato dd/mm/aa
+            :name: Nome da atividade
+            :link: Link para a atividade[Opcional]
+
+        """
+        if not acronym:
+            return ctx.send("**Usage: !add_trabalho <sigla> <data> <link> <nome_da_atividade>**")
+
+        # get link
+
+        if name.split()[-1].find('http') == 0:
+            link = name.split()[-1]
+            name = ' '.join(name.split()[0:-1])
+        else:
+            link = ' '
+
+        acronyms_keys = db.prefix("ac")
+        if not "ac" + acronym in acronyms_keys:
+            return await ctx.send("**A Sigla digitada não foi encontrada**", delete_after=3)
+
+        # Date check and format
+        date_limit = date_limit.split('/')
+        if len(date_limit) < 2 or len(date_limit) > 3:
+            return await ctx.send("Insira uma data válida")
+        
+        if len(date_limit) == 2:
+            yy = 2000 + 21
+        else:
+            yy = 2000 + int(date_limit[2])
+        
+        mm = int(date_limit[1])
+        dd = int(date_limit[0])
+    
+        time_in_sec = datetime(yy, mm, dd, hour=22, minute=59, tzinfo=country_time_zone)
+
+        if not db.prefix("w"):
+            new_key = str(100)
+            keys = db.prefix("w")
+
+        else:
+            keys = db.prefix("w")
+            new_key = int(keys[-1][1:]) + 1
+
+        if not 'w' + str(new_key) in keys:
+            db["w" + str(new_key)] = [acronym, time_in_sec.timestamp(), name, link]
+
+        await ctx.channel.send(f"`{name}` **adicionado com sucesso**")
+    
+
+    @commands.command(aliases=['del_w', 'dw', 'del_work'])
+    async def del_trabalho(self, ctx):
+        " Ao digitar o comando a lista de tarefas será mostrada. Digite um id para excluí-lo."
+        # Show all ids
+        keys = db.prefix("w")
+        txt = []
+        for key in keys:
+            txt.append(f"`{key[1:]}`**- {db[key][2]}**\n")
+        txt.append("**\nDigite um id para ser apagado**")
+        embed = discord.Embed(title='Ids cadastrados', description=' '.join(txt))
+        await ctx.send(embed=embed)
+
+        def check(author):
+            def inner_check(message):
+                if message.author == author:
+                    msg = message.content
+                    if 'w' + msg in keys:
+                        return True
+                    else:
+                        return False
+            return inner_check
+        
+        message = await self.client.wait_for('message', check=check(ctx.author), timeout=30)
+
+        id = message.content
+        if db["w" + str(id)]:
+            await ctx.send(f"`{db[ 'w'+ str(id)][2]}` Deletado com sucesso!")
+            del db["w" + str(id)]
+        else:    
+            await ctx.send(f"**O id `{id}` não foi encontrado**")
+        
+    @commands.command(aliases=['sw', 'hw'])
+    async def trabalhos(self, ctx):
+        txt = []
+        subjects_keys = db.prefix("ac")
+        for subject_acronym in subjects_keys:
+            
+            txt.append(f"\n**{db[subject_acronym]}**\n")
+
+            for work_id in db.prefix("w"):
+                work = db[work_id]
+
+                # Check acronym
+                if work[0] == subject_acronym[2:]:
+                    if work[1] >= datetime.now(country_time_zone).timestamp():
+                        print(work)
+                        time_sec = int(work[1])
+                        name = work[2]
+                        link = work[3]
+                        txt.append(f"[`{name}`]({link}) termina <t:{time_sec}:R>\n")
+        
+        embed=discord.Embed(title='__Tarefas__', description=' '.join(txt))
+        await ctx.send(embed=embed)
+
+"""db
+w[num] = [acronym, time_in_sec, name, link]
+"""
+def setup(client) -> None:
+    client.add_cog(Trabalhos(client))
