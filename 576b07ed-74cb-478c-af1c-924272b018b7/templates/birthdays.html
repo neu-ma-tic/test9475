@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Birthdays</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+<style>
+  /* Style the body */
+	html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1D2333;
+    color: white;
+		height: 100%;
+    margin: 0;
+  }
+  
+	.no-data {
+		height: calc(100% - 1rem);
+		padding: .5rem;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		flex-direction: column;
+		font-size: 4rem;
+	}
+	
+	.content {
+		padding: 2rem;
+	}
+	
+  .card-container {
+		margin: auto;
+		display: grid;
+		gap: 1rem;
+	}
+	
+	@media only screen and (min-width: 1024px) {
+		.card-container {
+			grid-template-columns: 1fr 1fr;
+			min-width: 960px;
+			max-width: 1300px;
+		}
+	}
+	
+	@media only screen and (max-width: 1023px) {
+		.card-container {
+      grid-template-columns: 1fr;
+			min-width: 472px;
+			max-width: 642px;
+		}
+	}
+	
+  .card{
+    background: #262F44;
+    padding: 1rem;
+		overflow: hidden;
+    border-radius: .5rem;
+		
+		display: grid;
+		grid-template-columns: max-content 1fr max-content;
+		grid-template-rows: 6rem;
+		gap: .5rem;
+  }
+	
+  .member-avatar {
+		display: block;
+    height: 100%;
+    border-radius: 50%;
+  }
+	
+	.card-content-container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		overflow: hidden;
+	}
+	
+	.header {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+		height: 50%;
+	}
+
+  .username {
+    color: #1ABC9C;
+    font-size: 1.5rem;
+    font-weight: bold;
+		overflow: hidden;
+  }
+
+  .date {
+		line-height: .8;
+    color: #A3A6AA;
+    font-size: 1.1rem;
+  }
+	
+	.is-greeted {
+		color: lime;
+	}
+	
+	.not-greeted {
+		color: red;
+	}
+	
+	.guild-info {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+		height: 50%;
+	}
+	
+	.guild_icon {
+    height: 100%;
+    border-radius: 31.25%;
+	}
+	
+	.guild-name {
+		font-size: 1.1rem;
+		color: #C3C6CA;
+	}
+	
+	.delete-record-button {
+		width: 2rem;
+		height 2rem;
+		cursor: pointer;
+	}
+	
+	.delete-record-button:hover .svg-path {
+		fill: #d22;
+	}
+	
+	@media only screen and (max-width: 535px) {
+		.card-container {
+			min-width: initial;
+		}
+		
+		.card {
+			grid-template-rows: 3rem;
+      padding: .75rem;
+		}
+
+		.username {
+			font-size: .75rem;
+		}
+
+		.date {
+			font-size: .55rem;
+		}
+
+		.guild-name {
+			font-size: .55rem;
+		}
+  }
+</style>
+</head>
+
+<body>
+
+{% if not data %}
+  <div class="no-data">Currently not available</div>
+{% else %}
+<div class="content">
+  <div class="card-container">
+    {% for item in data['data'] %}
+    <div class="card">
+			<img class="member-avatar" src={{item['member_avatar']}}>
+			<div class="card-content-container">
+				<div class="header">
+					<div class="username">{{item['member_name']}}</div>
+					<div class="date {{'is-greeted' if item['is_greeted'] else 'not-greeted'}}">{{item['birthday']}}</div>
+				</div>
+				<div class="guild-info">
+					<img class="guild_icon" src={{item['guild_icon']}}>
+					<div class="guild-name">{{item['guild_name']}}</div>
+				</div>
+			</div>
+			<svg class="delete-record-button" viewBox="0 0 24 24" onclick="deleteRecord(this, 'unique_id')">
+				<path class="svg-path" fill="#a33" d="M15 3.999V2H9V3.999H3V5.999H21V3.999H15Z"></path>
+				<path class="svg-path" fill="#a33" d="M5 6.99902V18.999C5 20.101 5.897 20.999 7 20.999H17C18.103 20.999 19 20.101 19 18.999V6.99902H5ZM11 17H9V11H11V17ZM15 17H13V11H15V17Z"></path>
+			</svg>
+		</div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<script>
+	function deleteRecord(object, record_id) {
+		console.log(record_id);
+		let card = object.parentNode;
+		card.parentNode.removeChild(card);
+  }
+</script>
+
+</body>
+
+</html>

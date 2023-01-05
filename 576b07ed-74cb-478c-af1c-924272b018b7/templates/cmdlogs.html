@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logs</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+<style>
+  /* Style the body */
+  html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1D2333;
+    color: white;
+		height: 100%;
+    margin: 0;
+  }
+  
+	.no-data {
+		height: calc(100% - 1rem);
+		padding: .5rem;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		flex-direction: column;
+		font-size: 4rem;
+	}
+	
+	.content {
+		padding: 2rem;
+	}
+	
+  .card-container {
+		margin: auto;
+		display: grid;
+		gap: 1rem;
+	}
+	
+	@media only screen and (min-width: 664px) {
+		.card-container {
+  		min-width: 600px;
+  		max-width: 900px;
+		}
+	}
+  
+  .card {
+    background: #262F44;
+    font-size: 1.1rem;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+		overflow: hidden;
+    border-radius: .5rem;
+		display: grid;
+		grid-template-columns: max-content 1fr max-content;
+		grid-template-rows: 4rem max-content;
+		gap: .5rem;
+    grid-template-areas:
+      "avatar header delete"
+      "line content content";
+  }
+		
+  .member-avatar {
+    grid-area: avatar;
+		display: block;
+    height: 100%;
+    border-radius: 2rem;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .username {
+    display: inline;
+    color: #1ABC9C;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .date {
+    display: inline;
+    color: #A3A6AA;
+    margin-left: .5rem;
+  }
+  
+	.command-location {
+		color: #C3C6CA;
+		margin-top: .5rem;
+	}
+	
+	.delete-record-button {
+    grid-area: delete;
+		width: 2rem;
+		height: 2rem;
+		cursor: pointer;
+	}
+  
+	.delete-record-button:hover .svg-path {
+		fill: #d22;
+	}
+	
+	.line-container {
+    grid-area: line;
+		position: relative;
+	}
+	
+	.line {
+		border-left: 4px solid rgba(29, 35, 51, 0.8);
+		border-radius: 1px;
+		margin-left: -2px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+	}
+	
+	.card-content-container {
+    grid-area: content;
+		overflow: hidden;
+	}
+  
+	.card-content {
+		margin: .5rem 0;
+	}
+	
+	@media only screen and (max-width: 663px) {
+		.card {
+			grid-template-rows: 2.5rem max-content;
+      padding: .75rem;
+			font-size: .55rem;
+		}
+
+		.username {
+			font-size: .75rem;
+		}
+  
+  	.card-content {
+  		margin: .25rem 0;
+  	}
+  }
+  
+</style>
+</head>
+
+<body>
+
+{% if not data %}
+  <div class="no-data">Currently not available</div>
+{% else %}
+<div class="content">
+<div class="card-container">
+{% for item in data['data'][::-1] %}
+  <div class="card">
+  	<img class="member-avatar" src={{item['member_avatar']}}>
+  	<div class="header">
+  		<div class="username">{{item['member_name']}}</div>
+  		<div class="date">{{item['created_at']}}</div>
+  		<div class="command-location">{{item['guild']}} > {{item['channel']}}</div>
+  	</div>
+  	<svg class="delete-record-button" viewBox="0 0 24 24" onclick="deleteRecord(this, '{{item['log_id']}}')">
+  		<path class="svg-path" fill="#a33" d="M15 3.999V2H9V3.999H3V5.999H21V3.999H15Z"></path>
+  		<path class="svg-path" fill="#a33" d="M5 6.99902V18.999C5 20.101 5.897 20.999 7 20.999H17C18.103 20.999 19 20.101 19 18.999V6.99902H5ZM11 17H9V11H11V17ZM15 17H13V11H15V17Z"></path>
+  	</svg>
+  	<div class="line-container">
+  		<div class="line"></div>
+  	</div>
+  	<div class="card-content-container">
+  		<div class="card-content">{{item['command']}}</div>
+  	</div>
+  </div>
+{% endfor %}
+</div>
+</div>
+{% endif %}
+
+  
+<script>
+	function deleteRecord(deleteBtn, record_id) {
+    let card = deleteBtn.parentNode;
+    card.parentNode.removeChild(card);
+
+    fetch(window.location.href + '/delete', {
+      method: "POST",
+      body: JSON.stringify({ "log_id": record_id }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+    .then(response => response.json())
+    .then(json => console.log(json));
+	}
+</script>
+
+
+</body>
+</html>
