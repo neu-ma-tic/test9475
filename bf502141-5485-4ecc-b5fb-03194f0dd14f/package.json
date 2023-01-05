@@ -1,0 +1,37 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "Un ejemplo de un codigo eficiente de un bot con discord v13 que hice hace mucho tiempo, no revise el codigo pero seguramente tiene fallos tal vez luego lo revise y  arregle y mejore.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "cpu-stat": "^2.0.1",
+    "discord.js": "^13.6.0",
+    "figlet": "^1.5.2",
+    "fs": "^0.0.1-security",
+    "glob": "^7.2.0",
+    "math-expression-evaluator": "^1.3.13",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^6.1.8",
+    "morse": "^0.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DGABzd/DiscordBot.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/DGABzd/DiscordBot/issues"
+  },
+  "homepage": "https://github.com/DGABzd/DiscordBot#readme"
+}

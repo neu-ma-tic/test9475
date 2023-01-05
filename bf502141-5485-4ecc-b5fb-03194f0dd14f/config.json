@@ -1,0 +1,19 @@
+{
+    "token": "El Token",
+    "prefix": "!",
+    "color": "0x2d334e",
+    "developer": "Manu-cum#8533",
+    "emoji": {
+        "success": "<a:Yes:936725018627416114>",
+        "succesid": "936725018627416114",
+        "error": "<a:No:936725048050454559>",
+        "errorid": "936725048050454559"
+    },
+    "colors": {
+        "primary": "0x2d334e",
+        "negative": "0xcb3234",
+        "positive": "0x008f39",
+        "neutral": "0xe25f23"
+    }
+}
+
