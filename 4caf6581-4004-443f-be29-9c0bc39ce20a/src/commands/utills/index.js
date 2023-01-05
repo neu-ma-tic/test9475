@@ -1,0 +1,6 @@
+module.exports.delivery = require('./delivery')
+module.exports.changelogs = require('./changelogs')
+module.exports.qr = require('./qr')
+module.exports.periodic = require('./periodic')
+module.exports.currecny = require('./currency')
+module.exports.whois = require('./whois')
