@@ -1,0 +1,17 @@
+{
+  "author": [
+    "Fixator10"
+  ],
+  "install_msg": "Thanks for install.",
+  "short": "This cog shows SMM-related data",
+  "description": "This cog shows Super Mario Maker-related data. You can check levels and level designers",
+  "tags": [
+    "mario",
+    "smm",
+    "super mario maker"
+  ],
+  "requirements": [
+    "beautifulsoup4"
+  ],
+  "end_user_data_statement": "This cog does not persistently store data or metadata about users."
+}

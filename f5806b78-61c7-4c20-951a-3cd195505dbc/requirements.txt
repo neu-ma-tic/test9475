@@ -1,0 +1,14 @@
+Red-DiscordBot
+beautifulsoup4
+fonttools
+matplotlib
+mcstatus
+motor
+pillow>=6
+pillow>=6.2.1
+pymongo>=3.10
+python-dateutil
+python-forecastio
+python-valve
+tabulate
+wcwidth

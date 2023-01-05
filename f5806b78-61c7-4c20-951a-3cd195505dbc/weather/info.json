@@ -1,0 +1,18 @@
+{
+  "author": [
+    "Romashkoo",
+    "Fixator10"
+  ],
+  "install_msg": "Thanks for install.\nDon't forget to set api key (`[p]forecastapi`)\nIf you don't have registered DarkSky API key, this cog will be useless to you.\nDarkSky API closing at end of 2021 and im aware of this.",
+  "short": "Weather forecast",
+  "description": "Weather forecast. Requires \"semi-private\" DarkSky API key. For more info: https://blog.darksky.net",
+  "min_bot_version": "3.2.1",
+  "tags": [
+    "weather",
+    "forecast"
+  ],
+  "requirements": [
+    "python-forecastio"
+  ],
+  "end_user_data_statement": "This cog may store data about user's preferred measuring units.\nThis data can be remove by either via `[p]forecastunits reset` or via data removal request."
+}
