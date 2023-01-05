@@ -1,0 +1,12 @@
+config/client.js
+config/database.js
+node_modules/
+.vscode/
+backup.sql
+logs/cmd.log
+backup/
+src/config/client.js
+src/config/database.js
+package-lock.json
+.vscode
+.idea
