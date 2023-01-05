@@ -1,0 +1,19 @@
+{
+  "name": "-asdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dbd.js": "^2.2.0",
+    "quick.db": "^7.1.3",
+    "workerpool": "^6.1.1"
+  }
+}
