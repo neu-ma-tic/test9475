@@ -1,0 +1,4 @@
+discord.py
+dismusic
+wavelink
+discord-custom-help
