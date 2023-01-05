@@ -1,0 +1,9 @@
+node_modules/
+package-lock.json
+.vscode/
+test2.js
+config.json
+npm-debug.log
+extension.pem
+dist/
+assets/
