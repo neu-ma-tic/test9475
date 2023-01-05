@@ -1,11 +1,9 @@
-const { MessageEmbed } = require("discord.js");
-
 module.exports = {
-    name: "playing",
-    aliases: ["nowplaying", "np"],
+    name: "skip",
+    aliases: ["next"],
     category: "music",
-    description: "Displays the currently playing song.",
-    usage: "playing",
+    description: "Skips the currently playing song.",
+    usage: "skip",
     /**
      * @param {import("discord.js").Client} client Discord Client instance
      * @param {import("discord.js").Message} message Discord Message object
@@ -13,6 +11,8 @@ module.exports = {
      * @param {Object} settings guild settings
     */
     run: async (client, message, args, settings) => {
+        const SKIP_EMOJI = "⏭️";
+
         const serverQueue = client.musicGuilds.get(message.guild.id);
         if (!serverQueue) {
             return message.reply("There isn't a song currently playing.")
@@ -21,10 +21,11 @@ module.exports = {
                 }));
         }
 
-        const embedMsg = new MessageEmbed()
-            .setColor("BLUE")
-            .setDescription(`🎵 Currently playing: [${serverQueue.songs[0].title}](${serverQueue.songs[0].url})\nThere ${serverQueue.songs.length == 1 ? "is currently `1` song" : `are currently \`${serverQueue.songs.length}\` songs`} in queue.`);
-
-        message.channel.send(embedMsg);
+        message.react(SKIP_EMOJI)
+            .catch((err) => { // Probably don't have permissions to react
+                message.channel.send("Skipping...");
+            }).finally(() => {
+                serverQueue.connection.dispatcher.end();
+            });
     }
 }
