@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# production
+discord4bot-win32-x64/
+
+# misc
+*.bat
+*.lnk
+src/real.css
+src/index-old.html
+src/weebify.js
+.VSCodeCounter/
