@@ -1,0 +1,8 @@
+run = ["go", "run", "main.go"]
+entrypoint = "main.go"
+
+[languages.go]
+pattern = "**/*.go"
+
+[languages.go.languageServer]
+start = "gopls"
