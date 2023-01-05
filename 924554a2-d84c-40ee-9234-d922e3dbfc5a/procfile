@@ -1,0 +1,2 @@
+heroku create myapp --buildpack heroku/python
+web start main.py
