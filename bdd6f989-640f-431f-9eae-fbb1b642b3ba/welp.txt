@@ -1,0 +1,8 @@
+Bot larry commands
+
+[Commands]
+/suslink
+/welp
+/plsban @user why:???
+/sus @user why:???
+/showtime < useless command
