@@ -1,0 +1,34 @@
+{
+	"name": "music-bot",
+	"version": "0.0.1",
+	"description": "An example music bot written using @discordjs/voice",
+	"scripts": {
+		"start": "npm run build && node -r tsconfig-paths/register dist/bot",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint src --ext .ts",
+		"lint:fix": "eslint src --ext .ts --fix",
+		"prettier": "prettier --write **/*.{ts,js,json,yml,yaml}",
+		"build": "tsc",
+		"build:check": "tsc --noEmit --incremental false"
+	},
+	"author": "Amish Shah <contact@shah.gg>",
+	"license": "MIT",
+	"dependencies": {
+		"@discordjs/opus": "^0.5.0",
+		"@discordjs/voice": "^0.6.0",
+		"discord-api-types": "^0.19.0",
+		"discord.js": "^13.1.0",
+		"express": "^4.17.1",
+		"libsodium-wrappers": "^0.7.9",
+		"node": "16.6.1",
+		"server": "^1.0.36",
+		"youtube-dl-exec": "^1.2.4",
+		"yt-search": "^2.10.1",
+		"ytdl-core": "^4.8.3"
+	},
+	"devDependencies": {
+		"@types/yt-search": "^2.3.2",
+		"tsconfig-paths": "^3.9.0",
+		"typescript": "~4.2.2"
+	}
+}
