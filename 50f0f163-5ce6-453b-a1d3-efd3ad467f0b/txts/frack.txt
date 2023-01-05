@@ -1,0 +1,298 @@
+@client.slash_command()
+async def invite(ctx):
+    embed = discord.Embed(
+        title='Andy-Bot invitation',
+        description=
+        '[Click Here](https://discord.com/api/oauth2/authorize?client_id=763315062668001301&permissions=8&scope=bot%20applications.commands)\n\n[Andys Youtube Channel](https://www.youtube.com/channel/UC6kZd-2yKyXXE0UR5sDvy0A?sub_confirmation=1)',
+        color=discord.Color.red())
+    embed.set_footer(text=f'Requested by {ctx.author.name}',
+                     icon_url=ctx.author.avatar.url)
+    await ctx.respond(
+        embed=embed,
+    )
+
+
+
+
+
+@client.slash_command()
+@commands.check(is_it_me)
+async def server(ctx):
+    await ctx.respond("\n".join([i.name for i in client.guilds]))
+
+
+
+
+@client.slash_command()
+async def test(ctx):
+    await ctx.respond(discord.__version__)
+
+
+@client.slash_command()
+async def ping(ctx):
+    await ctx.respond(f'🏓**Pong!** Latency: {round(client.latency * 1000)}ms')
+
+
+@client.slash_command()
+async def aibot(ctx, *, args):
+    message = args
+    key = "k5eOddS5Uj9t"
+    header = {"x-api-key": key}
+    type = "stable"
+    params = {'type': type, 'message': message}
+    async with aiohttp.ClientSession(headers=header) as session:
+        async with session.get(url='https://api.pgamerx.com/v3/ai/response',
+                               params=params) as resp:
+            text = await resp.json()
+            print(resp.status)
+            await ctx.respond(text[0]['message'])
+
+
+@client.slash_command()
+async def programmerjoke(ctx):
+    joke = pyjokes.get_joke()
+    await ctx.respond(joke)
+
+
+
+
+@client.slash_command()
+async def joke(ctx):
+
+    urls = "https://dad-jokes.p.rapidapi.com/random/jokes"
+
+    headers = {
+        'x-rapidapi-key': "288fd18848mshb066f43d241c797p1603dejsne3b93c3e4352",
+        'x-rapidapi-host': "dad-jokes.p.rapidapi.com"
+    }
+
+    responsed = requests.request("GET", urls, headers=headers)
+    json_thing = json.loads(responsed.text)
+    await ctx.respond(
+        f"**{json_thing['body'][0]['setup']}**\n\n||{json_thing['body'][0]['punchline']}||"
+    )
+
+
+@client.slash_command()
+async def translate(ctx, lang, *, args):
+    lang = lang.lower()
+    if lang not in googletrans.LANGUAGES and lang not in googletrans.LANGCODES:
+        raise commands.BadArgument('Invalid language to translate text to')
+    translator = googletrans.Translator()
+    text_translated = translator.translate(args, dest=lang).text
+    await ctx.respond(text_translated)
+
+
+@client.slash_command(name='die', help='This command returns a random last words')
+async def die(ctx):
+    responses = [
+        'why have you brought my short life to an end',
+        'i could have done so much more', 'i have a family, kill them instead'
+    ]
+    await ctx.respond(random.choice(responses))
+
+
+@client.slash_command(name='inspire', help='this command inspires people')
+async def inspire(ctx):
+    quote = get_quote()
+    await ctx.respond(quote)
+
+
+@client.slash_command()
+async def musichelp(ctx):
+    await ctx.respond('Use .play and then the video of your choice')
+
+
+@client.slash_command()
+async def minecraft(ctx, arg):
+    r = requests.get('https://api.minehut.com/server/' + arg + '?byName=true')
+    json_data = r.json()
+
+    description = json_data["server"]["motd"]
+    online = str(json_data["server"]["online"])
+    playerCount = str(json_data["server"]["playerCount"])
+
+    embed = discord.Embed(title=arg + " Server Info",
+                          description='Description: ' + description +
+                          '\nOnline: ' + online + '\nPlayers: ' + playerCount,
+                          color=discord.Color.dark_green())
+    embed.set_thumbnail(
+        url=
+        "https://i1.wp.com/www.craftycreations.net/wp-content/uploads/2019/08/Grass-Block-e1566147655539.png?fit=500%2C500&ssl=1"
+    )
+
+    await ctx.respond(embed=embed)
+
+
+@client.slash_command()
+@commands.has_permissions(manage_messages=True)
+async def clear(ctx, amount=10):
+    await ctx.channel.purge(limit=amount)
+    await ctx.respond('yes')
+
+
+@client.slash_command(description="Unmutes a specified user.")
+@commands.has_permissions(manage_messages=True)
+async def unmute(ctx, member: discord.Member):
+    mutedRole = discord.utils.get(ctx.guild.roles, name="Muted")
+
+    await member.remove_roles(mutedRole)
+    await member.send(f" you have being unmutedd from: - {ctx.guild.name}")
+    embed = discord.Embed(title="unmute",
+                          description=f" unmuted-{member.mention}",
+                          colour=discord.Color.light_gray())
+    await ctx.respond(embed=embed)
+
+
+@client.slash_command()
+@commands.has_permissions(manage_messages=True)
+async def kick(ctx, member: discord.Member, *, reason=None):
+    await member.kick(reason=reason)
+    await ctx.respond('{member} has being kicked for {reason}')
+
+
+@client.slash_command()
+@commands.has_permissions(manage_messages=True)
+async def ban(ctx, member: discord.Member, *, reason=None):
+    await member.ban(reason=reason)
+    await ctx.respond(f'{member} has being banned for {reason}')
+
+
+@client.slash_command()
+@commands.has_permissions(manage_messages=True)
+async def unban(ctx, member: discord.Member):
+    banned_users = await ctx.guild.bans()
+    member_name, member_discriminator = member.split('#')
+    for ban_entry in banned_users:
+        user = ban_entry.user
+        if (user.name, user.discriminator) == (member_name,
+                                               member_discriminator):
+            await ctx.guild.unban(user)
+            await ctx.respond(f"{user} has been Unbanned")
+
+
+client.sniped_messages = {}
+
+
+@client.event
+async def on_message_delete(message):
+    client.sniped_messages[message.guild.id] = (message.content,
+                                                message.author,
+                                                message.channel.name,
+                                                message.created_at)
+
+
+@client.slash_command()
+@commands.check(is_it_me)
+async def snipe(ctx):
+    try:
+        contents, author, channel_name, own_time = client.sniped_messages[
+            ctx.guild.id]
+
+    except:
+        await ctx.channel.send("Couldn't find a message to snipe!")
+        return
+
+    embed = discord.Embed(description=contents,
+                          color=discord.Color.purple(),
+                          timestamp=own_time)
+    embed.set_author(name=f"{author.name}#{author.discriminator}",
+                     icon_url=author.avatar.url)
+    embed.set_footer(text=f"Deleted in : #{channel_name}")
+    await ctx.channel.send(embed=embed)
+
+
+@client.slash_command()
+@commands.check(is_it_me)
+async def dm(ctx, member: discord.Member, *, args):
+    await member.send(args)
+    await ctx.respond(f"'{args}' sent to {member}")
+
+
+@client.slash_command()
+async def say(ctx, *, args):
+    if ctx.author.id == owner_id:
+        await ctx.respond(args)
+    else:
+      list = ['bruh no', 'why should I?','no u','no thanks','no']
+      random_sd = random.choice(list)
+      await ctx.respond(random_sd)
+
+
+
+
+@client.slash_command()
+async def meme(ctx):
+    async with aiohttp.ClientSession() as cs:
+        async with cs.get('https://meme-api.herokuapp.com/gimme') as r:
+            res = await r.json()
+            embed = discord.Embed(title=res['title'],
+                                  color=discord.Color.purple())
+            embed.set_image(url=res['preview'][1])
+            embed.set_footer(text=f"Requested by {ctx.author.name}",
+                             icon_url=ctx.author.avatar.url)
+            await ctx.respond(embed=embed)
+
+
+
+@client.slash_command(name="credit", help="this command returns the credit")
+async def credit(ctx):
+    embed = discord.Embed(
+        title='Credit',
+        description=
+        "**Made by `Andy` aka RunTheProgram**\nAlso make sure to check out Andy's YouTube Channel and Discord server!\nIf you need any help with the bot you can join the Andy-Bot support server!",
+        color=discord.Color.random())
+    embed.set_footer(text=f'Requested by {ctx.author.name}',
+                     icon_url=ctx.author.avatar.url)
+    view = discord.ui.View()
+    view.add_item(discord.ui.Button(label='YouTube Channel', url='https://www.youtube.com/channel/UC6kZd-2yKyXXE0UR5sDvy0A?sub_confirmation=1', style=discord.ButtonStyle.url))
+    view.add_item(discord.ui.Button(label="Dev's Discord Server", url='https://discord.gg/DQDxhpUJkH', style=discord.ButtonStyle.url))
+    view.add_item(discord.ui.Button(label='Bot Program Support', url='https://discord.gg/6SepjBwx38', style=discord.ButtonStyle.url))
+
+    await ctx.respond(
+        embed=embed,view=view
+    )
+
+
+@client.slash_command()
+async def weather(ctx, country, location):
+    state = 'randomshit'
+    url = f'http://api.openweathermap.org/data/2.5/weather?q={location},{state},{country}&appid={api_key}&units=metric'
+    try:
+        data = parse_data(json.loads(requests.get(url).content)['main'])
+        await ctx.respond(embed=weather_message(data, location))
+    except KeyError:
+        await ctx.respond(embed=error_message(location))
+
+
+
+
+@client.slash_command()
+async def AndyBot(ctx, *, question):
+    if ctx.author.id == owner_id:
+        await ctx.respond("I AM REALLY SORRY I WON'T DO IT AGAIN")
+    else:
+        return False
+
+
+@client.slash_command()
+async def hack(ctx, member: discord.Member):
+    m = await ctx.respond(f'Hacking {member} right now!!')
+    await asyncio.sleep(2)
+    await m.edit('Bypassing 2fa discord login')
+    await asyncio.sleep(2)
+    await m.edit('Metasploit reverse shell injection')
+    await asyncio.sleep(2)
+    await m.edit('clickjacking html json excution')
+    await asyncio.sleep(2)
+    await m.edit('ip = 127.0.0.7')
+    await asyncio.sleep(2)
+    await m.edit('stealing nitro')
+    await asyncio.sleep(2)
+    await m.edit('reporting user to discord for breaking discord TOS')
+    await asyncio.sleep(2)
+    await m.edit('getting social security number')
+    await asyncio.sleep(2)
+    await m.edit('social security number: 6969696969420')
+    await asyncio.sleep(2)
+    await m.edit('the super realistic hack is finished')
