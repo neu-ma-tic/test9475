@@ -1,0 +1,8 @@
+{
+“name”: “Clant Bot”,
+“version”: “1.0.0”,
+“description”: “My First Discord Bot”,
+“main”: “bot.js”,
+“author”: “Spitfire9881”,
+“dependencies”: {}
+}
