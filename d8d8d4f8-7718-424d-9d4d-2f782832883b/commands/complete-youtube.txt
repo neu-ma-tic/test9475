@@ -1,0 +1,26 @@
+module.exports = {
+    name: 'youtube',
+    description: "sends the youtube link",
+    execute(message, args){
+
+
+        let role = message.guild.roles.cache.find(r => r.name === "testrole");
+        
+        if(message.member.permissions.has("BAN_MEMBERS")){
+            message.channel.send('You have the permission to ban members.');
+        } else {
+            message.channel.send("You don't have the permission to ban members.");
+        }
+
+        //if(message.member.roles.cache.some(r => r.name === "testrole")){
+        //    message.channel.send('https://www.youtube.com/retroguy');
+        //
+        //
+        //} else {
+        //    message.channel.send("You can't run this command because you don't have the right permissions, let me change that.");
+        //    message.member.roles.add(role).catch(console.error);
+        //}
+
+
+    }
+}
