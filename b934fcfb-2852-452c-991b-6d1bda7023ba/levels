@@ -1,0 +1,100 @@
+import discord
+from discord.ext import commands
+from pymongo import MongoClient
+import os
+from PIL import Image, ImageFont, ImageDraw
+from io import BytesIO
+Channel = 812092012794347520
+Talking = [812744605232922693, 814141521363599410, 814147165094019102, 848693095096254464, 846929798798508102, 854395191264149504, 815181892889477150, 815231442601639937, 852602834179981342, 812092012794347520, 812744940622839828, 826787365925158952, 826787365925158952, 844290615867867156, 814147880829845525, 814147823775121469, 822744495178383371, 836372158061871154]
+Roles = ["Pluto","Neptune","Uranus","Saturn","Jupiter","Mars","Venus","Mercury","Sun"]
+Levelr = [5,10,15,20,25,30,35,40,45]
+
+cluster = MongoClient("mongodb+srv://Earth9389:<Earth9389>@earth.mldri.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+levelling = cluster["discord"]["levelling"]
+
+
+
+
+
+
+
+
+
+
+
+
+class levels(commands.Cog):
+    def __init__(self, client):
+        self.client = client 
+    
+
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        if message.channel.id in Talking:
+            stats = levelling.find_one({"id" : message.author.id})
+            if not message.author.bot:
+                if stats is None:
+                    new = {"id" : message.author.id, "xp" : 0}
+                    levelling.insert_one(new)
+                else:
+                    xp = stats["xp"] + 5
+                    levelling.update_one({"id" : message.author.id}, {"$set":{"xp":xp}})
+                    lvl = 0
+                    while True:
+                        if xp < ((50*(lvl**2))+(50*(lvl))):
+                            break
+                        lvl += 1 
+                    xp -= ((50*((lvl-1)**2))+(50*(lvl)))
+                    if xp == 0:
+                        await message.channel.send(f'{message.author.mention} has leveled up to level {lvl}') 
+                        for i in range(len(Roles)):
+                            if lvl == Levelr[i]:
+                                await message.author.add_roles(discord.utils.get(message.author.guild.roles, name=Roles[i]))
+
+    @command.commands()
+    async def Rank(self, ctx):
+        if ctx.channel.id == Channel:
+            stats = levelling.find_one({"id" : ctx.author.id})
+            if stats is None:
+                await ctx.channel.send("You have not been ranked yet, send some messages first!")
+            else:
+                xp = stats["xp"]
+                lvl = 0
+                rank = 0
+                while True:
+                        if xp < ((50*(lvl**2))+(50*(lvl))):
+                            break
+                        lvl += 1 
+                xp -= ((50*((lvl-1)**2))+(50*(lvl)))
+                ranc = Image.open("Rank.png")
+                font = ImageFont.truetype("arial_narrow_7.ttf",45 )
+                fontb = ImageFont.truetype("arial_narrow_7.ttf",50 )
+                fontc = ImageFont.truetype("arial_narrow_7.ttf",30 )
+                draw = ImageDraw.Draw(ranc)
+                txt = f"Level: {lvl}"
+                draw.text((295,30), txt, (255,230,0), font=fontb)
+                tx = f"{xp}/{int(200*((1/2)*lvl))} XP"
+                draw.text((295,90), tx, (0,0,0), font=font)
+                name = f"Total: {xp}"
+                draw.text((295,150), name, (0,0,0), font=font)
+                nae = ctx.member.name
+                draw.text((295,210), nae, (0,0,204), font=fontc)
+                ok = ctx.member.avatar_url_as(size = 128)
+                data = BytesIO(await ok.read())
+                ppf = Image.open(data)
+                ppf = ppf.resize((211,211))
+                ranc.paste(ppf, (12,20))
+                ranc.save(f"Rankcard{nae}.png")
+                await ctx.send(file= discord.File(f"Rankcard{nae}.png"))
+                os.remove(f"Rankcard{nae}.png")
+        
+def setup(client):
+    client.add_cog(levels(client))
+            
+
+                     
+
+
+
+
+    

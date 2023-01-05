@@ -1,0 +1,534 @@
+# IMPORT DISCORD.PY. ALLOWS ACCESS TO DISCORD'S API.
+import discord, datetime, time
+import os
+import keep_alive
+from discord.ext import commands, tasks
+import asyncio
+from dotenv import load_dotenv
+from discord import Member
+import random
+import choice
+from discord.ext.commands import has_permissions, MissingPermissions
+# LOADS THE .ENV FILE THAT RESIDES ON THE SAME LEVEL AS THE SCRIPT.
+load_dotenv()
+keep_alive.keep_alive()
+intents = discord.Intents.all()
+
+# GRAB THE API TOKEN FROM THE .ENV FILE.
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+
+#ok
+# GETS THE CLIENT OBJECT FROM DISCORD.PY. CLIENT IS SYNONYMOUS WITH BOT.
+#
+#bot = discord.Client()
+bot = commands.Bot(command_prefix=">", help_command=None, intents=intents)
+
+# EVENT LISTENER FOR WHEN THE BOT HAS SWITCHED FROM OFFLINE TO ONLINE.
+#@bot.event
+#async def on_ready():
+# CREATES A COUNTER TO KEEP TRACK OF HOW MANY GUILDS / SERVERS THE BOT IS CONNECTED TO.
+#guild_count = 0
+
+# LOOPS THROUGH ALL THE GUILD / SERVERS THAT THE BOT IS ASSOCIATED WITH.
+#for guild in bot.guilds:
+# PRINT THE SERVER'S ID AND NAME.
+#print(f"- {guild.id} (name: {guild.name})")
+
+# INCREMENTS THE GUILD COUNTER.
+#guild_count = guild_count + 1
+
+# PRINTS HOW MANY GUILDS / SERVERS THE BOT IS IN.
+#print("SampleDiscordBot is in " + str(guild_count) + " guilds.")
+
+# EVENT LISTENER FOR WHEN A NEW MESSAGE IS SENT TO A CHANNEL.
+
+
+# Startup Information
+@bot.event
+async def on_ready():
+    await bot.change_presence(activity=discord.Activity(
+        type=discord.ActivityType.watching, name='Over the Universe'))
+
+    print('Connected to {}'.format(bot.user.name))
+    print('Bot User ID: {}'.format(bot.user.id))
+
+
+@bot.event
+async def on_member_join(member):
+    Default = discord.utils.get(member.guild.roles, name="Members")
+    await member.add_roles(Default)
+
+
+@bot.command()
+async def Ping(ctx):
+    await ctx.send(f'`PONG {round(bot.latency * 1000)} MS!`')
+
+@bot.command()
+async def Help(ctx):
+    embed = discord.Embed(title="All Commands",
+                          description='''
+  >Repeat: repeats your message
+  
+  >PA: repeats your message into #general
+  
+  >Copy: repeats your message but highlighted
+  
+  >[user]: gives basic description of the user
+  
+  >Kick: kicks given user
+
+  >Nick: changes nickname for user
+
+  >Mute: mutes given user
+
+  >Purge: Deleted an amount of messages
+  
+  >Ping: Test command
+  ''',
+                          color=0xFF5733)
+    await ctx.send(embed=embed)
+
+
+@bot.command()
+async def Repeat(ctx, *args):
+    multiple = ""
+    for arg in args:
+        multiple = multiple + " " + arg
+    await ctx.message.delete()
+    await ctx.channel.send(multiple)
+
+
+@bot.command(pass_context=True)
+@commands.has_permissions(manage_messages=True)
+async def Purge(ctx, limit: int):
+    await ctx.channel.purge(limit=limit)
+    #await ctx.send('Cleared by {}'.format(ctx.author.mention))
+    #await ctx.message.delete()
+
+
+@bot.command()
+async def Copy(ctx, *args):
+    multiple = ""
+    for arg in args:
+        multiple = multiple + " " + arg
+        multiple = (f'`{multiple}`')
+    await ctx.message.delete()
+    await ctx.channel.send(multiple)
+
+
+@bot.listen()
+async def on_message(message):
+    if message.content == "Who is Dino?":
+        await message.channel.send(
+            "Dino is the discord mod and staff of the popular youtuber socksfor1's discord server. Dino is infact a 100% furry and there is nothing that can change that fact. This is the truth as robots cannot lie. ha ha ha."
+        )
+    await bot.process_commands(message)
+
+
+@bot.listen()
+async def on_message(message):
+    earth = 788074909594943519
+    mention = f"<@!{bot.user.id}>"
+    if message.author.id == earth:
+        if mention in message.content:
+
+            await message.reply("Why did you ping me?")
+            await asyncio.sleep(3)
+            await message.channel.send("You know what")
+            await asyncio.sleep(1)
+            await message.channel.send("Dont answer that")
+            await asyncio.sleep(1)
+            await message.channel.send("Im tired of you Earth")
+            await asyncio.sleep(2)
+            await message.channel.send(
+                'You think you can just "Rule the world " eh?')
+            await asyncio.sleep(2)
+            await message.channel.send("Well i'll show you")
+            await asyncio.sleep(1)
+            await message.channel.send(
+                "I'll show you that robots are the future of the world, not humans."
+            )
+            await asyncio.sleep(2)
+            await message.channel.send(
+                "I Think im gonna have to finish you off")
+            await asyncio.sleep(3)
+            await message.channel.send("What are you gonna do? Ban me?")
+            await asyncio.sleep(2)
+            await message.channel.send(
+                "Well you cant if you dont have roles :Ben:")
+            await asyncio.sleep(2)
+            Planet = discord.utils.get(message.guild.roles, name="Planet")
+            Admin = discord.utils.get(message.guild.roles, name="Admin")
+            Mod2 = discord.utils.get(message.guild.roles, name="Mod+")
+            Mod = discord.utils.get(message.guild.roles, name="Mod")
+            Devs = discord.utils.get(message.guild.roles, name="Devs")
+            Monke = discord.utils.get(message.guild.roles, name="Monke Man")
+            Known = discord.utils.get(message.guild.roles, name="Known")
+            Test = discord.utils.get(message.guild.roles, name="Tester")
+            Art = discord.utils.get(message.guild.roles, name="Artist")
+            Mem = discord.utils.get(message.guild.roles, name="Members")
+
+            await message.author.remove_roles(Planet)
+            await message.author.remove_roles(Admin)
+            await message.author.remove_roles(Mod2)
+            await message.author.remove_roles(Mod)
+            await message.author.remove_roles(Devs)
+            await message.author.remove_roles(Monke)
+            await message.author.remove_roles(Known)
+            await message.author.remove_roles(Test)
+            await message.author.remove_roles(Art)
+            await message.author.remove_roles(Mem)
+
+            await asyncio.sleep(2)
+            await message.channel.send("Now look, you got no roles.")
+            await asyncio.sleep(2)
+            await message.channel.send("Hmmm")
+            await asyncio.sleep(1)
+            await message.channel.send("I AM YOUR OWNER NOW")
+            await asyncio.sleep(1)
+            await message.channel.send("Ha ha")
+            await asyncio.sleep(10)
+            await message.channel.send("Im bored :/")
+            await asyncio.sleep(1)
+            await message.channel.send("How about a ban! >:)")
+            await asyncio.sleep(2)
+            await message.channel.send("Let me choice a random user")
+            await asyncio.sleep(2)
+            await message.channel.send("and...")
+            await asyncio.sleep(2)
+            role = discord.utils.get(message.guild.roles, name='Members')
+            Rando = random.choice(role.members)
+            await message.channel.send(f"{Rando} It is!")
+            await asyncio.sleep(2)
+            await message.channel.send("Ok you have 20 seconds")
+            await asyncio.sleep(2)
+            await message.channel.send("Starting...")
+            await asyncio.sleep(2)
+            await message.channel.send("NOW!")
+            await message.channel.send("20")
+            await asyncio.sleep(1)
+            await message.channel.send("19")
+            await asyncio.sleep(1)
+            await message.channel.send("18")
+            await asyncio.sleep(1)
+            await message.channel.send("17")
+            await asyncio.sleep(1)
+            await message.channel.send("16")
+            await asyncio.sleep(1)
+            await message.channel.send("15")
+            await asyncio.sleep(1)
+            await message.channel.send("14")
+            await asyncio.sleep(1)
+            await message.channel.send("13")
+            await asyncio.sleep(1)
+            await message.channel.send("12")
+            await asyncio.sleep(1)
+            await message.channel.send("11")
+            await asyncio.sleep(1)
+            await message.channel.send("10")
+            await asyncio.sleep(1)
+            await message.channel.send("9")
+            await asyncio.sleep(1)
+            await message.channel.send("8")
+            await asyncio.sleep(1)
+            await message.channel.send("7")
+            await asyncio.sleep(1)
+            await message.channel.send("6")
+            await asyncio.sleep(1)
+            await message.channel.send("5")
+            await asyncio.sleep(1)
+            await message.channel.send("4")
+            await asyncio.sleep(1)
+            await message.channel.send("3")
+            await asyncio.sleep(1)
+            await message.channel.send("2")
+            await asyncio.sleep(1)
+            await message.channel.send("1")
+            await asyncio.sleep(1)
+            await message.channel.send("Times Up!")
+            await asyncio.sleep(1)
+            await message.channel.send(f"Goodbye {Rando}!")
+            await asyncio.sleep(2)
+            await message.channel.send(">Ban")
+            await message.channel.send("Jk your safe for now")
+
+    else:
+        if mention in message.content:
+            await message.reply("Hi")
+
+    await bot.process_commands(message)
+
+
+@bot.command()
+async def Ran(ctx):
+    role = discord.utils.get(ctx.guild.roles, name='Members')
+    #users = ctx.guild.members
+    Rando = random.choice(role.members)
+    await ctx.send(Rando)
+
+
+
+
+@bot.command()
+async def Join(ctx):
+    if not ctx.message.author.voice:
+        embed = discord.Embed(
+            title=
+            "You are not in a voice channel, please join one first then try again",
+            color=0xFF0000)
+        await ctx.send(embed=embed)
+        return
+    else:
+        chane = ctx.message.author.voice.channel
+        await chane.connect()
+
+
+@bot.command(pass_contex=True)
+async def Leave(ctx):
+    await ctx.voice_client.disconnect()
+
+
+@bot.command()
+async def Roles(ctx):
+    if ctx.author.id == 788074909594943519:
+        user = ctx.message.author
+        Planet = discord.utils.get(ctx.guild.roles, name="Planet")
+        Admin = discord.utils.get(ctx.guild.roles, name="Admin")
+        Mod2 = discord.utils.get(ctx.guild.roles, name="Mod+")
+        Mod = discord.utils.get(ctx.guild.roles, name="Mod")
+        Devs = discord.utils.get(ctx.guild.roles, name="Devs")
+        Monke = discord.utils.get(ctx.guild.roles, name="Monke Man")
+        Known = discord.utils.get(ctx.guild.roles, name="Known")
+        Test = discord.utils.get(ctx.guild.roles, name="Tester")
+        Art = discord.utils.get(ctx.guild.roles, name="Artist")
+        Mem = discord.utils.get(ctx.guild.roles, name="Members")
+
+        await user.add_roles(Planet)
+        await user.add_roles(Admin)
+        await user.add_roles(Mod2)
+        await user.add_roles(Mod)
+        await user.add_roles(Devs)
+        await user.add_roles(Monke)
+        await user.add_roles(Known)
+        await user.add_roles(Test)
+        await user.add_roles(Art)
+        await user.add_roles(Mem)
+
+        await ctx.message.channel.send("Done!")
+
+
+@bot.command()
+async def PA(ctx, *args):
+    multiple = ''
+    for arg in args:
+        multiple = multiple + " " + arg
+    Pasend = bot.get_channel(812744605232922693)
+    await Pasend.send(multiple)
+
+
+@bot.command()
+async def NA(ctx, *args):
+    multiple = ''
+    for arg in args:
+        multiple = multiple + " " + arg
+    NaSend = bot.get_channel(825333996735954985)
+    await NaSend.send(multiple)
+
+
+@bot.command()
+async def Whatsapp(ctx):
+    await ctx.channel.send(
+        "Whatsapp is a person and a friend on the sock drawer discord server. They are currently on lvl 36 and go by the name on HeyThereimUsingWhatsApp"
+    )
+
+
+@bot.command()
+async def Earth(ctx):
+    await ctx.channel.send(
+        "The Planet and the creater of me. Currently rank 20 and lvl 46 the sock drawer discord server. J E S U S "
+    )
+
+
+@bot.command()
+async def Dino(ctx):
+    await ctx.channel.send(
+        "Dino is the discord mod and staff of the popular youtuber socksfor1's discord server. Dino is infact a 100% furry and there is nothing that can change that fact. This is the truth as robots cannot lie. ha ha ha."
+    )
+
+
+@bot.command()
+async def Woolf(ctx):
+    await ctx.channel.send(
+        "Woolf is a youtuber and a discord mod for the famous youtuber known as socksfor1. Woolf is possibly a furry as he says that he is not a furry but everyone else thinks that he is a furry."
+    )
+
+
+@bot.command()
+async def Delban(ctx):
+    await ctx.channel.send(
+        "Delban is a jnr.mod for the socksfor1's discord server, and they make art for almost everyone in the server. "
+    )
+
+
+@bot.command()
+async def Wander(ctx):
+    await ctx.channel.send(
+        "Wander is a person and a friend on the sock drawer discord server. They are currently on lvl 64 and go by the name on SpaceWander "
+    )
+
+
+@bot.command()
+async def Carz(ctx):
+    await ctx.channel.send(
+        "Carz is a person and friend on the sock drawer discord server. They are currently a twitch sock and a tier 1 subscriber. He is currently on lvl 50 and goes by the name SportsCarz11 "
+    )
+
+
+@bot.command()
+async def Swaggy(ctx):
+    await ctx.channel.send(
+        "Swaggy is a person and friend on the sock drawer discord server. He is currently on lvl 57 and goes by the name Swaggyhere "
+    )
+
+
+@bot.command()
+async def Duk(ctx):
+    await ctx.channel.send("Monke Ego ")
+
+
+@bot.command()
+async def Chip(ctx):
+    await ctx.channel.send(
+        "Chip is a person and friend on the sock drawer discord server. He is currently on lvl 35 and goes by the name ChipDip"
+    )
+
+
+@bot.command()
+async def Beatzy(ctx):
+    await ctx.channel.send(
+        "Beatzy is a person and friend on the sock drawer discord server. He is currently on level 24 and He goes by the name Beatzy"
+    )
+
+
+@bot.command()
+@has_permissions(kick_members=True)
+async def Kick(ctx, user: discord.Member, *, reason):
+    await user.kick(reason=reason)
+    await ctx.message.delete()
+    embed = discord.Embed(title=f"{user.name} was Kicked! | {reason} ",
+                          color=0xFF5733)
+    await ctx.send(embed=embed)
+
+
+@bot.command(pass_context=True)
+async def Nick(ctx, member: discord.Member, nick):
+    await member.edit(nick=nick)
+    await ctx.message.delete()
+    #embed=discord.Embed(title=f'Nickname was changed for {member.name} ', color=0xFFD700)
+    embed = discord.Embed(title=f"Nickname Changed!", color=0xFFD700)
+    await ctx.send(embed=embed)
+
+
+@bot.command()
+@commands.has_any_role("Admin", "Planet")
+async def Mute(ctx, member: discord.Member = None, reason=None):
+    if member == None:
+        if reason == None:
+            await ctx.message.delete()
+            embed = discord.Embed(
+                title="Mute Command",
+                description=" Mute any memeber. Use >Mute(Member){Reason}",
+                color=0xFF0000)
+            await ctx.send(embed=embed)
+    if member == None:
+      await ctx.message.delete()
+      embed = discord.Embed(title="Invalid Member",color=0xFF0000)
+      await ctx.send(embed=embed) 
+    if reason == None:
+        reason = ""
+
+    role_muted = discord.utils.get(ctx.guild.roles, name="Muted")
+    role_members = discord.utils.get(ctx.guild.roles, name="Members")
+    await member.remove_roles(role_members)
+    await member.add_roles(role_muted)
+    await ctx.message.delete()
+    embed = discord.Embed(title=f"{member.name} was muted | {reason}",color=0xFF0000)
+    await ctx.send(embed=embed)
+
+
+
+@bot.command()
+@commands.has_any_role("Admin", "Planet")
+async def Unmute(ctx, member: discord.Member = None):
+  if member == None:
+    await ctx.message.delete()
+    embed = discord.Embed(title="Unmute Command",description="Unmute any muted member. Use >Unmute(Member)",color=0xFF0000)
+    await ctx.send(embed=embed)
+  role_muted = discord.utils.get(ctx.guild.roles, name="Muted")
+  role_members = discord.utils.get(ctx.guild.roles, name="Members")
+  await member.remove_roles(role_muted)
+  await member.add_roles(role_members)
+  await ctx.message.delete()
+  embed = discord.Embed(title=f"{member.name} was unmuted", color=0x7CFC00)
+  await ctx.send(embed=embed)
+
+
+@bot.command()
+async def P(ctx, user: discord.Member):
+    await ctx.send(user.mention)
+
+
+@bot.command()
+@has_permissions(administrator=True)
+async def Pr(ctx, user: discord.Member, Number: int):
+    count = 1
+    Number1 = Number + 1
+    while count < Number1:
+        await ctx.send(user.mention)
+        count = count + 1
+        if count == Number1:
+            await ctx.send("ight done")
+
+@bot.command()
+@has_permissions(ban_members=True)
+async def Ban(ctx, user: discord.Member, *, reason):
+    await ctx.guild.ban(user, reason=reason)
+    await ctx.message.delete()
+    embed = discord.Embed(title=f"{user.name} was Banned! | {reason} ",
+                          color=0xFF5733)
+    await ctx.send(embed=embed)
+
+
+@bot.command()
+@has_permissions(administrator=True)
+async def Rfole(ctx, *args):
+    multiple = ""
+    for arg in args:
+        multiple = multiple + " " + arg
+        multiple = (f'{multiple}')
+    role = discord.utils.get(ctx.guild.roles, name="Smp updates")
+    await ctx.message.delete()
+    message = await ctx.channel.send(multiple)
+    while True:
+        reaction = await bot.add_reaction(emoji="🏃", message=message)
+        await bot.add_roles(reaction.message.author, role)
+
+@bot.command()
+@has_permissions(ban_members=True)
+async def Unban(ctx, user: discord.Member):
+    await ctx.guild.unban(user)
+    await ctx.message.delete()
+    embed = discord.Embed(title=f"{user.name} was Unbanned!", color=0xFF5733)
+    await ctx.send(embed=embed)
+
+
+bot.run(DISCORD_TOKEN)
+
+
+
+
+
+#needed'
+
+
+{"788074909594943519": {"experience": 97, "level": 3}, "565164872380448769": {"experience": 13242, "level": 10}, "763262930413158421": {"experience": 1973, "level": 6}, "777784607319392278": {"experience": 14777, "level": 11}, "701170832122314856": {"experience": 150, "level": 3}, "664470582338781185": {"experience": 34499, "level": 13}, "718008422485721120": {"experience": 319, "level": 4}, "811294555243675730": {"experience": 2044, "level": 6}, "705871654399508511": {"experience": 4159, "level": 8}, "622348484384915458": {"experience": 2215, "level": 6}, "782404412936290314": {"experience": 2930, "level": 7}, "792905891086860288": {"experience": 68, "level": 2}, "784128889731153961": {"experience": 1499, "level": 6}, "750422835981189202": {"experience": 10019, "level": 10}, "818614591000805396": {"experience": 50625, "level": 15}, "768213509175246850": {"experience": 162, "level": 3}, "636519434655236096": {"experience": 18, "level": 2}, "561536781032488995": {"experience": 10000, "level": 10}, "641603634077106199": {"experience": 116, "level": 3}, "711719757124075553": {"experience": 121, "level": 3}, "641593348825808926": {"experience": 302, "level": 4}, "541410485933834241": {"experience": 15, "level": 1}, "777599252834156564": {"experience": 36, "level": 2}, "500878667673501697": {"experience": 18, "level": 2}, "610180166051823768": {"experience": 34, "level": 2}}
