@@ -1,0 +1,19 @@
+{
+  "author": [
+    "Fixator10",
+    "DiNitride"
+  ],
+  "install_msg": "Thanks for install.",
+  "short": "Some (maybe) useful utils.",
+  "description": "Some (maybe) useful utils.",
+  "tags": [
+    "utils",
+    "time",
+    "someone",
+    "color"
+  ],
+  "requirements": [
+    "tabulate"
+  ],
+  "end_user_data_statement": "This cog does not persistently store data or metadata about users."
+}

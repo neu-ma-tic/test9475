@@ -1,0 +1,19 @@
+{
+  "author": [
+    "Fixator10"
+  ],
+  "install_msg": "Thanks for install.",
+  "short": "This cog show minecraft-related data",
+  "description": "This cog show minecraft-related data\nIncluding:\n  Player's nicks history\n  Get skin by nickname\n  Get status of minecraft data-servers",
+  "tags": [
+    "minecraft",
+    "game"
+  ],
+  "min_python_version": [3, 8, 0],
+  "requirements": [
+    "tabulate",
+    "wcwidth",
+    "mcstatus>=5.1.1"
+  ],
+  "end_user_data_statement": "This cog does not persistently store data or metadata about users."
+}
