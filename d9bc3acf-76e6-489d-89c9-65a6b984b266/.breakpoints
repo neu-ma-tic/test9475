@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.py": [
+      {
+        "id": "a39d2d4f-fc07-449c-b037-fa49034f43ed",
+        "line": 1,
+        "version": 673,
+        "index": 0
+      }
+    ],
+    "packages/fun": [
+      {
+        "id": "2dad246f-9fdc-4829-8b78-d1571c6411fb",
+        "line": 3,
+        "version": 0,
+        "index": 37
+      }
+    ]
+  }
+}
