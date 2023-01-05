@@ -1,0 +1,36 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up","how old are you","how's going"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?","I'm very well thank you"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "age",
+         "patterns": ["how old", "how old is Vu", "what is your age", "how old are you", "age?"],
+         "responses": ["I am 22 years old!", "22 years young!"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?"],
+         "responses": ["You can call me Vu.", "I'm Vu!", "I'm Vu but that's not my real name."],
+         "context_set": ""
+        },
+        {
+
+        },
+        {"tag": "shop",
+         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
+         "responses": ["We'll sell you the Kush for $69"],
+         "context_set": ""
+        },
+        {"tag": "hours",
+         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
+         "responses": ["We open 24/7"],
+         "context_set": ""
+        }
+   ]
+}

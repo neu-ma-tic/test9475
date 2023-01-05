@@ -1,0 +1,95 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="s4d_login" id=")O7+PL3eS1Br}h;?X9N$" x="288" y="163">
+    <value name="TOKEN">
+      <block type="text" id="a7JxIIyK[Yr~TPL^-{W:">
+        <field name="TEXT">OTgzOTIyOTY0NTIzMjYyMDEy.GOy_0b.6YhFUWJ6rYK0VSl4OF54UghWqid0FwywC6jKQs</field>
+      </block>
+    </value>
+  </block>
+  <block type="s4d_on_message" id="Qx+aIDM=_,mj^tl$vGmW" x="288" y="238">
+    <statement name="STATEMENTS">
+      <block type="controls_if" id="Cr$f.P2*Nq2Dl}?D!r`(">
+        <value name="IF0">
+          <block type="logic_compare" id="oq-Tf{oSnv,],{N*FSF|">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="s4d_message_content" id="pyFMNvR6J#o6Ky/UA~]f"></block>
+            </value>
+            <value name="B">
+              <block type="text" id=";[??XKp36YJf2U}j2_}e">
+                <field name="TEXT">!ping</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="s4d_reply" id="wgo^7yFoMz,K{AaMl6L)">
+            <value name="CONTENT">
+              <block type="text" id="N-4C!JnJCe,s$75i%8Ce">
+                <field name="TEXT">pong!</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_message" id="-4{On2H,-`*!#tQo#WEv" x="882" y="343">
+    <statement name="STATEMENTS">
+      <block type="controls_if" id="bV$Kb(V8=^GKkI-7A_]v">
+        <value name="IF0">
+          <block type="logic_compare" id="t@Omr}~ZLC+I4(5^3X$*">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="s4d_message_content" id="l,D#kzXG`6~m!xP?xJmC"></block>
+            </value>
+            <value name="B">
+              <block type="text" id="K_-UGxVb%:{O+MB^3%t]">
+                <field name="TEXT">!react</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="s4d_add_reaction" id="h*=d|{,O%T0=13c%,gm#">
+            <value name="REACTION">
+              <shadow type="text" id="hlpf%7vAYgUJj)8]Zjo9">
+                <field name="TEXT">🤔</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="s4d_on_message" id="cxQV:xU$qh[=ud#Zy4qz" x="48" y="444">
+    <statement name="STATEMENTS">
+      <block type="controls_if" id="4@!cfZU:gZ9$m.9R%i/]">
+        <value name="IF0">
+          <block type="s4d_includes" id="N[C?nfc=v};i]|K1)Olf">
+            <value name="TEXT">
+              <shadow type="text" id="8dCGF8RjpR/AxA]v^+uD">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="s4d_message_content" id="oXUgW@8gEyR}W`?s,V7|"></block>
+            </value>
+            <value name="INCLUDES">
+              <shadow type="text" id="*kdR@my$67}4`*up-MV#">
+                <field name="TEXT">faq</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="s4d_add_reaction" id="8S3qWz^H92J4JvOEjBO:">
+            <value name="REACTION">
+              <shadow type="text" id="*{]mMf^}R_lBSfyI#*Hv">
+                <field name="TEXT">🖕</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
