@@ -1,0 +1,43 @@
+apply plugin: "java"
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+
+version = "0.9.0-UNSTABLE"
+group = "io.github.lxgaming.discordbot"
+archivesBaseName = "DiscordBotCore"
+
+configurations {
+  provided {
+    compile.extendsFrom(provided)
+  }
+}
+
+repositories {
+  mavenCentral()
+  maven {
+    url "https://jcenter.bintray.com"
+  }
+}
+
+dependencies {
+  compile "net.dv8tion:JDA:3.0.0_185"
+}
+
+jar {
+  from {
+    (configurations.compile - configurations.provided).collect {
+	  it.isDirectory() ? it : zipTree(it)
+	}
+  }
+  exclude("natives/**")
+}
+
+processResources {
+  inputs.property "version", project.version
+  
+  from (sourceSets.main.resources.srcDirs) {
+    include("plugin.yml")
+    expand("version":project.version)
+  }
+}
