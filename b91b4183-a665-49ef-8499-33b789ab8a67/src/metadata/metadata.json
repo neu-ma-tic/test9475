@@ -1,0 +1,3074 @@
+{
+  "package": "DiscordBot",
+  "tagline": "DiscordBot API",
+  "description": "DiscordBot",
+  "image": "http:\/\/logo.clearbit.com\/discordapp.com",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-DiscordBot-Package",
+  "keywords": [
+  ],
+  "accounts": {
+    "domain": "http:\/discordapp.com",
+    "credentials": [
+      "clientId",
+      "clientSecret",
+      "accessToken"
+    ]
+  },
+  "steps": [
+    "Go to Discord website (http://discordapp.com/)",
+    "Log in or create a new account",
+    "Register an app (https://discordapp.com/developers/applications/me)",
+    "After creation your app you will see Client ID and Client Secret",
+    "'Create A Bot User' for your application and provide this bot proper privileges",
+    "Get Bot access token from you Application page (https://discordapp.com/developers/applications/me)"
+  ],
+  "blocks": [
+    {
+      "name": "getAccessToken",
+      "description": "Get access token",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Discord",
+          "required": true
+        },
+        {
+          "name": "clientSecret",
+          "type": "credentials",
+          "info": "Client secret obtained from Discord",
+          "required": true
+        },
+        {
+          "name": "code",
+          "type": "String",
+          "info": "Code provided by the user",
+          "required": true
+        },
+        {
+          "name": "redirectUri",
+          "type": "String",
+          "info": "Redirect uri for your application",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getAppInfo",
+      "description": "Returns the bot's OAuth2 application info.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleChannel",
+      "description": "Guild channels represent an isolated set of users and messages within a Guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateChannel",
+      "description": "Update a channels settings.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "channelName",
+          "type": "String",
+          "info": "2-100 character channel name",
+          "required": false
+        },
+        {
+          "name": "channelPosition",
+          "type": "Number",
+          "info": "The position of the channel in the left-hand listing",
+          "required": false
+        },
+        {
+          "name": "channelTopic",
+          "type": "String",
+          "info": "0-1024 character channel topic",
+          "required": false
+        },
+        {
+          "name": "channelBitrate",
+          "type": "Number",
+          "info": "The bitrate (in bits) of the voice channel; 8000 to 96000 (128000 for VIP servers)",
+          "required": false
+        },
+        {
+          "name": "channelUserLimit",
+          "type": "Number",
+          "info": "The user limit of the voice channel; 0 refers to no limit, 1 to 99 refers to a user limit",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteChannel",
+      "description": "Delete a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getChannelMessages",
+      "description": "Returns the messages for a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "aroundId",
+          "type": "Number",
+          "info": "Get messages around this message ID",
+          "required": false
+        },
+        {
+          "name": "beforeId",
+          "type": "Number",
+          "info": "Get messages before this message ID",
+          "required": false
+        },
+        {
+          "name": "afterId",
+          "type": "Number",
+          "info": "Get messages after this message ID",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Max number of messages to return (1-100)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getChannelSingleMessage",
+      "description": "Returns the message from a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "Number",
+          "info": "Id of the message",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createReaction",
+      "description": "Create a reaction for the message.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "Number",
+          "info": "Id of the message",
+          "required": true
+        },
+        {
+          "name": "emoji",
+          "type": "String",
+          "info": "Emoji",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteOwnReaction",
+      "description": "Delete a reaction the current user has made for the message.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "Number",
+          "info": "Id of the message",
+          "required": true
+        },
+        {
+          "name": "emoji",
+          "type": "String",
+          "info": "Emoji",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getReactions",
+      "description": "Get a list of users that reacted with this emoji.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "Number",
+          "info": "Id of the message",
+          "required": true
+        },
+        {
+          "name": "emoji",
+          "type": "String",
+          "info": "Emoji",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteUserReaction",
+      "description": "Delete a reaction the user with provided userId has made for the message.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "Number",
+          "info": "Id of the message",
+          "required": true
+        },
+        {
+          "name": "emoji",
+          "type": "String",
+          "info": "Emoji",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteAllReactions",
+      "description": "Delete all reactions for the message.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "Number",
+          "info": "Id of the message",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getChannelInvites",
+      "description": "Returns a list of invite objects (with invite metadata) for the channel. ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createChannelInvite",
+      "description": "Create a new invite object for the channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "maxAge",
+          "type": "Number",
+          "info": "Duration of invite in seconds before expiry, or 0 for never",
+          "required": false
+        },
+        {
+          "name": "maxUses",
+          "type": "Number",
+          "info": "Max number of uses or 0 for unlimited",
+          "required": false
+        },
+        {
+          "name": "temporary",
+          "type": "Boolean",
+          "info": "Whether this invite only grants temporary membership. Default: false",
+          "required": false
+        },
+        {
+          "name": "unique",
+          "type": "Boolean",
+          "info": "If true, don't try to reuse a similar invite (useful for creating many unique one time use invites) Default: false",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateUserChannelPermissions",
+      "description": "Edit the channel permission overwrites for a user in a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        },
+        {
+          "name": "allow",
+          "type": "Number",
+          "info": "The bitwise value of all allowed permissions",
+          "required": false
+        },
+        {
+          "name": "deny",
+          "type": "Number",
+          "info": "The bitwise value of all disallowed permissions",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateRoleChannelPermissions",
+      "description": "Edit the channel permission overwrites for a role in a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "roleId",
+          "type": "Number",
+          "info": "Id of the role",
+          "required": true
+        },
+        {
+          "name": "allow",
+          "type": "Number",
+          "info": "The bitwise value of all allowed permissions",
+          "required": false
+        },
+        {
+          "name": "deny",
+          "type": "Number",
+          "info": "The bitwise value of all disallowed permissions",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteUserChannelPermission",
+      "description": "Delete the channel permission overwrites for a user in a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteRoleChannelPermission",
+      "description": "Delete the channel permission overwrites for a role in a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "roleId",
+          "type": "Number",
+          "info": "Id of the role",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createTriggerTypingIndicator",
+      "description": "Post a typing indicator for the specified channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "addPinnedChannelMessage",
+      "description": "Pin a message in a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "Number",
+          "info": "Id of the message in channel",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getPinnedMessages",
+      "description": "Get pinned messages in a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deletePinnedChannelMessage",
+      "description": "Delete a pinned message in a channel.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the guild channel",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "Number",
+          "info": "Id of the message in channel",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createGuild",
+      "description": "Create a new guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildName",
+          "type": "String",
+          "info": "Name of the guild (2-100 characters)",
+          "required": true
+        },
+        {
+          "name": "guildRegion",
+          "type": "String",
+          "info": "{voice_region.id} for voice",
+          "required": false
+        },
+        {
+          "name": "guildIcon",
+          "type": "File",
+          "info": "jpeg image for the guild icon",
+          "required": false
+        },
+        {
+          "name": "guildVerificationLevel",
+          "type": "Number",
+          "info": "Guild verification level",
+          "required": false
+        },
+        {
+          "name": "guildDefaultMessageNotifications",
+          "type": "Number",
+          "info": "Default message notifications setting",
+          "required": false
+        },
+        {
+          "name": "guildRoles",
+          "type": "Array",
+          "info": "New guild roles",
+          "required": false
+        },
+        {
+          "name": "guildChannels",
+          "type": "Array",
+          "info": "New guild's channels",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuild",
+      "description": "Returns the new guild object for the given id.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateGuild",
+      "description": "Updating existing guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "guildName",
+          "type": "String",
+          "info": "Name of the guild (2-100 characters)",
+          "required": false
+        },
+        {
+          "name": "guildRegion",
+          "type": "String",
+          "info": "{voice_region.id} for voice",
+          "required": false
+        },
+        {
+          "name": "guildIcon",
+          "type": "File",
+          "info": "jpeg image for the guild icon",
+          "required": false
+        },
+        {
+          "name": "guildVerificationLevel",
+          "type": "Number",
+          "info": "Guild verification level",
+          "required": false
+        },
+        {
+          "name": "guildDefaultMessageNotifications",
+          "type": "Number",
+          "info": "Default message notifications setting",
+          "required": false
+        },
+        {
+          "name": "guildAfkTimeout",
+          "type": "Number",
+          "info": "Afk timeout in seconds",
+          "required": false
+        },
+        {
+          "name": "guildAfkChannelId",
+          "type": "String",
+          "info": "Id for afk channel",
+          "required": false
+        },
+        {
+          "name": "guildSplash",
+          "type": "File",
+          "info": "128x128 jpeg image for the guild splash (VIP only)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildChannels",
+      "description": "Returns a list of guild channel objects.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createGuildChannel",
+      "description": "Returns a list of guild channel objects.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "channelName",
+          "type": "String",
+          "info": "Channel name (2-100 characters)",
+          "required": true
+        },
+        {
+          "name": "channelType",
+          "type": "String",
+          "info": "voice or text(default)",
+          "required": false
+        },
+        {
+          "name": "voiceChannelBitrate",
+          "type": "Number",
+          "info": "The bitrate (in bits) of the voice channel (voice only)",
+          "required": false
+        },
+        {
+          "name": "voiceChannelUserLimit",
+          "type": "Number",
+          "info": "The user limit of the voice channel (voice only)",
+          "required": false
+        },
+        {
+          "name": "channelPermissionsOverwrite",
+          "type": "List",
+          "structure": {
+            "name": "channelPermissionsOverwrite",
+            "type": "JSON",
+            "info": "Single channelPermissionsOverwrite"
+          },
+          "info": "The channel's permission overwrites",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateGuildChannelPositions",
+      "description": "Modify the positions of a set of channel objects for the guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the channel",
+          "required": true
+        },
+        {
+          "name": "positionNumber",
+          "type": "Number",
+          "info": "Sorting position of the channel",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildMembers",
+      "description": "Returns a list of guild member objects that are members of the guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildMember",
+      "description": "Returns a guild member object for the specified user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateGuildMember",
+      "description": "Modify attributes of a guild member.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        },
+        {
+          "name": "memberNick",
+          "type": "String",
+          "info": "Value to set users nickname to",
+          "required": false
+        },
+        {
+          "name": "memberRoles",
+          "type": "List",
+          "structure": {
+            "name": "memberRole",
+            "type": "String",
+            "info": "Single memberRole"
+          },
+          "info": "Array of roles the member is assigned",
+          "required": false
+        },
+        {
+          "name": "mute",
+          "type": "Boolean",
+          "info": "If the user is muted",
+          "required": false
+        },
+        {
+          "name": "deaf",
+          "type": "Boolean",
+          "info": "If the user is deafened",
+          "required": false
+        },
+        {
+          "name": "moveToChannelId",
+          "type": "String",
+          "info": "Id of channel to move user to (if they are connected to voice)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "addGuildMemberRole",
+      "description": "Adds a role to a guild member.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        },
+        {
+          "name": "roleId",
+          "type": "Number",
+          "info": "Id of the role",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildRoles",
+      "description": "Returns a list of role objects for the guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "removeGuildMemberRole",
+      "description": "removes added role to a guild member.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        },
+        {
+          "name": "roleId",
+          "type": "Number",
+          "info": "Id of the role",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createGuildRole",
+      "description": "Create a new role for the guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "roleName",
+          "type": "String",
+          "info": "Name of the role",
+          "required": false
+        },
+        {
+          "name": "rolePermissions",
+          "type": "Number",
+          "info": "Bitwise of the enabled/disabled permissions",
+          "required": false
+        },
+        {
+          "name": "roleColor",
+          "type": "Number",
+          "info": "RGB color value",
+          "required": false
+        },
+        {
+          "name": "hoist",
+          "type": "Boolean",
+          "info": "Whether the role should be displayed separately in the sidebar",
+          "required": false
+        },
+        {
+          "name": "mentionable",
+          "type": "Boolean",
+          "info": "Whether the role should be mentionable",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateGuildRolePositions",
+      "description": "Modify the positions of a set of role objects for the guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "roleId",
+          "type": "Number",
+          "info": "Id of the role",
+          "required": true
+        },
+        {
+          "name": "rolePosition",
+          "type": "Number",
+          "info": "sorting position of the role",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateGuildRole",
+      "description": "Update existing role for the guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "roleId",
+          "type": "Number",
+          "info": "Id of the role",
+          "required": true
+        },
+        {
+          "name": "roleName",
+          "type": "String",
+          "info": "Name of the role",
+          "required": false
+        },
+        {
+          "name": "rolePermissions",
+          "type": "Number",
+          "info": "Bitwise of the enabled/disabled permissions",
+          "required": false
+        },
+        {
+          "name": "roleColor",
+          "type": "Number",
+          "info": "RGB color value",
+          "required": false
+        },
+        {
+          "name": "hoist",
+          "type": "Boolean",
+          "info": "Whether the role should be displayed separately in the sidebar",
+          "required": false
+        },
+        {
+          "name": "mentionable",
+          "type": "Boolean",
+          "info": "Whether the role should be mentionable",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildBans",
+      "description": "Returns a list of user objects that are banned from this guild. ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createGuildBan",
+      "description": "Create a guild ban, and optionally delete previous messages sent by the banned user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        },
+        {
+          "name": "deleteMessageDays",
+          "type": "Number",
+          "info": "Number of days to delete messages for (0-7)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "removeGuildBan",
+      "description": "Remove a guild ban of the banned user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteGuildRole",
+      "description": "Delete a guild role.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "roleId",
+          "type": "Number",
+          "info": "Id of the role",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteGuild",
+      "description": "Delete a guild permanently. User must be owner.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildPruneCount",
+      "description": "Returns an object with one 'pruned' key indicating the number of members that would be removed in a prune operation. ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "countDays",
+          "type": "Number",
+          "info": "Number of days to count prune for (1 or more)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "startGuildPrune",
+      "description": "Begin a prune operation.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "countDays",
+          "type": "Number",
+          "info": "Number of days to prune (1 or more)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildVoiceRegions",
+      "description": "Returns a list of voice region objects for the guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildInvites",
+      "description": "Returns a list of invite objects (with invite metadata) for the guild. ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildIntegrations",
+      "description": "Returns a list of integration objects for the guild. ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createGuildIntegration",
+      "description": "Attach an integration object from the current user to the guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "integrationType",
+          "type": "String",
+          "info": "The integration type",
+          "required": true
+        },
+        {
+          "name": "integrationId",
+          "type": "Number",
+          "info": "Id of the integration.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateGuildIntegration",
+      "description": "Modify the behavior and settings of a integration object for the guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "integrationId",
+          "type": "Number",
+          "info": "Id of the integration.",
+          "required": true
+        },
+        {
+          "name": "expireBehavior",
+          "type": "Number",
+          "info": "The behavior when an integration subscription lapses",
+          "required": false
+        },
+        {
+          "name": "expireGracePeriod",
+          "type": "Number",
+          "info": "Period (in seconds) where the integration will ignore lapsed subscriptions",
+          "required": false
+        },
+        {
+          "name": "enableEmoticons",
+          "type": "Boolean",
+          "info": "Whether emoticons should be synced for this integration (twitch only currently)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "syncGuildIntegration",
+      "description": "Sync an integration.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "integrationId",
+          "type": "Number",
+          "info": "Id of the integration.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteGuildIntegration",
+      "description": "Delete an integration.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "integrationId",
+          "type": "Number",
+          "info": "Id of the integration.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildEmbed",
+      "description": "Returns the guild embed object.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getInvite",
+      "description": "Returns the invite object.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "inviteCode",
+          "type": "String",
+          "info": "Code of the invite",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteInvite",
+      "description": "Delete the invite.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "inviteCode",
+          "type": "String",
+          "info": "Code of the invite",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getCurrentUser",
+      "description": "Returns the user object of the requester's account.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getUser",
+      "description": "Returns a user for a given user ID.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateCurrentUser",
+      "description": "Returns the user object of the requester's account.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "username",
+          "type": "String",
+          "info": "New username",
+          "required": false
+        },
+        {
+          "name": "avatar",
+          "type": "File",
+          "info": "JPEG avatar image",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getCurrentUserGuilds",
+      "description": "Returns a list of user guild objects the current user is a member of.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "beforeId",
+          "type": "Number",
+          "info": "Get guilds before this guild ID",
+          "required": false
+        },
+        {
+          "name": "afterId",
+          "type": "Number",
+          "info": "Get guilds after this guild ID",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Max number of guilds to return (1-100)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "leaveGuild",
+      "description": "Leave a guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getUserDms",
+      "description": "Returns a list of DM channel objects.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createDm",
+      "description": "Create a new DM channel with a user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "recipientId",
+          "type": "Number",
+          "info": "Id of the recipient",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createGroupDm",
+      "description": "Create a new DM channel with a user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "accessTokens",
+          "type": "List",
+          "structure": {
+            "name": "accessToken",
+            "type": "String",
+            "info": "Single accessToken"
+          },
+          "info": "Access tokens of users that have granted your app the gdm.join scope",
+          "required": true
+        },
+        {
+          "name": "nicks",
+          "type": "JSON",
+          "info": "Dictionary of user ids to their respective nicknames",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getUsersConnections",
+      "description": "Returns a list of connection objects.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getVoiceRegions",
+      "description": "Returns an array of voice region objects that can be used when creating servers.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createWebhook",
+      "description": "Create a new webhook. ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the channel",
+          "required": true
+        },
+        {
+          "name": "webhookName",
+          "type": "String",
+          "info": "Name of the webhook (2-100 characters)",
+          "required": true
+        },
+        {
+          "name": "webhookAvatar",
+          "type": "File",
+          "info": "128x128 jpeg image for the default webhook avatar",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getChannelWebhooks",
+      "description": "Returns a list of channel webhook objects.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the channel",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getGuildWebhooks",
+      "description": "Returns a list of guild webhook objects.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleWebhook",
+      "description": "Returns the new webhook object for the given id.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "webhookId",
+          "type": "Number",
+          "info": "Id of the webhook",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getWebhookWithToken",
+      "description": "Same as above, except this call does not require authentication and returns no user in the webhook object.",
+      "args": [
+        {
+          "name": "webhookToken",
+          "type": "String",
+          "info": "Token of the webhook",
+          "required": true
+        },
+        {
+          "name": "webhookId",
+          "type": "Number",
+          "info": "Id of the webhook",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateWebhook",
+      "description": "Update a webhook. ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "webhookId",
+          "type": "Number",
+          "info": "Id of the webhook",
+          "required": true
+        },
+        {
+          "name": "webhookName",
+          "type": "String",
+          "info": "Name of the webhook (2-100 characters)",
+          "required": true
+        },
+        {
+          "name": "webhookAvatar",
+          "type": "File",
+          "info": "128x128 jpeg image for the default webhook avatar",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateWebhookWithToken",
+      "description": "Update a webhook.",
+      "args": [
+        {
+          "name": "webhookToken",
+          "type": "String",
+          "info": "Access token for ywebhook",
+          "required": true
+        },
+        {
+          "name": "webhookId",
+          "type": "Number",
+          "info": "Id of the webhook",
+          "required": true
+        },
+        {
+          "name": "webhookName",
+          "type": "String",
+          "info": "Name of the webhook (2-100 characters)",
+          "required": true
+        },
+        {
+          "name": "webhookAvatar",
+          "type": "File",
+          "info": "128x128 jpeg image for the default webhook avatar",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteWebhook",
+      "description": "Delete a webhook. ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "webhookId",
+          "type": "Number",
+          "info": "Id of the webhook",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteWebhookWithToken",
+      "description": "Delete a webhook. ",
+      "args": [
+        {
+          "name": "webhookToken",
+          "type": "String",
+          "info": "Access token for webhook",
+          "required": true
+        },
+        {
+          "name": "webhookId",
+          "type": "Number",
+          "info": "Id of the webhook",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "executeWebhookContent",
+      "description": "Execute a webhook with text content",
+      "args": [
+        {
+          "name": "webhookToken",
+          "type": "String",
+          "info": "Access token for webhook",
+          "required": true
+        },
+        {
+          "name": "webhookId",
+          "type": "Number",
+          "info": "Id of the webhook",
+          "required": true
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "info": "The message contents (up to 2000 characters)",
+          "required": true
+        },
+        {
+          "name": "webhookUsername",
+          "type": "String",
+          "info": "Override the default username of the webhook",
+          "required": false
+        },
+        {
+          "name": "webhookAvatarUrl",
+          "type": "String",
+          "info": "Override the default avatar of the webhook",
+          "required": false
+        },
+        {
+          "name": "tts",
+          "type": "Boolean",
+          "info": "true if this is a TTS message",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "executeWebhookEmbed",
+      "description": "Execute a webhook with ebmed content",
+      "args": [
+        {
+          "name": "webhookToken",
+          "type": "String",
+          "info": "Access token for webhook",
+          "required": true
+        },
+        {
+          "name": "webhookId",
+          "type": "Number",
+          "info": "Id of the webhook",
+          "required": true
+        },
+        {
+          "name": "embed",
+          "type": "List",
+          "structure": {
+            "name": "embed",
+            "type": "String",
+            "info": "Single embed"
+          },
+          "info": "Array of embed objects",
+          "required": true
+        },
+        {
+          "name": "webhookUsername",
+          "type": "String",
+          "info": "Override the default username of the webhook",
+          "required": false
+        },
+        {
+          "name": "webhookAvatarUrl",
+          "type": "String",
+          "info": "Override the default avatar of the webhook",
+          "required": false
+        },
+        {
+          "name": "tts",
+          "type": "Boolean",
+          "info": "true if this is a TTS message",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "executeWebhookFile",
+      "description": "Execute a webhook with file content",
+      "args": [
+        {
+          "name": "webhookToken",
+          "type": "String",
+          "info": "Access token for webhook",
+          "required": true
+        },
+        {
+          "name": "webhookId",
+          "type": "Number",
+          "info": "Id of the webhook",
+          "required": true
+        },
+        {
+          "name": "file",
+          "type": "File",
+          "info": "File",
+          "required": true
+        },
+        {
+          "name": "webhookUsername",
+          "type": "String",
+          "info": "Override the default username of the webhook",
+          "required": false
+        },
+        {
+          "name": "webhookAvatarUrl",
+          "type": "String",
+          "info": "Override the default avatar of the webhook",
+          "required": false
+        },
+        {
+          "name": "tts",
+          "type": "Boolean",
+          "info": "true if this is a TTS message",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "addRecipientToGroupDm",
+      "description": "Adds a recipient to a Group DM using their access token",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "userToken",
+          "type": "String",
+          "info": "access token of a user that has granted your app the gdm.join scope",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the Group DM channel",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        },
+        {
+          "name": "userNick",
+          "type": "String",
+          "info": "Nickname of the user being added",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "removeRecipientFromGroupDm",
+      "description": "Remove a recipient from a Group DM",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the Group DM channel",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "addGuildMember",
+      "description": "Adds a user to the guild, provided you have a valid oauth2 access token for the user with the guilds.join scope.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        },
+        {
+          "name": "userToken",
+          "type": "String",
+          "info": "An oauth2 access token granted with the guilds.join to the bot's application for the user you want to add to the guild",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "removeGuildMember",
+      "description": "Remove a member from a guild.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "guildId",
+          "type": "Number",
+          "info": "Id of the guild",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Id of the user",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteMessage",
+      "description": "Delete a message. ",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the channel",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "Number",
+          "info": "Id of the message",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "bulkDeleteMessages",
+      "description": "Delete multiple messages in a single request.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access token for your bot received from Discord",
+          "required": true
+        },
+        {
+          "name": "channelId",
+          "type": "Number",
+          "info": "Id of the channel",
+          "required": true
+        },
+        {
+          "name": "messageIds",
+          "type": "List",
+          "structure": {
+            "name": "messageId",
+            "type": "String",
+            "info": "Single messageId"
+          },
+          "info": "Ids of the messages",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    }
+  ]
+}
