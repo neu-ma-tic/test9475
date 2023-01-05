@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "repl_nix_Basic-Accounts-Gen-DiscordBot"
+version = "0.1.0"
+description = ""
+authors = ["Replit user <<>>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+discord = "^2.0.0"
+colorama = "^0.4.6"
+dhooks = "^1.1.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
