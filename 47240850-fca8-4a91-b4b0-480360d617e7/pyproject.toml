@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "discordbot"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+discord = "^1.0.1"
+json2 = "^0.4.0"
+requests = "^2.25.1"
+check-requirements-txt = "^1.0.2"
+repl = "^1.0"
+replit = "^2.0.0"
+flask = "^1.1.2"
+giphy_client = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
