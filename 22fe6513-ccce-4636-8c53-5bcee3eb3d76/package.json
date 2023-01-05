@@ -1,0 +1,42 @@
+{
+  "name": "dcbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "engines": {
+    "node": "14.17.6",
+    "npm": "7.24.0"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "@material-ui/icons": "^4.11.2",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.18.1",
+    "ffmpeg-static": "^4.4.0",
+    "ms": "^2.1.3",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "yt-search": "^2.7.1",
+    "ytdl-core": "^4.11.0",
+    "ytdl-core-discord": "^1.3.1",
+    "ytpl": "^2.2.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "node index.js",
+    "eject": "react-scripts eject",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johnsoncpk/DiscordBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Johnsoncpk/DiscordBot/issues"
+  },
+  "homepage": "https://github.com/Johnsoncpk/DiscordBot#readme"
+}

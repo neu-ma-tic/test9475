@@ -1,0 +1,1 @@
+{"version":2,"languages":{"nodejs-npm":{"specfileHash":"b92d5ac1c8c26c58b889537a7b3be090","lockfileHash":"71f904225b3d7ac995b34b9f59c2422b","guessedImports":["dotenv","yt-search","ytpl","request-promise","discord.js","express","node-fetch","ms","ytdl-core-discord"],"guessedImportsHash":"253c5a9c6763910018d173a0413670a4"}}}
