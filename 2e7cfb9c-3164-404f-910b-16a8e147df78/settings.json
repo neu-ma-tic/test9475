@@ -1,0 +1,10 @@
+{
+  "defaults": {
+    "prefix": "/"
+  },
+  "jokes": {
+    "active": 1, 
+    "cost": 10,
+    "limit": 3
+  }
+}

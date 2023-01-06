@@ -1,0 +1,2 @@
+print("Cool!")
+print("Magic!")

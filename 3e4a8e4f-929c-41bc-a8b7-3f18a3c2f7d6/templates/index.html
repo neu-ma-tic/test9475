@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename= 'images/apple-touch-icon.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename= 'images/favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename= 'images/favicon-16x16.png') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+	<script src="{{ url_for('static', filename= 'js/utils.js') }}">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(logged)
+	</script>
+	<title>Timers</title>
+</head>
+<header>
+	This website use cookies to save the apikey in your browser, in this way you do not need to login every time.
+	<br>
+</header>
+<body>
+	<h1 id="error">ERROR</h1>
+	<div id="login">
+		<label>Api Key<input type="password" name="ApiKey" id="apikey"></label>
+      <button type="button" onclick="login()">Send</button>
+  </div>
+    <h2 id="logged"></h2>
+		<div id="timers">	
+			<h1>Timers</h1>
+			<table>
+				<tr>
+					<th>Boss</th>
+					<th>Timer</th>
+					<th>Reset</th>
+					<th>Delete</th>
+				</tr>
+				<tr>
+					<td>110</td>
+					<td id="110"></td>
+					<td><button type="button" onclick="setTimer(110, 30)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(110)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>115</td>
+					<td id="115"></td>
+					<td><button type="button" onclick="setTimer(115, 35)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(115)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>120</td>
+					<td id="120"></td>
+					<td><button type="button" onclick="setTimer(120, 40)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(120)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>125</td>
+					<td id="125"></td>
+					<td><button type="button" onclick="setTimer(125, 45)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(125)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>130</td>
+					<td id="130"></td>
+					<td><button type="button" onclick="setTimer(130, 50)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(130)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>140</td>
+					<td id="140"></td>
+					<td><button type="button" onclick="setTimer(140, 55)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(140)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>155</td>
+					<td id="155"></td>
+					<td><button type="button" onclick="setTimer(155, 60)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(155)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>160</td>
+					<td id="160"></td>
+					<td><button type="button" onclick="setTimer(160, 65)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(160)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>165</td>
+					<td id="165"></td>
+					<td><button type="button" onclick="setTimer(165, 70)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(165)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>170</td>
+					<td id="170"></td>
+					<td><button type="button" onclick="setTimer(170, 80)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(170)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>180</td>
+					<td id="180"></td>
+					<td><button type="button" onclick="setTimer(180, 90)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(180)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>185</td>
+					<td id="185"></td>
+					<td><button type="button" onclick="setTimer(185, 75)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(185)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>190</td>
+					<td id="190"></td>
+					<td><button type="button" onclick="setTimer(190, 85)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(190)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>195</td>
+					<td id="195"></td>
+					<td><button type="button" onclick="setTimer(195, 95)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(195)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>200</td>
+					<td id="200"></td>
+					<td><button type="button" onclick="setTimer(200, 105)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(200)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>205</td>
+					<td id="205"></td>
+					<td><button type="button" onclick="setTimer(205, 115)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(205)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>210</td>
+					<td id="210"></td>
+					<td><button type="button" onclick="setTimer(210, 125)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(210)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>215</td>
+					<td id="215"></td>
+					<td><button type="button" onclick="setTimer(215, 135)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer(215)">Delete</button></td>
+				</tr>
+				<tr>
+					<td>aggy</td>
+					<td id="aggy"></td>
+					<td><button type="button" onclick="setTimer('aggy', 1894)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer('aggy')">Delete</button></td>
+				</tr>
+				<tr>
+					<td>mord</td>
+					<td id="mord"></td>
+					<td><button type="button" onclick="setTimer('mord', 2160)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer('mord')">Delete</button></td>
+				</tr>
+				<tr>
+					<td>hrung</td>
+					<td id="hrung"></td>
+					<td><button type="button" onclick="setTimer('hrung', 2160)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer('hrung')">Delete</button></td>
+				</tr>
+				<tr>
+					<td>necro</td>
+					<td id="necro"></td>
+					<td><button type="button" onclick="setTimer('necro', 3160)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer('necro')">Delete</button></td>
+				</tr>
+				<tr>
+					<td>prot</td>
+					<td id="prot"></td>
+					<td><button type="button" onclick="setTimer('prot', 1190)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer('prot')">Delete</button></td>
+				</tr>
+				<tr>
+					<td>gele</td>
+					<td id="gele"></td>
+					<td><button type="button" onclick="setTimer('gele', 2880)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer('gele')">Delete</button></td>
+				</tr>
+				<tr>
+					<td>bt</td>
+					<td id="bt"></td>
+					<td><button type="button" onclick="setTimer('bt', 4320)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer('bt')">Delete</button></td>
+				</tr>
+				<tr>
+					<td>dino</td>
+					<td id="dino"></td>
+					<td><button type="button" onclick="setTimer('dino', 4320)">Reset</button></td>
+					<td><button type="button" onclick="deleteTimer('dino')">Delete</button></td>
+				</tr>
+			</table>
+		</div>
+  </body>
+</html>

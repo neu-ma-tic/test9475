@@ -1,0 +1,1 @@
+{"version":2,"languages":{"python-python3-poetry":{"guessedImports":["appdirs","fuzzywuzzy","colorama","yarl","aiohttp-json-rpc","distro","markdown","motor","aiohttp","packaging","uvloop","pymongo","apsw","tqdm","babel","click","asyncpg"],"guessedImportsHash":"6e2100bebeee5aba335a297060204423"}}}

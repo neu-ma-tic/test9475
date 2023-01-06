@@ -1,0 +1,28 @@
+{
+  "files": {
+    "handlers/command.js": [
+      {
+        "id": "b90a0d11-c75b-4f97-a92c-0dae525c0bb6",
+        "line": 14,
+        "version": 1,
+        "index": 508
+      }
+    ],
+    "index.js": [
+      {
+        "id": "5c46fbec-c8d4-461f-985e-b5983a40aa9a",
+        "line": 1,
+        "version": 1,
+        "index": 0
+      }
+    ],
+    "xp.json": [
+      {
+        "id": "fcfce588-ab01-44d9-ab58-69870d04c34b",
+        "line": 1,
+        "version": 1,
+        "index": 0
+      }
+    ]
+  }
+}

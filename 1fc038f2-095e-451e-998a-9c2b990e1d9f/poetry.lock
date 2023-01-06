@@ -1,0 +1,16 @@
+[[package]]
+category = "main"
+description = "The Python module for discord.js."
+name = "discord.js"
+optional = false
+python-versions = "*"
+version = "1.0.1"
+
+[metadata]
+content-hash = "6be1a51b2787c560fe7c3b676cc2a1a399d406fc1137dd1e4c5702d3a264dc78"
+python-versions = "^3.8"
+
+[metadata.files]
+"discord.js" = [
+    {file = "discord.js-1.0.1.tar.gz", hash = "sha256:61811b1af6584e5a83f9582408d751b64877990ba0000c5e5794f48402801109"},
+]

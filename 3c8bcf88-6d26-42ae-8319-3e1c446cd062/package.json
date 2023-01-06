@@ -1,0 +1,26 @@
+{
+  "name": "lll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-player": "^4.1.0",
+    "discord-ytdl-core": "^5.0.3",
+    "discord.js": "^12.5.3",
+    "distube": "^2.8.13",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mineflayer": "^2.34.0",
+    "shelljs": "^0.8.4",
+    "soundcloud-scraper": "^5.0.0",
+    "spotify-url-info": "^2.2.3",
+    "youtube-sr": "^4.0.8",
+    "ytdl-core": "^4.8.0"
+  }
+}

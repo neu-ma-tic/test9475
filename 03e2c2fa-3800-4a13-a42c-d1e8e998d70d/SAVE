@@ -1,0 +1,55 @@
+ async def belepes(self, ctx):
+        #self.c.execute("""UPDATE tagok
+        #     SET bool = 1 
+        #     WHERE discord_id = id;""")
+        self.enabled = True
+
+        seconds = 0
+        hours = 0 
+        minutes = 0
+        secondint = int(seconds)
+        hourint = int(hours)
+        minuteint = int(minutes)
+        mbed = discord.Embed(
+          colour = (discord.Colour.magenta()),
+          title = f'CSSOS Szolgálati időnapló - {ctx.message.author.name}',
+          description = f"Szolgálatban töltött idő: {hours} h : {minutes} m : {seconds} s"
+        )
+        message = await ctx.send(embed = mbed)
+        #while self.c.execute("""SELECT bool 
+        #                  FROM tagok 
+        #                   WHERE discord_id = id;"""):
+        while self.enabled:
+          secondint = secondint + 1
+          if secondint == 60:
+            secondint = 0
+            minuteint = minuteint + 1
+          if minuteint == 60:
+            minuteint = 0
+            hourint = hourint + 1
+          new_mbed = discord.Embed(
+            colour = (discord.Colour.magenta()),
+            title = f'CSSOS Szolgálati időnapló - {ctx.message.author.name}',
+            description = f"Szolgálatban töltött idő: {hourint} h : {minuteint} m : {secondint} s"
+          )
+          await message.edit(embed = new_mbed)
+          await asyncio.sleep(1)
+
+          if self.enabled == False:
+            await ctx.send(f"Osszesen szolgálatban toltott ido: {minuteint * 60 + secondint + hourint * 60 *60}")
+          
+        #if self.c.execute("""SELECT bool 
+        #                FROM tagok
+        #                WHERE discord_id = id ;""") == 0:
+        #  await ctx.send(f"Osszesen szolgálatban toltott ido: {minuteint * 60 + secondint + hourint * 60 * 60}")
+
+    @commands.command()
+    async def kilepes(self, ctx):
+      #id = 0
+      #print(f"Kileptetes started...{id}")
+      
+      #self.c.execute("""UPDATE tagok
+      #             SET bool = 0
+      #             WHERE discord_id = id;""")
+      self.enabled = False
+      print("Kileptetes")

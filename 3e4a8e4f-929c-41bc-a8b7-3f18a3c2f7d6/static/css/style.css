@@ -1,0 +1,16 @@
+h2#logged {
+  color: green;
+}
+
+div#timers {
+	display: none;
+}
+
+h1#error {
+	color: red;
+	display: none;
+}
+
+table, th, td {
+  border: 1px solid black;
+}

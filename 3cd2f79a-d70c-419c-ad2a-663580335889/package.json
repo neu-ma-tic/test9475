@@ -1,0 +1,16 @@
+{
+  "name": "lovebot",
+  "version": "1.0.0",
+  "description": "a chatbot made by dart2.0 called as lovebot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "dart2.0",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "forever": "^1.0.0"
+  }
+}

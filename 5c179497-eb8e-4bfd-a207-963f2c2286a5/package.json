@@ -1,0 +1,23 @@
+{
+  "name": "discordbot-hst",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-button": "^1.0.3",
+    "discord.js": "^13.6.0",
+    "distube": "^3.3.2",
+    "easy-discord-chatbot": "^0.0.4",
+    "express": "^4.17.3",
+    "moment": "^2.29.1",
+    "node-fetch": "^3.2.3",
+    "pretty-ms": "^7.0.1",
+    "quick.db": "^7.1.3"
+  }
+}

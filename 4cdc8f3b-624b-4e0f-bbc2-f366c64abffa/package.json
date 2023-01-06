@@ -1,0 +1,18 @@
+{
+  "name": "theroombot",
+  "version": "1.0.0",
+  "description": "I am TheRoomBot",
+  "main": "main.js",
+  "scripts": {
+    "test": "rn node ."
+  },
+  "author": "GxmingWithCxllum#9982",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0",
+    "ffmpeg-static": "^4.4.0",
+    "fs": "0.0.1-security",
+    "ms": "^2.1.3"
+  }
+}

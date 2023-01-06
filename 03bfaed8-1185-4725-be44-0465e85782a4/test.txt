@@ -1,0 +1,41 @@
+
+@bot.command()
+async def hwcalnew(ctx, *, arg):
+    try:
+      with open("homework.txt", "w") as homeworkfile:
+        homeworkfile.write(arg)
+      await ctx.send("Success.")
+    except:
+      await ctx.send("Sorry, an error occured.")
+
+@bot.command()
+async def hwcal(ctx):
+  try:
+    with open("homework.txt", "r") as homeworkfile:
+        await ctx.send(homeworkfile.read())
+  except:
+    await ctx.send("Sorry, an error occured. - this probably means the file is empty")
+
+@bot.command()
+async def hwcalbackup(ctx, savename=None):
+  if savename == None:
+    await ctx.send("Please specify a file name.")
+    return
+  savename = savename + ".txt"
+  with open(str(savename), "w") as newsave:
+      with open("homework.txt", "r") as homeworkfile:
+          newsave.write(homeworkfile.read())
+
+@bot.command()
+async def hwhelp(ctx):
+  await ctx.send(
+    '''
+    ```
+    $writehwcal - uploads a new version of homework and DELETES the last version
+    $hwcal - print homework
+    $backuphwcal - for testing only please no spam : makes a new file thats a backup(duh)
+  
+    https://repl.it/@AndersonT/DiscordBot-hwreminder 
+    ^- code  
+    Markdown tips - using prolog capitals -> red, numbers -> blue```''')
+
