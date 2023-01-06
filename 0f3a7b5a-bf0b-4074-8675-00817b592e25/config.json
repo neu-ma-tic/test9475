@@ -1,0 +1,47 @@
+{
+
+    "BOT_TOKEN": "OTgyOTY0NzI0MjI2NDc0MDI0.Ghw0z_.J0pxWIN5mbdRPOu-RtP9N24hQvdR8u97TUoqxw",
+    "GUILD_ID": "1002263573843693608",
+    "BOT_SERVER_ID": "[BOT_SERVER_ID]",
+    "SERVER_NAME": "[SERVER_NAME]",
+    "BOT_ACTIVITY": "STREAMING",
+    "BOT_ACTIVITY_URL": "https://www.twitch.tv/hikponss",
+    "BOT_PREFIX": "!",
+
+    "STATS": {
+        "guild_ID": "[ROLE_ID]",
+        "totalUsersChannel_ID": "[CHANNEL_ID]",
+        "usersChannel_ID": "[CHANNEL_ID]",
+        "botsChannel_ID": "[CHANNEL_ID]"
+    },
+    "ROLE_CLAIM": {
+        "channel_ID": "[CHANNEL_ID]"
+    },
+    "TICKET_SYSTEM": {
+        "guild_ID": "[ROLE_ID]",
+        "supportCategoryID": "[CATEGORY_ID]",
+        "supportChannelID": "[CHANNEL_ID]",
+        "roleSupportId": "[ROLE_ID]",
+        "roleMemberId": "[ROLE_ID]"
+    },
+    "WELCOMER": {
+        "welcomeChannel_ID": "[CHANNEL_ID]",
+        "introChannel_ID": "[CHANNEL_ID]",
+        "memberRole_ID": "[ROLE_ID]"
+    },
+    "GIVEAWAYS": {
+        "hostedBy": true,
+        "everyoneMention": true   
+    },
+    "COMMANDS":{
+        "discord_rules_ID": "[RULE_ID]",
+        "roleplay_rules_ID": "[RULE_ID]",
+        "application_answers_ID": "[CHANNEL_ID]",
+        "admin_role_ID": "[ROLE_ID]"
+    },
+    "FIVEM_SERVER":{
+        "name": "[UNUSED-NAME]",
+        "ip": "[UNUSED-IP]",
+        "port": "[UNUSED-PORT]"
+    }
+}
