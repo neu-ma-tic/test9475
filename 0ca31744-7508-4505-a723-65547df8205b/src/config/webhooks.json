@@ -1,0 +1,58 @@
+{
+    "startLogs": { 
+        "id": " ",
+        "token": "https://discord.com/api/webhooks/1024801769257177099/hgPstdmAm4xEUAPhbBZmI-zWaZisjKMZ1SQeb04zzj9axJFdBlvgSjE80XFgydLpN4Zd"
+    },
+    "shardLogs": {
+        "id": " ",
+        "token": "https://discord.com/api/webhooks/1024801769257177099/hgPstdmAm4xEUAPhbBZmI-zWaZisjKMZ1SQeb04zzj9axJFdBlvgSjE80XFgydLpN4Zd"
+    },
+    "errorLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "dmLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "voiceLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "serverLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "serverLogs2": {
+        "id": " ",
+        "token": " "
+    },
+    "commandLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "consoleLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "warnLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "voiceErrorLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "creditLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "evalLogs": {
+        "id": " ",
+        "token": " "
+    },
+    "interactionLogs": {
+        "id": " ",
+        "token": " "
+    }
+}

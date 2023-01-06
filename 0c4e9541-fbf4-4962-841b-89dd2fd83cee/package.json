@@ -1,0 +1,22 @@
+{
+  "name": "jarvis-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot ",
+  "main": "jarvis-bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdstevens044/Jarvis-DiscordBot.git"
+  },
+  "author": "mdstevens044",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdstevens044/Jarvis-DiscordBot/issues"
+  },
+  "homepage": "https://github.com/mdstevens044/Jarvis-DiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
+}
