@@ -1,0 +1,3 @@
+#!/bin/sh
+unset LUA_PATH LUA_PATH_5_2 LUA_PATH_5_3 LUA_PATH_5_4 LUA_CPATH LUA_CPATH_5_2 LUA_CPATH_5_3 LUA_CPATH_5_4
+LUAROCKS_SYSCONFDIR="/usr/local/etc/luarocks" LUA_PATH="/home/runner/DiscordBot/luarocks-3.7.0/src/?.lua;;" exec "/usr/bin/lua5.1" "/home/runner/DiscordBot/luarocks-3.7.0/src/bin/luarocks-admin" --project-tree="/home/runner/DiscordBot/luarocks-3.7.0/lua_modules" "$@"

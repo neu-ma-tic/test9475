@@ -1,0 +1,51 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`${client.user.tag}에 로그인하였습니다!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === '핑') {
+    msg.reply('퐁!');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('pong!');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '탈') {
+    msg.reply('모!');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '인') {
+    msg.reply('생!');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '개굴아') {
+    msg.reply('네 개굴이 여기있어요');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '크시야') {
+    msg.reply('흥ㅠㅠ 개굴이 삐졌어 크시 부르지 마아');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '개구리') {
+    msg.reply('굴개굴개');
+  }
+});
+
+
+client.login('OTUxMDA2NDYwODQ5MDM3MzMy.YihLyQ.KmttBlwDYDnvQctyUgF0R6U2GYM');

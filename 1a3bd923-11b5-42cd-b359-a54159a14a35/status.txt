@@ -1,0 +1,13 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+ 
+client.on('ready', () => {
+ 
+client.user.setActivity(`​Usa el comando !help`, {
+type: "PLAYING"})
+    .then(presence => console.log(`Your Status has been set to  ${presence.game ? presence.game.none : 'none'}`))
+    .catch(console.error);
+ 
+});
+ 
+client.login('NjE3ODYwNjU0NzYxNzcxMDEx.XYO5sg.B6A0tlmnV_joKd2fMeZtbt-s8Co');
