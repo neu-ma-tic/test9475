@@ -1,0 +1,10 @@
+
+  "TOKEN": "OTMyODg0ODQ2MTUyMzg4NjY4.GXN9DW.FrvbAbSmpqZFeNa3R_x7hU7lAtZ8W2tG-BbQg8",
+  "YOUTUBE_API_KEY": "AIzaSyA7FRPuxTzmNFn5VSnDQKOMS_vwDuuDwhI",
+  "SOUNDCLOUD_CLIENT_ID": "  https://api.soundcloud.com/tracks?client_id=#{client_id}&limit=10",
+  "MAX_PLAYLIST_SIZE": 20,
+  "PREFIX": "1",
+  "PRUNING": false,
+  "STAY_TIME": 20,
+  "DEFAULT_VOLUME": 100
+}
